@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 namespace Conqueror.Logic;
 
-class Character {
+public class Character {
     private string name; 
     private string urlPhoto;
     private int id;

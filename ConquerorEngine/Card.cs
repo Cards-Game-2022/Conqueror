@@ -1,6 +1,6 @@
 namespace Conqueror.Logic;
 
-class Card {
+public class Card {
     private string name;
     private int cost;
     private string text;
@@ -25,8 +25,7 @@ class Card {
         set { effect = value; }
     }
     public int Id {
-        get { return id; }
-        set { id = value; }
+        get; private set;
     }
     public string UrlPhoto {
         get { return urlPhoto; }

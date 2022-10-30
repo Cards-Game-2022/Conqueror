@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorEngine/ConquerorEngine.csproj",
+      "projectUniqueName": "/home/marian_susana/Documents/Conqueror/ConquerorEngine/ConquerorEngine.csproj",
       "projectName": "ConquerorEngine",
-      "projectPath": "/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorEngine/ConquerorEngine.csproj",
+      "projectPath": "/home/marian_susana/Documents/Conqueror/ConquerorEngine/ConquerorEngine.csproj",
       "packagesPath": "/home/marian_susana/.nuget/packages/",
-      "outputPath": "/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorEngine/obj/",
+      "outputPath": "/home/marian_susana/Documents/Conqueror/ConquerorEngine/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/marian_susana/.nuget/NuGet/NuGet.Config"

@@ -1,6 +1,6 @@
 namespace Conqueror.Logic;
 
-class Game {
+public class Game {
     Language lg;
     public Game() {
         lg = new Language();

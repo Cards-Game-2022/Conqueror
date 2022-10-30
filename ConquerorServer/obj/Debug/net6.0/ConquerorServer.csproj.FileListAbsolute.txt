@@ -58,3 +58,33 @@
 /home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorServer/obj/Debug/net6.0/ConquerorServer.pdb
 /home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorServer/obj/Debug/net6.0/ConquerorServer.genruntimeconfig.cache
 /home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorServer/obj/Debug/net6.0/ref/ConquerorServer.dll
+/home/marian_susana/Documents/Conqueror/ConquerorServer/obj/Debug/net6.0/ConquerorServer.dll
+/home/marian_susana/Documents/Conqueror/ConquerorServer/obj/Debug/net6.0/refint/ConquerorServer.dll
+/home/marian_susana/Documents/Conqueror/ConquerorServer/obj/Debug/net6.0/ConquerorServer.pdb
+/home/marian_susana/Documents/Conqueror/ConquerorServer/obj/Debug/net6.0/ConquerorServer.csproj.AssemblyReference.cache
+/home/marian_susana/Documents/Conqueror/ConquerorServer/obj/Debug/net6.0/ConquerorServer.GeneratedMSBuildEditorConfig.editorconfig
+/home/marian_susana/Documents/Conqueror/ConquerorServer/obj/Debug/net6.0/ConquerorServer.AssemblyInfoInputs.cache
+/home/marian_susana/Documents/Conqueror/ConquerorServer/obj/Debug/net6.0/ConquerorServer.AssemblyInfo.cs
+/home/marian_susana/Documents/Conqueror/ConquerorServer/obj/Debug/net6.0/ConquerorServer.csproj.CoreCompileInputs.cache
+/home/marian_susana/Documents/Conqueror/ConquerorServer/obj/Debug/net6.0/ConquerorServer.MvcApplicationPartsAssemblyInfo.cache
+/home/marian_susana/Documents/Conqueror/ConquerorServer/obj/Debug/net6.0/ConquerorServer.RazorAssemblyInfo.cache
+/home/marian_susana/Documents/Conqueror/ConquerorServer/obj/Debug/net6.0/ConquerorServer.RazorAssemblyInfo.cs
+/home/marian_susana/Documents/Conqueror/ConquerorServer/bin/Debug/net6.0/appsettings.Development.json
+/home/marian_susana/Documents/Conqueror/ConquerorServer/bin/Debug/net6.0/appsettings.json
+/home/marian_susana/Documents/Conqueror/ConquerorServer/bin/Debug/net6.0/ConquerorServer.staticwebassets.runtime.json
+/home/marian_susana/Documents/Conqueror/ConquerorServer/bin/Debug/net6.0/ConquerorServer
+/home/marian_susana/Documents/Conqueror/ConquerorServer/bin/Debug/net6.0/ConquerorServer.deps.json
+/home/marian_susana/Documents/Conqueror/ConquerorServer/bin/Debug/net6.0/ConquerorServer.runtimeconfig.json
+/home/marian_susana/Documents/Conqueror/ConquerorServer/bin/Debug/net6.0/ConquerorServer.dll
+/home/marian_susana/Documents/Conqueror/ConquerorServer/bin/Debug/net6.0/ConquerorServer.pdb
+/home/marian_susana/Documents/Conqueror/ConquerorServer/bin/Debug/net6.0/ConquerorEngine.dll
+/home/marian_susana/Documents/Conqueror/ConquerorServer/bin/Debug/net6.0/ConquerorEngine.pdb
+/home/marian_susana/Documents/Conqueror/ConquerorServer/obj/Debug/net6.0/staticwebassets.build.json
+/home/marian_susana/Documents/Conqueror/ConquerorServer/obj/Debug/net6.0/staticwebassets.development.json
+/home/marian_susana/Documents/Conqueror/ConquerorServer/obj/Debug/net6.0/scopedcss/Shared/MainLayout.razor.rz.scp.css
+/home/marian_susana/Documents/Conqueror/ConquerorServer/obj/Debug/net6.0/scopedcss/Shared/NavMenu.razor.rz.scp.css
+/home/marian_susana/Documents/Conqueror/ConquerorServer/obj/Debug/net6.0/scopedcss/bundle/ConquerorServer.styles.css
+/home/marian_susana/Documents/Conqueror/ConquerorServer/obj/Debug/net6.0/scopedcss/projectbundle/ConquerorServer.bundle.scp.css
+/home/marian_susana/Documents/Conqueror/ConquerorServer/obj/Debug/net6.0/ConquerorServer.csproj.CopyComplete
+/home/marian_susana/Documents/Conqueror/ConquerorServer/obj/Debug/net6.0/ConquerorServer.genruntimeconfig.cache
+/home/marian_susana/Documents/Conqueror/ConquerorServer/obj/Debug/net6.0/ref/ConquerorServer.dll

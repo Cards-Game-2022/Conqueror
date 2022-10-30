@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "t0lNQX2fPRWsDFa+6TqjmiWhjaw16ffLZBXfCU0lLMWxsPc6UgAhKU0gwKwozrdiwlzMDGVWVENxmmv73nfNoA==",
+  "dgSpecHash": "QviSVj/I2AnT1JH3COw2R7nsLxwVcMf6GgFEkvo9HiqHjztDfNDHIVvk7EXFZL3vsx5pe0LQabgCBkx2/6mPNw==",
   "success": true,
-  "projectFilePath": "/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorServer/ConquerorServer.csproj",
+  "projectFilePath": "/home/marian_susana/Documents/Conqueror/ConquerorServer/ConquerorServer.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

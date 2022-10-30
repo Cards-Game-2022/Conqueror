@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "d96rEXD4yVVcWl9m/wbh5vgw2qMsax13MUVhwloZNX0=",
+  "Hash": "tiQWHAlWmGa5FuxDMXRWzAG/pMlRINO/BNPyvCdvOv0=",
   "Source": "ConquerorServer",
   "BasePath": "_content/ConquerorServer",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "ConquerorServer/wwwroot",
       "Source": "ConquerorServer",
-      "ContentRoot": "/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorServer/obj/Debug/net6.0/scopedcss/bundle/ConquerorServer.styles.css",
+      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/obj/Debug/net6.0/scopedcss/bundle/ConquerorServer.styles.css",
       "SourceId": "ConquerorServer",
       "SourceType": "Computed",
-      "ContentRoot": "/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorServer/obj/Debug/net6.0/scopedcss/bundle/",
+      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/obj/Debug/net6.0/scopedcss/bundle/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "ConquerorServer.styles.css",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorServer/obj/Debug/net6.0/scopedcss/bundle/ConquerorServer.styles.css"
+      "OriginalItemSpec": "/home/marian_susana/Documents/Conqueror/ConquerorServer/obj/Debug/net6.0/scopedcss/bundle/ConquerorServer.styles.css"
     },
     {
-      "Identity": "/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorServer/obj/Debug/net6.0/scopedcss/projectbundle/ConquerorServer.bundle.scp.css",
+      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/obj/Debug/net6.0/scopedcss/projectbundle/ConquerorServer.bundle.scp.css",
       "SourceId": "ConquerorServer",
       "SourceType": "Computed",
-      "ContentRoot": "/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorServer/obj/Debug/net6.0/scopedcss/projectbundle/",
+      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/obj/Debug/net6.0/scopedcss/projectbundle/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "ConquerorServer.bundle.scp.css",
       "AssetKind": "All",
@@ -48,13 +48,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorServer/obj/Debug/net6.0/scopedcss/projectbundle/ConquerorServer.bundle.scp.css"
+      "OriginalItemSpec": "/home/marian_susana/Documents/Conqueror/ConquerorServer/obj/Debug/net6.0/scopedcss/projectbundle/ConquerorServer.bundle.scp.css"
     },
     {
-      "Identity": "/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorServer/wwwroot/css/bootstrap/bootstrap.min.css",
+      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/css/bootstrap/bootstrap.min.css",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "css/bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot/css/bootstrap/bootstrap.min.css"
     },
     {
-      "Identity": "/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorServer/wwwroot/css/bootstrap/bootstrap.min.css.map",
+      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/css/bootstrap/bootstrap.min.css.map",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "css/bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot/css/bootstrap/bootstrap.min.css.map"
     },
     {
-      "Identity": "/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorServer/wwwroot/css/open-iconic/FONT-LICENSE",
+      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/css/open-iconic/FONT-LICENSE",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "css/open-iconic/FONT-LICENSE",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot/css/open-iconic/FONT-LICENSE"
     },
     {
-      "Identity": "/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorServer/wwwroot/css/open-iconic/font/css/open-iconic-bootstrap.min.css",
+      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/css/open-iconic/font/css/open-iconic-bootstrap.min.css",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "css/open-iconic/font/css/open-iconic-bootstrap.min.css",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot/css/open-iconic/font/css/open-iconic-bootstrap.min.css"
     },
     {
-      "Identity": "/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorServer/wwwroot/css/open-iconic/font/fonts/open-iconic.eot",
+      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/css/open-iconic/font/fonts/open-iconic.eot",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.eot",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot/css/open-iconic/font/fonts/open-iconic.eot"
     },
     {
-      "Identity": "/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorServer/wwwroot/css/open-iconic/font/fonts/open-iconic.otf",
+      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/css/open-iconic/font/fonts/open-iconic.otf",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.otf",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot/css/open-iconic/font/fonts/open-iconic.otf"
     },
     {
-      "Identity": "/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorServer/wwwroot/css/open-iconic/font/fonts/open-iconic.svg",
+      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/css/open-iconic/font/fonts/open-iconic.svg",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.svg",
       "AssetKind": "All",
@@ -170,10 +170,10 @@
       "OriginalItemSpec": "wwwroot/css/open-iconic/font/fonts/open-iconic.svg"
     },
     {
-      "Identity": "/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorServer/wwwroot/css/open-iconic/font/fonts/open-iconic.ttf",
+      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/css/open-iconic/font/fonts/open-iconic.ttf",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.ttf",
       "AssetKind": "All",
@@ -187,10 +187,10 @@
       "OriginalItemSpec": "wwwroot/css/open-iconic/font/fonts/open-iconic.ttf"
     },
     {
-      "Identity": "/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorServer/wwwroot/css/open-iconic/font/fonts/open-iconic.woff",
+      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/css/open-iconic/font/fonts/open-iconic.woff",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.woff",
       "AssetKind": "All",
@@ -204,10 +204,10 @@
       "OriginalItemSpec": "wwwroot/css/open-iconic/font/fonts/open-iconic.woff"
     },
     {
-      "Identity": "/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorServer/wwwroot/css/open-iconic/ICON-LICENSE",
+      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/css/open-iconic/ICON-LICENSE",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "css/open-iconic/ICON-LICENSE",
       "AssetKind": "All",
@@ -221,10 +221,10 @@
       "OriginalItemSpec": "wwwroot/css/open-iconic/ICON-LICENSE"
     },
     {
-      "Identity": "/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorServer/wwwroot/css/open-iconic/README.md",
+      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/css/open-iconic/README.md",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "css/open-iconic/README.md",
       "AssetKind": "All",
@@ -238,10 +238,10 @@
       "OriginalItemSpec": "wwwroot/css/open-iconic/README.md"
     },
     {
-      "Identity": "/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorServer/wwwroot/css/site.css",
+      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/css/site.css",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -255,10 +255,10 @@
       "OriginalItemSpec": "wwwroot/css/site.css"
     },
     {
-      "Identity": "/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorServer/wwwroot/DB/Card.json",
+      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/DB/Card.json",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "DB/Card.json",
       "AssetKind": "All",
@@ -272,10 +272,10 @@
       "OriginalItemSpec": "wwwroot/DB/Card.json"
     },
     {
-      "Identity": "/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorServer/wwwroot/DB/Characters.json",
+      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/DB/Characters.json",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "DB/Characters.json",
       "AssetKind": "All",
@@ -289,10 +289,10 @@
       "OriginalItemSpec": "wwwroot/DB/Characters.json"
     },
     {
-      "Identity": "/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorServer/wwwroot/favicon.ico",
+      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/favicon.ico",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -306,10 +306,10 @@
       "OriginalItemSpec": "wwwroot/favicon.ico"
     },
     {
-      "Identity": "/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorServer/wwwroot/font/bootstrap-icons.css",
+      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/font/bootstrap-icons.css",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "font/bootstrap-icons.css",
       "AssetKind": "All",
@@ -323,10 +323,10 @@
       "OriginalItemSpec": "wwwroot/font/bootstrap-icons.css"
     },
     {
-      "Identity": "/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorServer/wwwroot/font/bootstrap-icons.json",
+      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/font/bootstrap-icons.json",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "font/bootstrap-icons.json",
       "AssetKind": "All",
@@ -340,10 +340,10 @@
       "OriginalItemSpec": "wwwroot/font/bootstrap-icons.json"
     },
     {
-      "Identity": "/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorServer/wwwroot/font/bootstrap-icons.scss",
+      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/font/bootstrap-icons.scss",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "font/bootstrap-icons.scss",
       "AssetKind": "All",
@@ -357,10 +357,10 @@
       "OriginalItemSpec": "wwwroot/font/bootstrap-icons.scss"
     },
     {
-      "Identity": "/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorServer/wwwroot/font/fonts/bootstrap-icons.woff",
+      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/font/fonts/bootstrap-icons.woff",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "font/fonts/bootstrap-icons.woff",
       "AssetKind": "All",
@@ -374,10 +374,10 @@
       "OriginalItemSpec": "wwwroot/font/fonts/bootstrap-icons.woff"
     },
     {
-      "Identity": "/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorServer/wwwroot/font/fonts/bootstrap-icons.woff2",
+      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/font/fonts/bootstrap-icons.woff2",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "font/fonts/bootstrap-icons.woff2",
       "AssetKind": "All",
@@ -391,10 +391,10 @@
       "OriginalItemSpec": "wwwroot/font/fonts/bootstrap-icons.woff2"
     },
     {
-      "Identity": "/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorServer/wwwroot/font/index.html",
+      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/font/index.html",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "font/index.html",
       "AssetKind": "All",
@@ -406,6 +406,176 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/font/index.html"
+    },
+    {
+      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/cards.jpg",
+      "SourceId": "ConquerorServer",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "BasePath": "_content/ConquerorServer",
+      "RelativePath": "images/cards.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/cards.jpg"
+    },
+    {
+      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/final.jpg",
+      "SourceId": "ConquerorServer",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "BasePath": "_content/ConquerorServer",
+      "RelativePath": "images/final.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/final.jpg"
+    },
+    {
+      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/photo101.png",
+      "SourceId": "ConquerorServer",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "BasePath": "_content/ConquerorServer",
+      "RelativePath": "images/photo101.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/photo101.png"
+    },
+    {
+      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/photo102.png",
+      "SourceId": "ConquerorServer",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "BasePath": "_content/ConquerorServer",
+      "RelativePath": "images/photo102.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/photo102.png"
+    },
+    {
+      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/photo103.png",
+      "SourceId": "ConquerorServer",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "BasePath": "_content/ConquerorServer",
+      "RelativePath": "images/photo103.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/photo103.png"
+    },
+    {
+      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/photo104.png",
+      "SourceId": "ConquerorServer",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "BasePath": "_content/ConquerorServer",
+      "RelativePath": "images/photo104.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/photo104.png"
+    },
+    {
+      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/photo105.png",
+      "SourceId": "ConquerorServer",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "BasePath": "_content/ConquerorServer",
+      "RelativePath": "images/photo105.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/photo105.png"
+    },
+    {
+      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/photo106.png",
+      "SourceId": "ConquerorServer",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "BasePath": "_content/ConquerorServer",
+      "RelativePath": "images/photo106.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/photo106.png"
+    },
+    {
+      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/player.jpg",
+      "SourceId": "ConquerorServer",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "BasePath": "_content/ConquerorServer",
+      "RelativePath": "images/player.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/player.jpg"
+    },
+    {
+      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/index.css",
+      "SourceId": "ConquerorServer",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "BasePath": "_content/ConquerorServer",
+      "RelativePath": "index.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/index.css"
     }
   ]
 }
