@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "ConquerorServer/1.0.0": {
+        "dependencies": {
+          "ConquerorEngine": "1.0.0"
+        },
+        "runtime": {
+          "ConquerorServer.dll": {}
+        }
+      },
+      "ConquerorEngine/1.0.0": {
+        "runtime": {
+          "ConquerorEngine.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ConquerorServer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ConquerorEngine/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

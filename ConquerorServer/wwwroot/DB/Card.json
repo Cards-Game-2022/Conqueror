@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Malanga",
+    "Cost": 2,
+    "Text": "hola soy malanga te manlangueo",
+    "Efect": "lifeP1 = 30",
+    "Id": 0,
+    "UrlPhoto": "1.png"
+  },
+  {
+    "Name": "Malanga",
+    "Cost": 2,
+    "Text": "hola soy malanga te manlangueo",
+    "Efect": "lifeP1 = 30",
+    "Id": 0,
+    "UrlPhoto": "1.png"
+  }
+]

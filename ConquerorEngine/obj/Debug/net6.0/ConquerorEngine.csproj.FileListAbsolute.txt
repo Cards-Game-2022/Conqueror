@@ -1,0 +1,24 @@
+/home/david/David/Programación/CC/Programacion/Segundo Proyecto/Conqueror/ConquerorEngine/bin/Debug/net6.0/ConquerorEngine.deps.json
+/home/david/David/Programación/CC/Programacion/Segundo Proyecto/Conqueror/ConquerorEngine/bin/Debug/net6.0/ConquerorEngine.dll
+/home/david/David/Programación/CC/Programacion/Segundo Proyecto/Conqueror/ConquerorEngine/bin/Debug/net6.0/ref/ConquerorEngine.dll
+/home/david/David/Programación/CC/Programacion/Segundo Proyecto/Conqueror/ConquerorEngine/bin/Debug/net6.0/ConquerorEngine.pdb
+/home/david/David/Programación/CC/Programacion/Segundo Proyecto/Conqueror/ConquerorEngine/obj/Debug/net6.0/ConquerorEngine.csproj.AssemblyReference.cache
+/home/david/David/Programación/CC/Programacion/Segundo Proyecto/Conqueror/ConquerorEngine/obj/Debug/net6.0/ConquerorEngine.GeneratedMSBuildEditorConfig.editorconfig
+/home/david/David/Programación/CC/Programacion/Segundo Proyecto/Conqueror/ConquerorEngine/obj/Debug/net6.0/ConquerorEngine.AssemblyInfoInputs.cache
+/home/david/David/Programación/CC/Programacion/Segundo Proyecto/Conqueror/ConquerorEngine/obj/Debug/net6.0/ConquerorEngine.AssemblyInfo.cs
+/home/david/David/Programación/CC/Programacion/Segundo Proyecto/Conqueror/ConquerorEngine/obj/Debug/net6.0/ConquerorEngine.csproj.CoreCompileInputs.cache
+/home/david/David/Programación/CC/Programacion/Segundo Proyecto/Conqueror/ConquerorEngine/obj/Debug/net6.0/ConquerorEngine.dll
+/home/david/David/Programación/CC/Programacion/Segundo Proyecto/Conqueror/ConquerorEngine/obj/Debug/net6.0/ref/ConquerorEngine.dll
+/home/david/David/Programación/CC/Programacion/Segundo Proyecto/Conqueror/ConquerorEngine/obj/Debug/net6.0/ConquerorEngine.pdb
+/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorEngine/bin/Debug/net6.0/ConquerorEngine.deps.json
+/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorEngine/bin/Debug/net6.0/ConquerorEngine.dll
+/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorEngine/bin/Debug/net6.0/ConquerorEngine.pdb
+/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorEngine/obj/Debug/net6.0/ConquerorEngine.csproj.AssemblyReference.cache
+/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorEngine/obj/Debug/net6.0/ConquerorEngine.GeneratedMSBuildEditorConfig.editorconfig
+/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorEngine/obj/Debug/net6.0/ConquerorEngine.AssemblyInfoInputs.cache
+/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorEngine/obj/Debug/net6.0/ConquerorEngine.AssemblyInfo.cs
+/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorEngine/obj/Debug/net6.0/ConquerorEngine.csproj.CoreCompileInputs.cache
+/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorEngine/obj/Debug/net6.0/ConquerorEngine.dll
+/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorEngine/obj/Debug/net6.0/refint/ConquerorEngine.dll
+/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorEngine/obj/Debug/net6.0/ConquerorEngine.pdb
+/home/marian_susana/Documents/MATCOM/Programación/Juego de cartas/new/ConquerorEngine/obj/Debug/net6.0/ref/ConquerorEngine.dll
