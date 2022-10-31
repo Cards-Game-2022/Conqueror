@@ -46,4 +46,18 @@ justify-content: center;
     white-space: nowrap;
     background-color: transparent;
     border: 0;
-  }
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+  color: #fff;
+  text-decoration: none;
+  background-color: inherit;
+}
+
+.PagesHeaders {
+    color: black;
+    font-weight: bolder;
+    font-family: 'Unutterable', Georgia, 'Times New Roman', Times, serif;
+
+}

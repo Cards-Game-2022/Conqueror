@@ -1,0 +1,50 @@
+body{
+    background: url("images/player.jpg") rgb(31, 22, 114); 
+    background-size: cover; 
+}
+
+.card-image{
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+
+}
+.card-text{
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Elegantile', sans-serif;
+                                                  
+}
+
+.card-text:hover{
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+
+.col:hover{
+    cursor: pointer;
+
+    
+}
+
+.card {
+position: relative;
+display: flex;
+flex-direction: column;
+min-width: 0;
+word-wrap: break-word;
+background-color: #ffffff73;
+background-clip: border-box;
+border: 1px solid rgba(0, 0, 0, 0.125);
+border-radius: 20px;
+opacity:80%;
+}
+
+.card:hover{
+background-color: #ffffffa5;
+border-radius: 20px;
+opacity: 100%;
+}
+
+.card-header {
+    text-align: center;
+}

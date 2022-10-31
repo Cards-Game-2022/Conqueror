@@ -16675,6 +16675,11 @@
       "FileKind": "component"
     },
     {
+      "FilePath": "/home/marian_susana/Documents/Conqueror/ConquerorServer/Pages/SelectPlayer.cshtml",
+      "TargetPath": "Pages\\SelectPlayer.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/home/marian_susana/Documents/Conqueror/ConquerorServer/Pages/Error.cshtml",
       "TargetPath": "Pages\\Error.cshtml",
       "FileKind": "mvc"

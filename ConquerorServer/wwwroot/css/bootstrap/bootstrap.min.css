@@ -4307,18 +4307,13 @@ fieldset:disabled .btn {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #ffffff73;
+  background-color: #fff;
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 20px;
-  opacity:80%;
+  border-radius: 0.25rem;
 }
 
-.card:hover{
-  background-color: #ffffffa5;
-  border-radius: 20px;
-  opacity: 100%;
-}
+
 .card > hr {
   margin-right: 0;
   margin-left: 0;
@@ -4364,7 +4359,6 @@ fieldset:disabled .btn {
   margin-bottom: 0;
   background-color: rgba(0, 0, 0, 0.03);
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
-  text-align: center;
 }
 .card-header:first-child {
   border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
