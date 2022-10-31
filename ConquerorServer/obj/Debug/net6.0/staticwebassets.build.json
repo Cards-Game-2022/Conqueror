@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "tiQWHAlWmGa5FuxDMXRWzAG/pMlRINO/BNPyvCdvOv0=",
+  "Hash": "DtfAVuNXXjHTMqHWqIRHDvDzr8BPD/3USVVH/qIMN38=",
   "Source": "ConquerorServer",
   "BasePath": "_content/ConquerorServer",
   "Mode": "Default",
@@ -49,6 +49,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/home/marian_susana/Documents/Conqueror/ConquerorServer/obj/Debug/net6.0/scopedcss/projectbundle/ConquerorServer.bundle.scp.css"
+    },
+    {
+      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/CreateCard.css",
+      "SourceId": "ConquerorServer",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "BasePath": "_content/ConquerorServer",
+      "RelativePath": "CreateCard.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/CreateCard.css"
+    },
+    {
+      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/css/bootstrap.min.css",
+      "SourceId": "ConquerorServer",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "BasePath": "_content/ConquerorServer",
+      "RelativePath": "css/bootstrap.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/bootstrap.min.css"
     },
     {
       "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/css/bootstrap/bootstrap.min.css",
@@ -425,12 +459,12 @@
       "OriginalItemSpec": "wwwroot/images/cards.jpg"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/final.jpg",
+      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/main-menu.jpg",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
       "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
-      "RelativePath": "images/final.jpg",
+      "RelativePath": "images/main-menu.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -439,7 +473,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/images/final.jpg"
+      "OriginalItemSpec": "wwwroot/images/main-menu.jpg"
     },
     {
       "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/photo101.png",
@@ -576,6 +610,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/index.css"
+    },
+    {
+      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/pages.css",
+      "SourceId": "ConquerorServer",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "BasePath": "_content/ConquerorServer",
+      "RelativePath": "pages.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/pages.css"
     }
   ]
 }

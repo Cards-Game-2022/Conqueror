@@ -1,4 +1,24 @@
 
 body{
-    background: url("images/final.jpg") rgb(31, 22, 114); 
+    background: url("images/main-menu.jpg") rgb(31, 22, 114); 
+}
+
+
+.GameTitle{
+    color: white;
+    font-size: 100px;
+    font-weight: lighter;
+    font-family: 'Barbarian', sans-serif;
+}
+
+
+.MainMenu-elements {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+    justify-content: center;
+    font-family: 'Unutterable', Georgia, 'Times New Roman', Times, serif;
+    color: black;
+    font-size: 22px;
+    font-weight: bolder;
+    background-color: #ddd7f166;
 }

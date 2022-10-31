@@ -230,6 +230,39 @@
         }
       },
       {
+        "HashCode": 1171435440,
+        "Kind": "Components.Component",
+        "Name": "ConquerorServer.Shared.NavMenu",
+        "AssemblyName": "ConquerorServer",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "NavMenu"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ConquerorServer.Shared.NavMenu"
+        }
+      },
+      {
+        "HashCode": -774891984,
+        "Kind": "Components.Component",
+        "Name": "ConquerorServer.Shared.NavMenu",
+        "AssemblyName": "ConquerorServer",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ConquerorServer.Shared.NavMenu"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ConquerorServer.Shared.NavMenu",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": -2084855321,
         "Kind": "Components.Component",
         "Name": "ConquerorServer.Shared.MainLayout",
@@ -322,39 +355,6 @@
           "Runtime.Name": "Components.None",
           "Common.TypeName": "ConquerorServer.Shared.MainLayout.Body",
           "Components.IsSpecialKind": "Components.ChildContent",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 1171435440,
-        "Kind": "Components.Component",
-        "Name": "ConquerorServer.Shared.NavMenu",
-        "AssemblyName": "ConquerorServer",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "NavMenu"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ConquerorServer.Shared.NavMenu"
-        }
-      },
-      {
-        "HashCode": -774891984,
-        "Kind": "Components.Component",
-        "Name": "ConquerorServer.Shared.NavMenu",
-        "AssemblyName": "ConquerorServer",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "ConquerorServer.Shared.NavMenu"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ConquerorServer.Shared.NavMenu",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -16677,6 +16677,11 @@
     {
       "FilePath": "/home/marian_susana/Documents/Conqueror/ConquerorServer/Pages/Error.cshtml",
       "TargetPath": "Pages\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/marian_susana/Documents/Conqueror/ConquerorServer/Pages/CreateCard.cshtml",
+      "TargetPath": "Pages\\CreateCard.cshtml",
       "FileKind": "mvc"
     },
     {
