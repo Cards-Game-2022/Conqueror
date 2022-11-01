@@ -2,9 +2,9 @@ using System.Collections.Generic;
 
 namespace Conqueror.Logic;
 
-    static class Deck {
+    public class Deck {
 
-        static List<Card> deck;
+        public static List<Card> deck;
 
         static public List<Card> Shuffle (List<Card> deck) {
 

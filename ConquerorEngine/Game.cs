@@ -8,8 +8,19 @@ public class Game {
 
     public void NewGame() {
 
-        Player player1 = new Player("Andres", 1);
-        Player player2 = new Player("Manolo", 2);
+
+
+        //Database.LoadCards();
+        //Añadir 5 cartas a la mano del jugador cuando se crea
+        List<int> hand1 = new();
+        List<int> hand2 = new();
+        for(int i = 0; i<5; i++)
+        {
+            hand1.Add(Deck.Draw(Deck.deck).Id);
+            hand2.Add(Deck.Draw(Deck.deck).Id);
+        }
+        Player player1 = new Player("Andres", 1, hand1);
+        Player player2 = new Player("Manolo", 2, hand2);
 
     }
 
@@ -21,6 +32,15 @@ public class Game {
         Card card = new Card(name, cost, newId, 1, text, effect, urlPhoto);
         Database.StoreCard(card);
     }
+
+      public void CreateCard(string name, int cost, int newId, string text, string effect, string urlPhoto) {
+
+        //GetLastCardId
+        //int newId = LastCardId + 1
+        Card card = new Card(name, cost, newId, 1, text, effect, urlPhoto);
+        Database.StoreCard(card);
+    }
+
 
     public void UpdateCard(int id, Card card) {
 

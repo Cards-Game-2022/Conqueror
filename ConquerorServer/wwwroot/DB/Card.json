@@ -1,18 +1,11 @@
 [
   {
-    "Name": "Malanga",
-    "Cost": 2,
-    "Text": "hola soy malanga te manlangueo",
-    "effect": "lifeP1 = 30",
+    "Name": null,
+    "Cost": 0,
+    "Rarity": 0,
+    "Text": null,
+    "Effect": null,
     "Id": 0,
-    "UrlPhoto": "1.png"
-  },
-  {
-    "Name": "Malanga",
-    "Cost": 2,
-    "Text": "hola soy malanga te manlangueo",
-    "effect": "lifeP1 = 30",
-    "Id": 0,
-    "UrlPhoto": "1.png"
+    "UrlPhoto": null
   }
 ]

@@ -52,7 +52,7 @@
 
         <div class="mb-3 d-flex justify-content-around">
             <button class="btn btn-primary">Atrás</button>
-            <button class="btn btn-primary" onclick="myFunction()">Aceptar</button>
+            <button class="btn btn-primary" @onclick="Handler">Aceptar</button>
         </div>
     </div>
 
@@ -68,9 +68,10 @@
 @code{
 
   
-    private string name="";
+    private string name = "";
     private void Handler(){
-        
+    name=" a ";
+
     }
 
     private async void CreateCardBg() {

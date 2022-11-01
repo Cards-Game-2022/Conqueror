@@ -88,7 +88,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Atras</button>
-                    <button type="button" class="btn btn-primary" onclick="Hand.RemoveCard(2)">Lanzar</button>
+                    <button type="button" class="btn btn-primary" onclick="InvoqueCard()">Lanzar</button>
                 </div>
             </div>
         </div>
@@ -96,3 +96,10 @@
 
 </body>
 
+@code{
+
+
+void InvoqueCard(){
+    Hand.RemoveCard(2);
+}
+}

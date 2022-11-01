@@ -4,7 +4,7 @@ using System.Text.Json;
 using System.Collections.Generic;
 namespace Conqueror.Logic;
 
-static class Database {
+static public class Database {
     static public List<Card> Cards {
         get; private set;
     }
@@ -14,9 +14,16 @@ static class Database {
 
     
     static public void LoadCards() {
+
+        Console.WriteLine("Loading Cards");
         if (File.Exists(Config.pathCard)) {
+
+            Console.WriteLine("Inside if");
             string jsonString = File.ReadAllText(Config.pathCard);
+
+            Console.WriteLine("json Object created");
             List<Card> card = JsonSerializer.Deserialize<List<Card>>(jsonString);
+            Console.WriteLine("Dennis puto");
         }
     }
 
@@ -29,7 +36,6 @@ static class Database {
 
     static public void StoreCard(Card card) {
         List<Card>cards = new List<Card>();
-        cards.Add(card);
         cards.Add(card);
 
         var options = new JsonSerializerOptions { WriteIndented = true };
