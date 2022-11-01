@@ -8,6 +8,8 @@ public class Game {
 
     public void NewGame() {
 
+        Player player1 = new Player("Andres", 1);
+        Player player2 = new Player("Manolo", 2);
 
     }
 
