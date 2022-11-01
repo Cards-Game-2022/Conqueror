@@ -14,8 +14,8 @@ static class Database {
 
     
     static public void LoadCards() {
-        if (File.Exists(Config.pahtCard)) {
-            string jsonString = File.ReadAllText(Config.pahtCard);
+        if (File.Exists(Config.pathCard)) {
+            string jsonString = File.ReadAllText(Config.pathCard);
             List<Card> card = JsonSerializer.Deserialize<List<Card>>(jsonString);
         }
     }
@@ -35,7 +35,7 @@ static class Database {
         var options = new JsonSerializerOptions { WriteIndented = true };
         string jsonString = JsonSerializer.Serialize(cards, options);
 
-        File.WriteAllText(Config.pahtCard, jsonString); 
+        File.WriteAllText(Config.pathCard, jsonString); 
     }
 
     static public void StoreCharacter(Character character) {

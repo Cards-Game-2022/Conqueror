@@ -1,24 +1,4 @@
-@page "/gameenvironment"
-<!--New code -->
-
-<head>
-    <title>Conqueror ✶</title>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0 , maximum-scale=1.0 , minimum-scale=1.0 , user-scalable=no">
-    <link rel="stylesheet" href="complements/bootstrap/css/bootstrap.min.css">
-    <link href="GameEnvironment.css" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link href="https://fonts.cdnfonts.com/css/cathedral" rel="stylesheet">
-                                
-	<!--
-    <script src="complements/jquery.js"></script>
-    <script src="complements/popper.js"></script>
-    <script src="complements/bootstrap/js/bootstrap.bundle.js"></script>
-	-->
-   
-</head>
-
+@page "/gameEnvironment"
 
     
 <body class="container text-light">
@@ -108,10 +88,11 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Atras</button>
-                    <button type="button" class="btn btn-primary">Lanzar</button>
+                    <button type="button" class="btn btn-primary" onclick="Hand.RemoveCard(2)">Lanzar</button>
                 </div>
             </div>
         </div>
     </div>
 
 </body>
+

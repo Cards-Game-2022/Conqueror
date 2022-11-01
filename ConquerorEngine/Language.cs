@@ -7,16 +7,16 @@ class Language {
 
     }
     
-    // valida si el efecto esta escrito correctamente
-    public void IsValid(string efect) {
+    // valida si el effecto esta escrito correctamente
+    public void IsValid(string effect) {
 
     }
 
-    // interpreta el efecto y devuelve el nuevo estado del tablero
-    public void Interpreter(string efect, Player p1, Player p2, bool isP1) {
-        if (efect.Contains("=")) {
+    // interpreta el effecto y devuelve el nuevo estado del tablero
+    public void Interpreter(string effect, Player p1, Player p2, bool isP1) {
+        if (effect.Contains("=")) {
             char[] tokenSimple = "=".ToCharArray();
-            string[] tokens = efect.Split(tokenSimple, System.StringSplitOptions.RemoveEmptyEntries);
+            string[] tokens = effect.Split(tokenSimple, System.StringSplitOptions.RemoveEmptyEntries);
 
             if(tokens.Length == 2) {
                 bool mk = false;

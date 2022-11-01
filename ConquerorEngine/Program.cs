@@ -16,7 +16,7 @@ Player p1 = new Player(c1.Name, c1.UrlPhoto, c1.Id);
 
 Player p2 = new Player(c2.Name, c2.UrlPhoto, c2.Id);
 
-game.ActivateEfect("EnemyLife=1+5", p1, p2, true);
+game.Activateeffect("EnemyLife=1+5", p1, p2, true);
 
 Console.WriteLine(p2.Life);
 */

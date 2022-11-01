@@ -11,7 +11,7 @@ Jugador:
 - Tiene puntos.
 
 Carta:
-- Tiene un efecto que se interpretará a C#.
+- Tiene un effecto que se interpretará a C#.
 
 Parámetros para el lenguaje:
 - Puntos de vida de cada jugador.
@@ -22,4 +22,4 @@ Parámetros para el lenguaje:
 Llamadas desde el frontend al backend sin el lenguaje:
 - Mostrar jugadores.
 - Selecionar jugadores y empezar el juego.
-- Activar efecto de carta y delvolver nuevo estado del juego.
+- Activar effecto de carta y delvolver nuevo estado del juego.

@@ -1,6 +1,6 @@
 
-body{
-    background: url("images/main-menu.jpg") rgb(31, 22, 114); 
+.main-menu-background{
+    background-image: url("images/main-menu.jpg") rgb(31, 22, 114); 
 }
 
 

@@ -1,7 +1,4 @@
-body{
-    background: url("images/cards.jpg") rgb(31, 22, 114); 
-    background-size: cover;
-}
+
 input[type="file"]::file-selector-button {
     border: 1px solid #6c5ce7;
     margin-left: 55px;

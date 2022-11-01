@@ -1,35 +1,6 @@
 @page "/createCard"
-@using Microsoft.AspNetCore.Components.Web
-@namespace ConquerorServer.Pages
-@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@inject IJSRuntime JS;
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="font/bootstrap-icons.css">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link href="https://fonts.cdnfonts.com/css/unutterable" rel="stylesheet">
-    <link href="https://fonts.cdnfonts.com/css/cathedral" rel="stylesheet">
-
-    <link rel="stylesheet" href="pages.css">
-    <link rel="stylesheet" href="CreateCard.css">
-                              
-
-    <!--
-    <script src="complements/jquery.js"></script>
-    <script src="complements/popper.js"></script>
-    <script src="complements/bootstrap/js/bootstrap.bundle.js"></script>
-    -->
-    <title>Conqueror ✶</title>
-</head>
-
-<body class="container">
 
     <h1 class="text-center mt-3 PagesHeaders" id = "Create-Card-Header">Crear Carta</h1>
     <form action="" autocomplete="off" class=" mt-5 Create-Cards-Form">
@@ -61,7 +32,7 @@
     <div class="text-center mt-5">
 
         <div>
-            <h3>Forma de usar el mini-lenguaje para crear efectos</h3>
+            <h3>Forma de usar el mini-lenguaje para crear effectos</h3>
             <p>No existen variables excepto las definidas en el lenguaje, las cuales detallaremos ahora.</p>
             <code class="bg-black p-3">LifeP1,
                 LifeP2,
@@ -81,8 +52,28 @@
 
         <div class="mb-3 d-flex justify-content-around">
             <button class="btn btn-primary">Atrás</button>
-            <button class="btn btn-primary">Aceptar</button>
+            <button class="btn btn-primary" onclick="myFunction()">Aceptar</button>
         </div>
     </div>
-</body>
-</html>
+
+    @if(name!= "") {
+        <p>PutoDavid</p>
+    }
+
+
+@{
+    CreateCardBg();
+}
+
+@code{
+
+  
+    private string name="";
+    private void Handler(){
+        
+    }
+
+    private async void CreateCardBg() {
+        await JS.InvokeVoidAsync("CreateCardBG");
+    }
+}

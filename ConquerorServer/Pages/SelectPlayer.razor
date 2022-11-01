@@ -1,0 +1,47 @@
+@page "/selectPlayer"
+@inject IJSRuntime JS;
+
+
+    <h1 class="text-center mt-3 PagesHeaders" id="SPHeader">Seleccionar jugador P1</h1>
+
+    <div id="top-musical" class="mt-5 row row-cols-2 row-cols-sm-2 row-cols-md-4">
+        <div class="col cursor">
+            <div class="card">
+                <img class ="card-image" src="images/photo101.png" alt="">
+
+                <div class="card-body">
+                    <p class="card-text">La Moringa</p> 
+                </div>
+            </div>
+        </div>
+        <div class="col cursor">
+            <div class="card">
+                <img class ="card-image" src="images/photo102.png" alt="">
+
+                <div class="card-body">
+                    <p class="card-text">El rotador</p> 
+                </div>
+            </div>
+        </div>
+        <div class="col cursor">
+            <div class="card">
+                <img class ="card-image" src="images/photo104.png" alt="">
+
+                <div class="card-body">
+                    <p class="card-text">El que mira</p> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+@{
+    SelectPlayerBG();
+}
+
+@code{
+
+
+    private async void SelectPlayerBG() {
+        await JS.InvokeVoidAsync("SelectPlayerBG");
+    }
+}

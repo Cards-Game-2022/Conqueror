@@ -2,22 +2,28 @@ using System.Collections.Generic;
 
 namespace Conqueror.Logic;
 
-class Hand {
+public class Hand {
     
-        public List<Card> hand;
+        //Almacena los ids de las cartas
+        public static List<int> hand;
     
     
         public Hand() {
-            hand = new List<Card>();
+            hand = new List<int>();
         }
     
-        public void AddCard(List<Card> deck) {
-            hand.Add(Deck.Draw(deck));
+        public static void AddCard(List<Card> deck) {
+            
+            hand.Add(Deck.Draw(deck).Id);
             
         }
     
-        public void RemoveCard(int id) {
-           // hand.Remove(hand.id);
+        public static void RemoveCard(int id) {
+            
+            try{
+            hand.Remove(id);
+            }
+            catch{}
         }
     
     
