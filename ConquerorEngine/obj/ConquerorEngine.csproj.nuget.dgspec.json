@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/marian_susana/Documents/Conqueror/ConquerorEngine/ConquerorEngine.csproj": {}
+    "/home/david/David/Programación/CC/Programacion/Segundo Proyecto/ConquerorEngine/ConquerorEngine.csproj": {}
   },
   "projects": {
-    "/home/marian_susana/Documents/Conqueror/ConquerorEngine/ConquerorEngine.csproj": {
+    "/home/david/David/Programación/CC/Programacion/Segundo Proyecto/ConquerorEngine/ConquerorEngine.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/marian_susana/Documents/Conqueror/ConquerorEngine/ConquerorEngine.csproj",
+        "projectUniqueName": "/home/david/David/Programación/CC/Programacion/Segundo Proyecto/ConquerorEngine/ConquerorEngine.csproj",
         "projectName": "ConquerorEngine",
-        "projectPath": "/home/marian_susana/Documents/Conqueror/ConquerorEngine/ConquerorEngine.csproj",
-        "packagesPath": "/home/marian_susana/.nuget/packages/",
-        "outputPath": "/home/marian_susana/Documents/Conqueror/ConquerorEngine/obj/",
+        "projectPath": "/home/david/David/Programación/CC/Programacion/Segundo Proyecto/ConquerorEngine/ConquerorEngine.csproj",
+        "packagesPath": "/home/david/.nuget/packages/",
+        "outputPath": "/home/david/David/Programación/CC/Programacion/Segundo Proyecto/ConquerorEngine/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/marian_susana/.nuget/NuGet/NuGet.Config"
+          "/home/david/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -43,8 +43,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -53,7 +52,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.402/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/david/.dotnet-6.0/sdk/6.0.100/RuntimeIdentifierGraph.json"
         }
       }
     }

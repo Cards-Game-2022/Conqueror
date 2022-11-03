@@ -1,31 +1,39 @@
 using System.Collections.Generic;
 namespace Conqueror.Logic;
 
-public class Character {
+class Character {
     private string name; 
     private string urlPhoto;
     private int id;
 
     public string Name {
-        get; private set;
+        get { return name; }
+        set { name = value; }
     }
     public string UrlPhoto {
-         get; private set;
+        get { return urlPhoto; }
+        set { urlPhoto = value; }
     }
     public int Id {
-        get; private set;
+        get { return id; }
+        set { id = value; }
     }
 
-    public Character(string name, int id) {
+    public Character() {
+
+    }
+
+    public Character(string name) {
         this.name = name; 
-        this.id = id;
-        
     }
 
-    public Character(string name, int id, string url) {
+    public Character(string name, string url) {
         this.name = name;
-        this.id = id;
         this.urlPhoto = url; 
-        
+    }
+    public Character(string name, string url, int id) {
+        this.name = name;
+        this.urlPhoto = url; 
+        this.id = id;
     }
 }

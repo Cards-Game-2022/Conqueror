@@ -1,137 +1,78 @@
+using Microsoft.VisualBasic.CompilerServices;
+using System.Collections.Generic;
 namespace Conqueror.Logic;
 
-public class Card {
-    private string name;
-    private int cost;    
+class Card {
+    // no se pq pero las propiedades para el json tienen que ser de esta forma
+    private string name; 
+    private string urlPhoto;
+    private int id;
     private int rarity;
+    private int charms;
     private string text;
     private string effect;
-    private int id;
-    private string urlPhoto;
 
     public string Name {
-        get; private set;
-    }
-    public int Cost {
-        get; private set;
-    }
-    public int Rarity{
-        get; private set;
-
-    }
-    public string Text {
-        get; private set;
-    }
-    public string Effect {
-        get; private set;
-    }
-    public int Id {
-        get; private set;
+        get { return name; }
+        set { name = value; }
     }
     public string UrlPhoto {
-        get; private set;
+        get { return urlPhoto; }
+        set { urlPhoto = value; }
+    }
+    public int Id {
+        get { return id; }
+        set { id = value; }
+    }
+    public int Rarity {
+        get { return rarity; }
+        set { rarity = value; }
+    }
+    public int Charms {
+        get { return charms; }
+        set { charms = value; }
+    }
+    public string Text {
+        get { return text; }
+        set { text = value; }
+    }
+    public string Effect {
+        get { return effect; }
+        set { effect = value; }
     }
 
-
-        /// <summary>
-        ///if rarity is 1, the card is legendary
-        /// if rarity is 2, the card is rare
-        /// if rarity is 3, the card is special
-        /// if rarity is 4, the card is common
-        /// if rarity is 5, the card is basic
-        /// </summary>
- 
-
-    public Card(){}
-    public Card(string name, int cost, int id, int rarity, string effect) {
-        
-        this.name = name;
-        this.id = id;
-        this.effect = effect;
-
-        if(cost>=0)
-        this.cost = cost;
-        else
-        throw new Exception();
-
-        if(rarity>0)
-        this.rarity = rarity;
-        else
-        throw new Exception();
-
+    public Card() {
 
     }
 
-    public Card(string name, int cost, int id, int rarity, string effect, string text) {
-        
+    public Card(string name) {
+        this.name = name; 
+    }
+
+    public Card(string name, string url) {
         this.name = name;
+        this.urlPhoto = url; 
+    }
+    public Card(string name, string url, int id, int rarity, int charms, string text, string effect) {
+        this.name = name;
+        this.urlPhoto = url; 
         this.id = id;
-        this.effect = effect;
         this.text = text;
+        this.effect = effect;
 
-        
-        if(cost>=0)
-        this.cost = cost;
-        else
-        throw new Exception();
+        if (charms >= 0) {
+            this.charms = charms;
+        }
+        else {
+            Utils.Error("Valor incorrecto para charms debe ser no negativo");
+        }
 
-        if(rarity>0)
-        this.rarity = rarity;
-        else
-        throw new Exception();
-
-
-
+        if (rarity >= 0) {
+            this.rarity = rarity;
+        }
+        else {
+            Utils.Error("Valor incorrecto para rarity debe ser no negativo");
+        }
     }
     
-    public Card(string urlPhoto, string name, int cost, int id, int rarity, string effect) {
-        
-        this.urlPhoto = urlPhoto;
-        this.name = name;
-        this.id = id;
-        this.effect = effect;
-
-        if(cost>=0)
-        this.cost = cost;
-        else
-        throw new Exception();
-
-        if(rarity>0)
-        this.rarity = rarity;
-        else
-        throw new Exception();
-
-
-
-    }
-    public Card(string name, int cost, int id, int rarity, string effect, string text, string urlPhoto) {
-        
-        this.name = name;
-        this.id = id;
-        this.effect = effect;
-        this.text = text;
-        this.urlPhoto = urlPhoto;
-
-
-        if(cost>=0)
-        this.cost = cost;
-        else
-        throw new Exception();
-
-        if(rarity>0)
-        this.rarity = rarity;
-        else
-        throw new Exception();
-
-
-   
-    }
-
-
-    void InvoqueCard(Card card) {
-        
-        Hand.RemoveCard(card.id);
-
-        //card.ApplyEffect;
-    }
 }

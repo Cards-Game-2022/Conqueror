@@ -1,4 +1,4 @@
-namespace ConquerorEngine;
+namespace Conqueror.Logic;
 using Microsoft.VisualBasic.CompilerServices;
 
 using System;

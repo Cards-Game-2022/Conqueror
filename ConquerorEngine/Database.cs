@@ -4,51 +4,91 @@ using System.Text.Json;
 using System.Collections.Generic;
 namespace Conqueror.Logic;
 
-static public class Database {
-    static public List<Card> Cards {
+class Database {
+    public List<Card> Cards {
         get; private set;
     }
-    static public List<Character> Characters {
+    public List<Character> Characters {
         get; private set;
     }
 
     
-    static public List<Card> LoadCards() {
+    public void LoadCards() {
+        if (File.Exists(Config.pahtCard)) {
+            string jsonString = File.ReadAllText(Config.pahtCard);
 
-        
-        if (File.Exists(Config.pathCard)) {            
-            string jsonString = File.ReadAllText(Config.pathCard);
+            if (jsonString == "") {
+                return;
+            }
+
             Cards = JsonSerializer.Deserialize<List<Card>>(jsonString);
-
-            Console.WriteLine(Cards[0].Name);            
         }
-        return Cards;
     }
 
-    static public void LoadCharacters() {
+    public void LoadCharacters() {
         if (File.Exists(Config.pathCharacters)) {
             string jsonString = File.ReadAllText(Config.pathCharacters);
+
+            if (jsonString == "") {
+                return;
+            }
+
             Characters = JsonSerializer.Deserialize<List<Character>>(jsonString);
         }
     }
 
-    static public void StoreCard(Card card) {
-        //List<Card>cards = new List<Card>();
+    public void StoreCard(Card card) {
+        // cargo los datos que tengo y le agrego el nuevo
+        if (Cards == null) {
+            Cards = new List<Card>();
+            
+            LoadCards();
+        }
+        
         Cards.Add(card);
 
         var options = new JsonSerializerOptions { WriteIndented = true };
         string jsonString = JsonSerializer.Serialize(Cards, options);
 
-        File.WriteAllText(Config.pathCard, jsonString); 
+        File.WriteAllText(Config.pahtCard, jsonString); 
     }
 
-    static public void StoreCharacter(Character character) {
-        List<Character> characters = new List<Character>();
-        characters.Add(character);
-        characters.Add(character);
+    public void StoreCharacter(Character character) {
+        if (Characters == null) {
+            Characters = new List<Character>();
+
+            LoadCharacters();
+        }
+        
+        Characters.Add(character);
 
         var options = new JsonSerializerOptions { WriteIndented = true };
-        string jsonString = JsonSerializer.Serialize(characters, options);
+        string jsonString = JsonSerializer.Serialize(Characters, options);
         File.WriteAllText(Config.pathCharacters, jsonString); 
+    }
+
+    public Id GetLastId() {
+        // abre el txt y revisa si lo que contiene es un numero si no devuelve 0
+        Id id = new Id(0, 0);
+
+        if (File.Exists(Config.pathCharacters)) {
+            string jsonString = File.ReadAllText(Config.pathLastID);
+
+            if (jsonString == "") {
+                return id;
+            }
+
+            id = JsonSerializer.Deserialize<Id>(jsonString);
+        }
+
+        return id;
+    }
+
+    public void UpdateId(int card, int character) {
+        Id id = new Id(card, character);
+
+        var options = new JsonSerializerOptions { WriteIndented = true };
+        string jsonString = JsonSerializer.Serialize(id, options);
+        File.WriteAllText(Config.pathLastID, jsonString); 
     }
 }
