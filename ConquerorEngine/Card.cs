@@ -2,7 +2,7 @@ using Microsoft.VisualBasic.CompilerServices;
 using System.Collections.Generic;
 namespace Conqueror.Logic;
 
-class Card {
+public class Card {
     // no se pq pero las propiedades para el json tienen que ser de esta forma
     private string name; 
     private string urlPhoto;
