@@ -47,5 +47,15 @@ namespace Conqueror.Logic;
             return deck[0];
         
         }
+
+        public Card Draw(List<Card> deck, Card card) {
+            
+            //Not all code paths return a value exception. Fix.
+            
+           // if(deck.Contains(card))
+            return card;
+           // else
+           // Utils.Error("Esa carta no aparece en el deck");
+        }
        
     }

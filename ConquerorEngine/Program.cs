@@ -3,10 +3,7 @@ using Conqueror.Logic;
 
 Game game = new Game();
 
-//game.CreateCharacter("Helbrand", "1.png");
-game.CreateCard("Helbrand", "1.png");
-//game.GetCharacter(1); 
-//game.GetCard(1);
+
 
 Character c1 = game.GetCharacter(0);
 

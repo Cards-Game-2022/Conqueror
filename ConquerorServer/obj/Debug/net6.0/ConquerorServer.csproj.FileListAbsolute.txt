@@ -88,3 +88,6 @@
 /home/marian_susana/Documents/Conqueror/ConquerorServer/obj/Debug/net6.0/ConquerorServer.csproj.CopyComplete
 /home/marian_susana/Documents/Conqueror/ConquerorServer/obj/Debug/net6.0/ConquerorServer.genruntimeconfig.cache
 /home/marian_susana/Documents/Conqueror/ConquerorServer/obj/Debug/net6.0/ref/ConquerorServer.dll
+/home/marian_susana/Documents/Conqueror/ConquerorServer/bin/Debug/net6.0/ConquerorEngine.deps.json
+/home/marian_susana/Documents/Conqueror/ConquerorServer/bin/Debug/net6.0/ConquerorEngine.runtimeconfig.json
+/home/marian_susana/Documents/Conqueror/ConquerorServer/bin/Debug/net6.0/ConquerorEngine

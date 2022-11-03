@@ -2,7 +2,7 @@ using System;
 using Conqueror.Logic.Interpreter;
 namespace Conqueror.Logic;
 
-class Game {
+public class Game {
     Language lg;
     Database db;
     public Game() {
@@ -20,6 +20,7 @@ class Game {
         Id id = db.GetLastId();
 
         Card card = new Card(name, text, id.Card + 1, 5, 4, "s", "1dpdadadadadadadad");
+        
         db.StoreCard(card);
 
         db.UpdateId(id.Card + 1, id.Character);

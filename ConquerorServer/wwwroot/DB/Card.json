@@ -1,11 +1,38 @@
 [
   {
     "Name": null,
-    "Cost": 0,
-    "Rarity": 0,
-    "Text": null,
-    "Effect": null,
+    "UrlPhoto": null,
     "Id": 0,
-    "UrlPhoto": null
+    "Rarity": 0,
+    "Charms": 0,
+    "Text": null,
+    "Effect": null
+  },
+  {
+    "Name": "Helbrand",
+    "UrlPhoto": "1.png",
+    "Id": 7,
+    "Rarity": 5,
+    "Charms": 4,
+    "Text": "s",
+    "Effect": "1dpdadadadadadadad"
+  },
+  {
+    "Name": "Helbrand",
+    "UrlPhoto": "1.png",
+    "Id": 8,
+    "Rarity": 5,
+    "Charms": 4,
+    "Text": "s",
+    "Effect": "1dpdadadadadadadad"
+  },
+  {
+    "Name": "Helbrand",
+    "UrlPhoto": "1.png",
+    "Id": 9,
+    "Rarity": 5,
+    "Charms": 4,
+    "Text": "s",
+    "Effect": "1dpdadadadadadadad"
   }
 ]
