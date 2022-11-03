@@ -4,6 +4,14 @@ namespace Conqueror.Logic;
 
     public class Deck {
 
+
+        public List<Card> deck;
+
+         public Deck() {
+            deck = new List<Card>();
+        }        
+        
+       
         public List<Card> Shuffle (List<Card> deck) {
 
             
@@ -58,4 +66,5 @@ namespace Conqueror.Logic;
            // Utils.Error("Esa carta no aparece en el deck");
         }
        
+        
     }

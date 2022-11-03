@@ -3,7 +3,7 @@
 
 
     <h1 class="text-center mt-3 PagesHeaders" id = "Create-Card-Header">Crear Carta</h1>
-    <form action="" autocomplete="off" class=" mt-5 Create-Cards-Form">
+    <form action="" autocomplete="off" class=" mt-5 Create-Cards-Form" method = "post">
 
         <div class="form-floating mb-3 Floating-Form">
             <input type="text" class="form-control rounded-4 Form-Elements" id="floatingInput" placeholder="Nombre de la Carta">
@@ -61,8 +61,11 @@
     }
 
 
+
 @{
     CreateCardBg();
+    
+    
 }
 
 @code{
@@ -77,4 +80,6 @@
     private async void CreateCardBg() {
         await JS.InvokeVoidAsync("CreateCardBG");
     }
+
+    
 }

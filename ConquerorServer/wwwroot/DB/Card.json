@@ -1,38 +1,29 @@
 [
   {
-    "Name": null,
-    "UrlPhoto": null,
-    "Id": 0,
-    "Rarity": 0,
-    "Charms": 0,
-    "Text": null,
-    "Effect": null
-  },
-  {
     "Name": "Helbrand",
     "UrlPhoto": "1.png",
-    "Id": 7,
-    "Rarity": 5,
-    "Charms": 4,
-    "Text": "s",
-    "Effect": "1dpdadadadadadadad"
+    "Id": 1,
+    "Rarity": 1,
+    "Charms": 1,
+    "Text": "Una carta de prueba",
+    "Effect": "Te malanguea"
   },
   {
-    "Name": "Helbrand",
+    "Name": "Prueba 2",
     "UrlPhoto": "1.png",
-    "Id": 8,
-    "Rarity": 5,
-    "Charms": 4,
-    "Text": "s",
-    "Effect": "1dpdadadadadadadad"
+    "Id": 2,
+    "Rarity": 2,
+    "Charms": 1,
+    "Text": "Una carta de prueba",
+    "Effect": "Te malanguea"
   },
   {
-    "Name": "Helbrand",
+    "Name": "Prueba 4",
     "UrlPhoto": "1.png",
-    "Id": 9,
-    "Rarity": 5,
-    "Charms": 4,
-    "Text": "s",
-    "Effect": "1dpdadadadadadadad"
+    "Id": 3,
+    "Rarity": 4,
+    "Charms": 1,
+    "Text": "Una carta de prueba",
+    "Effect": "Te malanguea"
   }
 ]

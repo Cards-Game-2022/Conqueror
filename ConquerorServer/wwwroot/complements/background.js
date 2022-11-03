@@ -22,5 +22,6 @@ function IndexBg() {
   const body = document.querySelector("body")
   body.style.background = "url(../images/main-menu.jpg)";
   body.style.backgroundSize = "cover";
+  //console.log("puto");
 
 }
