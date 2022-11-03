@@ -42,6 +42,7 @@ public class Card {
         /// </summary>
  
 
+    public Card(){}
     public Card(string name, int cost, int id, int rarity, string effect) {
         
         this.name = name;

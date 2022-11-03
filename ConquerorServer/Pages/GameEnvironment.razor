@@ -88,7 +88,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Atras</button>
-                    <button type="button" class="btn btn-primary" onclick="InvoqueCard()">Lanzar</button>
+                    <button type="button" class="btn btn-primary" @onclick="InvoqueCard">Lanzar</button>
                 </div>
             </div>
         </div>
@@ -98,8 +98,10 @@
 
 @code{
 
+    public void InvoqueCard(){
+       // Game.hand1.RemoveCard(2);
+        Console.WriteLine("Removed");
 
-void InvoqueCard(){
-    Hand.RemoveCard(2);
-}
+       
+    }
 }

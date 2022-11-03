@@ -13,18 +13,16 @@ static public class Database {
     }
 
     
-    static public void LoadCards() {
+    static public List<Card> LoadCards() {
 
-        Console.WriteLine("Loading Cards");
-        if (File.Exists(Config.pathCard)) {
-
-            Console.WriteLine("Inside if");
+        
+        if (File.Exists(Config.pathCard)) {            
             string jsonString = File.ReadAllText(Config.pathCard);
+            Cards = JsonSerializer.Deserialize<List<Card>>(jsonString);
 
-            Console.WriteLine("json Object created");
-            List<Card> card = JsonSerializer.Deserialize<List<Card>>(jsonString);
-            Console.WriteLine("Dennis puto");
+            Console.WriteLine(Cards[0].Name);            
         }
+        return Cards;
     }
 
     static public void LoadCharacters() {
@@ -35,11 +33,11 @@ static public class Database {
     }
 
     static public void StoreCard(Card card) {
-        List<Card>cards = new List<Card>();
-        cards.Add(card);
+        //List<Card>cards = new List<Card>();
+        Cards.Add(card);
 
         var options = new JsonSerializerOptions { WriteIndented = true };
-        string jsonString = JsonSerializer.Serialize(cards, options);
+        string jsonString = JsonSerializer.Serialize(Cards, options);
 
         File.WriteAllText(Config.pathCard, jsonString); 
     }

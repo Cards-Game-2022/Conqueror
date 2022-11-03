@@ -24,7 +24,7 @@ public class Game {
 
     }
 
-    public void CreateCard(string name, int cost, string text, string effect, string urlPhoto) {
+    public void CreateCard(string name, int cost, int id, string text, string effect, string urlPhoto) {
 
         //GetLastCardId
         //int newId = LastCardId + 1
@@ -33,13 +33,7 @@ public class Game {
         Database.StoreCard(card);
     }
 
-      public void CreateCard(string name, int cost, int newId, string text, string effect, string urlPhoto) {
 
-        //GetLastCardId
-        //int newId = LastCardId + 1
-        Card card = new Card(name, cost, newId, 1, text, effect, urlPhoto);
-        Database.StoreCard(card);
-    }
 
 
     public void UpdateCard(int id, Card card) {
@@ -59,7 +53,7 @@ public class Game {
     } 
 
     public void GetCard(int id) {
-
+        Database.LoadCards();
     }
 
     public void ActivateEffect(string effect, Player p1, Player p2, bool isP1) {

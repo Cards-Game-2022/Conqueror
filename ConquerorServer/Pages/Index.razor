@@ -48,9 +48,9 @@
         game.CreateCard("Tacocat", 1, 2, "Soy un palindromo", "Ataque-5", "../ConquerorServer/wwwroot/images/photo104.png");
         game.CreateCard("Zombie", 3, 1, "Revivo siempre", "Ataque-6", "../ConquerorServer/wwwroot/images/photo104.png");
         Console.WriteLine("Last Card Created");
+
+        game.GetCard(1);
         
-        Database.LoadCards();
-        Console.WriteLine("Cards Loaded");
 
         game.NewGame();
 

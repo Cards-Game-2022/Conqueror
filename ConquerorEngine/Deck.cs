@@ -4,7 +4,7 @@ namespace Conqueror.Logic;
 
     public class Deck {
 
-        public static List<Card> deck;
+        public static List<Card> deck = Database.LoadCards();
 
         static public List<Card> Shuffle (List<Card> deck) {
 
