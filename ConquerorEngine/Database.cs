@@ -91,4 +91,29 @@ class Database {
         string jsonString = JsonSerializer.Serialize(id, options);
         File.WriteAllText(Config.pathLastID, jsonString); 
     }
+
+    public Character GetCharacter(int id) {
+        Character ch = null;
+
+        foreach (var item in Characters)
+        {
+            if (id == item.Id) {
+                ch = item;
+            }
+        }
+
+        return ch;
+    }
+    public Card GetCard(int id) {
+        Card cd = null;
+
+        foreach (var item in Cards)
+        {
+            if (id == item.Id) {
+                cd = item;
+            }
+        }
+
+        return cd;
+    }
 }

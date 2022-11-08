@@ -8,61 +8,57 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ConquerorServer
 build_property.RootNamespace = ConquerorServer
-build_property.ProjectDir = /home/marian_susana/Documents/Conqueror/ConquerorServer/
+build_property.ProjectDir = /home/david/David/Programación/CC/Programacion/Segundo Proyecto/Versiones/Conqueror ultimo/Conqueror/ConquerorServer/
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /home/marian_susana/Documents/Conqueror/ConquerorServer
+build_property.MSBuildProjectDirectory = /home/david/David/Programación/CC/Programacion/Segundo Proyecto/Versiones/Conqueror ultimo/Conqueror/ConquerorServer
 build_property._RazorSourceGeneratorDebug = 
 
-[/home/marian_susana/Documents/Conqueror/ConquerorServer/App.razor]
+[/home/david/David/Programación/CC/Programacion/Segundo Proyecto/Versiones/Conqueror ultimo/Conqueror/ConquerorServer/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/marian_susana/Documents/Conqueror/ConquerorServer/Pages/CreateCard.razor]
+[/home/david/David/Programación/CC/Programacion/Segundo Proyecto/Versiones/Conqueror ultimo/Conqueror/ConquerorServer/Pages/CreateCard.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ3JlYXRlQ2FyZC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/marian_susana/Documents/Conqueror/ConquerorServer/Pages/FetchData.razor]
+[/home/david/David/Programación/CC/Programacion/Segundo Proyecto/Versiones/Conqueror ultimo/Conqueror/ConquerorServer/Pages/FetchData.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRmV0Y2hEYXRhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/marian_susana/Documents/Conqueror/ConquerorServer/Pages/GameEnvironment.razor]
+[/home/david/David/Programación/CC/Programacion/Segundo Proyecto/Versiones/Conqueror ultimo/Conqueror/ConquerorServer/Pages/GameEnvironment.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvR2FtZUVudmlyb25tZW50LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/marian_susana/Documents/Conqueror/ConquerorServer/Pages/Index.razor]
+[/home/david/David/Programación/CC/Programacion/Segundo Proyecto/Versiones/Conqueror ultimo/Conqueror/ConquerorServer/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/marian_susana/Documents/Conqueror/ConquerorServer/Pages/SelectPlayer.razor]
+[/home/david/David/Programación/CC/Programacion/Segundo Proyecto/Versiones/Conqueror ultimo/Conqueror/ConquerorServer/Pages/SelectPlayer.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2VsZWN0UGxheWVyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/marian_susana/Documents/Conqueror/ConquerorServer/Shared/SurveyPrompt.razor]
+[/home/david/David/Programación/CC/Programacion/Segundo Proyecto/Versiones/Conqueror ultimo/Conqueror/ConquerorServer/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL1N1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/marian_susana/Documents/Conqueror/ConquerorServer/_Imports.razor]
+[/home/david/David/Programación/CC/Programacion/Segundo Proyecto/Versiones/Conqueror ultimo/Conqueror/ConquerorServer/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/marian_susana/Documents/Conqueror/ConquerorServer/Shared/MainLayout.razor]
+[/home/david/David/Programación/CC/Programacion/Segundo Proyecto/Versiones/Conqueror ultimo/Conqueror/ConquerorServer/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL01haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-i3zs6xhxze
 
-[/home/marian_susana/Documents/Conqueror/ConquerorServer/Shared/NavMenu.razor]
-build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL05hdk1lbnUucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = b-gmv8wy5l1j
-
-[/home/marian_susana/Documents/Conqueror/ConquerorServer/Pages/Error.cshtml]
+[/home/david/David/Programación/CC/Programacion/Segundo Proyecto/Versiones/Conqueror ultimo/Conqueror/ConquerorServer/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/marian_susana/Documents/Conqueror/ConquerorServer/Pages/_Host.cshtml]
+[/home/david/David/Programación/CC/Programacion/Segundo Proyecto/Versiones/Conqueror ultimo/Conqueror/ConquerorServer/Pages/_Host.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX0hvc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/marian_susana/Documents/Conqueror/ConquerorServer/Pages/_Layout.cshtml]
+[/home/david/David/Programación/CC/Programacion/Segundo Proyecto/Versiones/Conqueror ultimo/Conqueror/ConquerorServer/Pages/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX0xheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

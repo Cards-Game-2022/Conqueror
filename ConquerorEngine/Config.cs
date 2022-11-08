@@ -7,4 +7,6 @@ static class Config {
     static public string pathImageCharacters = @"Images/Characters";
     static public int basicLife = 30;
     static public string[] SystemVariables = { "MyLife", "EnemyLife" };
+
+    static public int Charms = 10;
 }

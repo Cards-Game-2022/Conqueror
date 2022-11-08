@@ -1,29 +1,29 @@
 
 
-.card-image{
+.card-player-image{
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
 
 }
-.card-text{
+.card-player-text{
     text-align: center;
     font-size: 30px;
     font-family: 'Elegantile', sans-serif;
                                                   
 }
 
-.card-text:hover{
+.card-player-text:hover{
     text-decoration: underline;
     text-decoration-thickness: 2px;
 }
 
-.col:hover{
+.col-player:hover{
     cursor: pointer;
 
     
 }
 
-.card {
+.card-player {
 position: relative;
 display: flex;
 flex-direction: column;
@@ -36,12 +36,12 @@ border-radius: 20px;
 opacity:80%;
 }
 
-.card:hover{
+.card-player:hover{
 background-color: #ffffffa5;
 border-radius: 20px;
 opacity: 100%;
 }
 
-.card-header {
+.card-player-header {
     text-align: center;
 }

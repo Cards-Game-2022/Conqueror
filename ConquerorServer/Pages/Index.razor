@@ -1,55 +1,39 @@
 ﻿@page "/"
 @inject IJSRuntime JS
 
- 
+<h1 class="text-center mt-6 GameTitle">Conqueror ✶</h1>
 
-    <h1 class="text-center mt-6 GameTitle">Conqueror ✶</h1>
+<div class="d-flex justify-content-center">
 
-    <div class="d-flex justify-content-center">
-
-        <div class="border-0 mt-5 mx-0 shadow overflow-hidden MainMenu" style="width: 280px;">
-            <ul class="list-unstyled mb-0">
-                <li><a class="dropdown-item d-flex align-items-center gap-2 MainMenu-elements" href="/selectPlayer">                        
-                        Iniciar torneo
-                    </a></li>
-                <li @onclick = "NewGame"><a class="dropdown-item d-flex align-items-center gap-2 MainMenu-elements" href="/gameEnvironment">                        
-                        Partida rápida
-                    </a></li>
-                <li><a class="dropdown-item d-flex align-items-center gap-2 MainMenu-elements" href="/createCard">                        
-                        Editar cartas
-                    </a></li>
-                <li><a class="dropdown-item d-flex align-items-center gap-2 MainMenu-elements" href="#">                 
-                        Editar personajes
-                    </a></li>
-            </ul>
-        </div>
+    <div class="border-0 mt-5 mx-0 shadow overflow-hidden MainMenu" style="width: 280px;">
+        <ul class="list-unstyled mb-0">
+            <li><a class="dropdown-item d-flex align-items-center gap-2 MainMenu-elements" href="/selectPlayer">                        
+                    Iniciar torneo
+                </a></li>
+            <li><a class="dropdown-item d-flex align-items-center gap-2 MainMenu-elements" href="/gameEnvironment">                        
+                    Partida rápida
+                </a></li>
+            <li><a class="dropdown-item d-flex align-items-center gap-2 MainMenu-elements" href="/createCard">                        
+                    Editar cartas
+                </a></li>
+            <li><a class="dropdown-item d-flex align-items-center gap-2 MainMenu-elements" href="#">                 
+                    Editar personajes
+                </a></li>
+        </ul>
     </div>
+</div>
 
  
 
 
 @{
-	Start();
-
-    
+	Start();   
 }
 @code{
+
     private async void Start() {
         await JS.InvokeVoidAsync("IndexBg");
     }
-
-    void NewGame() {
-        
-        Game game = new Game();
-
-        game.NewGame();
-        
-        Console.WriteLine("Mazo creado");
-        
-
-    }
-
-    
 }
 
 

@@ -20,7 +20,7 @@ public class Game {
 
     }
 
-    public void NewGame() {
+    public Player[] NewGame() {
         Deck Mazo = new Deck();
 
         Character C1 = GetCharacter(0);
@@ -33,14 +33,15 @@ public class Game {
 
 
         CreateDeck(Mazo.deck);
-
-        for(int i = 0; i < 5; i++) {
-            player1.hand.AddCard(Mazo.Draw(Mazo.deck));
-            player2.hand.AddCard(Mazo.Draw(Mazo.deck));
+    
+        for (int i = 0; i < 5; i++) {
+            player1.Hand.AddCard(Mazo.Draw(Mazo.deck));
+            player2.Hand.AddCard(Mazo.Draw(Mazo.deck));
         }
-        Console.WriteLine(player1.Id);
-        Console.WriteLine(player2.Id);
-
+    
+        
+        Player[] aux = { player1, player2 };
+        return aux;
     }
 
     public void CreateCard(string name, string url, int rarity, int charms, string text, string effect) {
@@ -67,13 +68,14 @@ public class Game {
         db.StoreCharacter(character);
         db.UpdateId(id.Card, id.Character + 1);
     }
+    
     public Character GetCharacter(int id) {  
-        return db.Characters[id];
+        return db.GetCharacter(id);
     } 
 
-    public Card GetCard(int id) {
-        return db.Cards[id];
-    }
+    public Card GetCard(int id) {  
+        return db.GetCard(id);
+    } 
 
     public void ActivateEffect(string effect, Player p1, Player p2, bool isP1) {
         Lexer lexer = new Lexer(effect); 
