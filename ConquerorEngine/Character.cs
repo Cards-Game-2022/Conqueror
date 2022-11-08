@@ -20,7 +20,6 @@ public class Character {
     }
 
     public Character() {
-
     }
 
     public Character(string name) {

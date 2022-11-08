@@ -9,7 +9,7 @@ public class Player : Character {
     }
     public Player(string name, string urlPhoto, int id) {        
         Life = Config.basicLife;
-        Charms = Config.Charms;
+        Charms = Config.charms;
         Hand = new Hand();
 
         this.Name = name;

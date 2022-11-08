@@ -5,41 +5,37 @@ namespace Conqueror.Logic;
 public class Game {
     Language lg;
     Database db;
+
     public Game() {
-        
         db = new Database();
 
-        db.LoadCards();
+        db.InitCards();
+        db.InitCharacters();
         //game.CreateCard("Helbrand", "1.png", 1, 1, "Una carta de prueba", "Te malanguea");
         //game.CreateCard("Prueba 2", "1.png", 2, 1, "Una carta de prueba", "Te malanguea");
         //game.CreateCard("Prueba 4", "1.png", 4, 1, "Una carta de prueba", "Te malanguea");
 
-        CreateCharacter("David", "foto1");
-        CreateCharacter("Marian", "foto2");
-        
-
-    }
+        CreateCharacter("David", "photo101.png");
+        CreateCharacter("Marian", "photo104.png");
+    }   
 
     public Player[] NewGame() {
+
         Deck Mazo = new Deck();
-
-        Character C1 = GetCharacter(0);
-        Character C2 = GetCharacter(1);
-
-        db.LoadCharacters();
-
-        Player player1 = new Player(C1.Name, C1.UrlPhoto, C1.Id);
-        Player player2 = new Player(C2.Name, C2.UrlPhoto, C2.Id);
-
-
-        CreateDeck(Mazo.deck);
-    
-        for (int i = 0; i < 5; i++) {
-            player1.Hand.AddCard(Mazo.Draw(Mazo.deck));
-            player2.Hand.AddCard(Mazo.Draw(Mazo.deck));
-        }
-    
         
+        Character c1 = GetCharacter(1);
+        Character c2 = GetCharacter(2);
+
+        Player player1 = new Player(c1.Name, c1.UrlPhoto, c1.Id);
+        Player player2 = new Player(c2.Name, c2.UrlPhoto, c2.Id);
+
+        CreateDeck(Mazo.deckCards);
+
+        for (int i = 0; i < 5; i++) {
+            player1.Hand.AddCard(Mazo.Draw(Mazo.deckCards));
+            player2.Hand.AddCard(Mazo.Draw(Mazo.deckCards));
+        }
+
         Player[] aux = { player1, player2 };
         return aux;
     }
@@ -60,7 +56,6 @@ public class Game {
     }
 
     public void CreateCharacter(string name, string url) {
-
         Id id = db.GetLastId();
         
         Character character = new Character(name, Config.pathImageCharacters + "/" + url, id.Character + 1);
@@ -85,15 +80,10 @@ public class Game {
     }
 
     public void CreateDeck(List<Card> deck) {
-        
         foreach(Card card in db.Cards){
-            
-            for(int i = 0; i<card.Rarity; i++) {
-                
+            for(int i = 0; i<card.Rarity; i++) {  
                 deck.Add(card);    
-            
             }
         }
-
     }
 }

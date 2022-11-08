@@ -82,7 +82,6 @@
 /home/marian_susana/Documents/Conqueror/ConquerorServer/obj/Debug/net6.0/staticwebassets.build.json
 /home/marian_susana/Documents/Conqueror/ConquerorServer/obj/Debug/net6.0/staticwebassets.development.json
 /home/marian_susana/Documents/Conqueror/ConquerorServer/obj/Debug/net6.0/scopedcss/Shared/MainLayout.razor.rz.scp.css
-/home/marian_susana/Documents/Conqueror/ConquerorServer/obj/Debug/net6.0/scopedcss/Shared/NavMenu.razor.rz.scp.css
 /home/marian_susana/Documents/Conqueror/ConquerorServer/obj/Debug/net6.0/scopedcss/bundle/ConquerorServer.styles.css
 /home/marian_susana/Documents/Conqueror/ConquerorServer/obj/Debug/net6.0/scopedcss/projectbundle/ConquerorServer.bundle.scp.css
 /home/marian_susana/Documents/Conqueror/ConquerorServer/obj/Debug/net6.0/ConquerorServer.csproj.CopyComplete

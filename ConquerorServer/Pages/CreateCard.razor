@@ -2,75 +2,71 @@
 @inject IJSRuntime JS;
 
 
-    <h1 class="text-center mt-3 PagesHeaders" id = "Create-Card-Header">Crear Carta</h1>
-    <form action="" autocomplete="off" class=" mt-5 Create-Cards-Form" method = "post">
-
-        <div class="form-floating mb-3 Floating-Form">
-            <input type="text" class="form-control rounded-4 Form-Elements" id="floatingInput" placeholder="Nombre de la Carta">
-            <label for="floatingInput">Nombre de la Carta: </label>
+<h1 class="text-center" id="">Crear Carta</h1>
+<form action="mt-5" autocomplete="off">
+    <div class="row">
+        <div class="col-12 col-lg-4">
+            <div class="form-floating mb-3 Floating-Form">
+                <input type="text" class="form-control rounded-4 Form-Elements" id="floatingInput" placeholder="Nombre de la Carta">
+                <label for="floatingInput">Nombre de la Carta: </label>
+            </div>
+            <div class="form-floating mb-3 Floating-Form">
+                <input type="text" class="form-control rounded-4 Form-Elements" id="floatingPassword" placeholder="Texto">
+                <label for="floatingPassword">Texto de la Carta simplificado: </label>
+            </div>
+            <div class="form-floating mb-3 Floating-Form">
+                <input type="number" class="form-control rounded-4 Form-Elements" id="floatingPassword" placeholder="Texto">
+                <label for="floatingPassword">Coste de Puntos: </label>
+            </div>
+            <div class="form-floating mb-3 Floating-Form">
+                <!--
+                <input type="file" class="form-control rounded-4" id="floatingPassword" placeholder="puta"/>
+                <label>Select image to upload: <input type="button" /></label>
+                -->
+                <input type="file" class="form-control rounded-4 Form-Elements" id="floatingPassword" placeholder="Texto">
+                <label for="floatingPassword">Imagen: </label>
+                
+            </div>
         </div>
-        <div class="form-floating mb-3 Floating-Form">
-            <input type="text" class="form-control rounded-4 Form-Elements" id="floatingPassword" placeholder="Texto">
-            <label for="floatingPassword">Texto de la Carta simplificado: </label>
-        </div>
-        <div class="form-floating mb-3 Floating-Form">
-            <input type="number" class="form-control rounded-4 Form-Elements" id="floatingPassword" placeholder="Texto">
-            <label for="floatingPassword">Coste de Puntos: </label>
-        </div>
-        <div class="form-floating mb-3 Floating-Form">
-            <!--
-            <input type="file" class="form-control rounded-4" id="floatingPassword" placeholder="puta"/>
-            <label>Select image to upload: <input type="button" /></label>
-            -->
-            <input type="file" class="form-control rounded-4 Form-Elements" id="floatingPassword" placeholder="Texto">
-            <label for="floatingPassword">Imagen: </label>
-            
-        </div>
-    </form>
+        <div class="col-12 col-lg-8">
+            <div class="text-center mt-2">
+                <div>
+                    <h3>Forma de usar el mini-lenguaje para crear efectos</h3>
+                    <p>No existen variables excepto las definidas en el lenguaje, las cuales detallaremos ahora.</p>
 
+                    <div class="bg-black p-3">
+                        <code>LifeP1,
+                        LifeP2,
+                        HandP1,
+                        HandP2,
+                        MazoP1,
+                        MazoP2,
+                        PointP1,
+                        PointP2</code> 
+                    </div>
+                </div>
 
-    <div class="text-center mt-5">
+                <p class="text-light mt-5">Editor de texto:</p>
+                <div class="form-floating mb-3">
+                    <textarea name="" id="" cols="40" rows="20"></textarea>
+                </div>
 
-        <div>
-            <h3>Forma de usar el mini-lenguaje para crear effectos</h3>
-            <p>No existen variables excepto las definidas en el lenguaje, las cuales detallaremos ahora.</p>
-            <code class="bg-black p-3">LifeP1,
-                LifeP2,
-                HandP1,
-                HandP2,
-                MazoP1,
-                MazoP2,
-                PointP1,
-                PointP2</code>
-            <p></p>
-        </div>
-
-        <p class="text-light mt-5">Editor de texto:</p>
-        <div class="form-floating mb-3">
-            <textarea name="" id="" cols="40" rows="20"></textarea>
-        </div>
-
-        <div class="mb-3 d-flex justify-content-around">
-            <button class="btn btn-primary">Atrás</button>
-            <button class="btn btn-primary" @onclick="Handler">Aceptar</button>
+                <div class="mb-3 d-flex justify-content-around">
+                    <button class="btn btn-primary">Atrás</button>
+                    <button class="btn btn-primary" @onclick="Handler">Aceptar</button>
+                </div>
+            </div>
         </div>
     </div>
-
-    @if(name!= "") {
-        <p>PutoDavid</p>
-    }
+</form>
 
 
 
 @{
-    CreateCardBg();
-    
-    
+    CreateCardBg();    
 }
 
-@code{
-
-  
+@code{  
     private string name = "";
     private void Handler(){
     name=" a ";
@@ -78,7 +74,7 @@
     }
 
     private async void CreateCardBg() {
-        await JS.InvokeVoidAsync("CreateCardBG");
+        await JS.InvokeVoidAsync("CreateCardBg");
     }
 
     

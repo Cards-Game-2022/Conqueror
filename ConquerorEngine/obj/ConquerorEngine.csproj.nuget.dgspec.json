@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/david/David/Programación/CC/Programacion/Segundo Proyecto/Versiones/Conqueror ultimo/Conqueror/ConquerorEngine/ConquerorEngine.csproj": {}
+    "/home/marian_susana/Documents/Conqueror/ConquerorEngine/ConquerorEngine.csproj": {}
   },
   "projects": {
-    "/home/david/David/Programación/CC/Programacion/Segundo Proyecto/Versiones/Conqueror ultimo/Conqueror/ConquerorEngine/ConquerorEngine.csproj": {
+    "/home/marian_susana/Documents/Conqueror/ConquerorEngine/ConquerorEngine.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/david/David/Programación/CC/Programacion/Segundo Proyecto/Versiones/Conqueror ultimo/Conqueror/ConquerorEngine/ConquerorEngine.csproj",
+        "projectUniqueName": "/home/marian_susana/Documents/Conqueror/ConquerorEngine/ConquerorEngine.csproj",
         "projectName": "ConquerorEngine",
-        "projectPath": "/home/david/David/Programación/CC/Programacion/Segundo Proyecto/Versiones/Conqueror ultimo/Conqueror/ConquerorEngine/ConquerorEngine.csproj",
-        "packagesPath": "/home/david/.nuget/packages/",
-        "outputPath": "/home/david/David/Programación/CC/Programacion/Segundo Proyecto/Versiones/Conqueror ultimo/Conqueror/ConquerorEngine/obj/",
+        "projectPath": "/home/marian_susana/Documents/Conqueror/ConquerorEngine/ConquerorEngine.csproj",
+        "packagesPath": "/home/marian_susana/.nuget/packages/",
+        "outputPath": "/home/marian_susana/Documents/Conqueror/ConquerorEngine/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/david/.nuget/NuGet/NuGet.Config"
+          "/home/marian_susana/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -43,7 +43,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -52,7 +53,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/home/david/.dotnet-6.0/sdk/6.0.100/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.402/RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,4 +1,4 @@
-function CreateCardBG() {
+function CreateCardBg() {
   const body = document.querySelector("body")
 
   body.style.background = "url(../images/cards.jpg)";
