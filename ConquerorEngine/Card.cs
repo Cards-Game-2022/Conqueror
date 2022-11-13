@@ -42,12 +42,11 @@ public class Card {
     }
 
     public Card() {
-    }
 
+    }
     public Card(string name) {
         this.name = name; 
     }
-
     public Card(string name, string url) {
         this.name = name;
         this.urlPhoto = url; 
@@ -62,20 +61,14 @@ public class Card {
         if (charms >= 0) {
             this.charms = charms;
         } else {
-            Utils.Error("Valor incorrecto para charms debe ser no negativo");
+            Utils.Error("Valor incorrecto para charms. Debe ser no negativo");
         }
 
         if (rarity >= 0) {
             this.rarity = rarity;
         } else {
-            Utils.Error("Valor incorrecto para rarity debe ser no negativo");
+            Utils.Error("Valor incorrecto para rarity. Debe ser no negativo");
         }
     }
-
-    public void ActivateEffect(Card card) {
-            
-    }
-
-
     
 }

@@ -4,7 +4,8 @@ using System.Text.Json;
 using System.Collections.Generic;
 namespace Conqueror.Logic;
 
-class Database {
+public class Database {
+    // TODO: En general quitaria la mayoria de las líneas en blanco, generalmente no aportan claridad
     public List<Card> Cards {
         get; private set;
     }
@@ -12,10 +13,17 @@ class Database {
         get; private set;
     }
 
+    public Database() {
+        InitCards();
+        InitCharacters();
+    }
+
+    //los metodos de crear y cargar cambiaron segun las sugerencias de mi tio
+
     public void InitCharacters() {
         if (Characters == null) {
-            if (File.Exists(Config.pathCharacters)) {
-                string jsonString = File.ReadAllText(Config.pathCharacters);
+            if (File.Exists(Config.PathCharacters)) {
+                string jsonString = File.ReadAllText(Config.PathCharacters);
                 if (jsonString != "") {
                     Characters = JsonSerializer.Deserialize<List<Character>>(jsonString);
                     return;
@@ -30,13 +38,12 @@ class Database {
         Characters.Add(ch);
         var options = new JsonSerializerOptions { WriteIndented = true };
         string jsonString = JsonSerializer.Serialize(Characters, options);
-        File.WriteAllText(Config.pathCharacters, jsonString);
+        File.WriteAllText(Config.PathCharacters, jsonString);
     }
-
     public void InitCards() {
         if (Cards == null) {
-            if (File.Exists(Config.pathCard)) {
-                string jsonString = File.ReadAllText(Config.pathCard);
+            if (File.Exists(Config.PathCard)) {
+                string jsonString = File.ReadAllText(Config.PathCard);
                 if (jsonString != "") {
                     Cards = JsonSerializer.Deserialize<List<Card>>(jsonString);
                     return;
@@ -51,13 +58,13 @@ class Database {
         Cards.Add(cd);
         var options = new JsonSerializerOptions { WriteIndented = true };
         string jsonString = JsonSerializer.Serialize(Cards, options);
-        File.WriteAllText(Config.pathCard, jsonString);
+        File.WriteAllText(Config.PathCard, jsonString);
     }
 
     public Id GetLastId() {
         // abre el txt y revisa si lo que contiene es un numero si no devuelve 0
-        if (File.Exists(Config.pathCharacters)) {
-            string jsonString = File.ReadAllText(Config.pathLastID);
+        if (File.Exists(Config.PathCharacters)) {
+            string jsonString = File.ReadAllText(Config.PathLastID);
             if (jsonString != "") {
                 return JsonSerializer.Deserialize<Id>(jsonString);
             }
@@ -67,10 +74,10 @@ class Database {
 
     public void UpdateId(int card, int character) {
         Id id = new Id(card, character);
+
         var options = new JsonSerializerOptions { WriteIndented = true };
         string jsonString = JsonSerializer.Serialize(id, options);
-        
-        File.WriteAllText(Config.pathLastID, jsonString); 
+        File.WriteAllText(Config.PathLastID, jsonString); 
     }
 
     public Character GetCharacter(int id) {
@@ -79,6 +86,7 @@ class Database {
                 return item;
             }
         }
+        Utils.Error("Personaje no encontrado");
         return null;
     }
     public Card GetCard(int id) {
@@ -87,6 +95,7 @@ class Database {
                 return item;
             }
         }
+        Utils.Error("Carta no encontrada");
         return null;
     }
 }

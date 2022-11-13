@@ -3,63 +3,55 @@ using System.Collections.Generic;
 namespace Conqueror.Logic;
 
 public class Deck {
-    public List<Card> deckCards;
+    public List<Card> mainDeck;
 
     public Deck() {
-        deckCards = new List<Card>();
+        mainDeck = new List<Card>();
     }        
     
-    public List<Card> Shuffle (List<Card> deck) {
-        // TODO: los nombres de las variables deberian comenzar por minusculas, mezclas unas mayusculas y otras minusculas
-        // TODO: randomGenerator -> Yes
-        // TODO: PositionsToShuffle, CopiaDeck, Added -> No
-        // TODO: a -> No, es poco descriptivo, una sola letra solo se debe usar para los "loops" (for, while, ...)
-        // TODO: y personalmente creo que PositionsToShuffle y randomGenerator son innecesariamente largos
-        int[] positionsToShuffle = new int[deck.Count];
+    public List<Card> Shuffle (List<Card> listOfCards) {
+
+        int[] shuffledPositions = new int[listOfCards.Count];
         Random randomGenerator = new Random();
 
-        for (int i = 0; i < positionsToShuffle.Length; i++) { 
-            
+        for (int i = 0; i < shuffledPositions.Length; i++) { 
             bool added = false;
 
-            while(!added) {
-                int randomNumber = randomGenerator.Next(1, deck.Count + 1);
+            while (!added) {
+                int randomNumber = randomGenerator.Next(1, listOfCards.Count + 1);
 
-                if(!positionsToShuffle.Contains(randomNumber)) {
-                    positionsToShuffle[i] = randomNumber;
+                if (!shuffledPositions.Contains(randomNumber)) {
+                    shuffledPositions[i] = randomNumber;
                     added = true;
                 }   
             }        
         }
 
-        List<Card> copiaDeck = new();
+        List<Card> copiedList = new();
 
-        for (int i = 0; i < deck.Count; i++) {
-            copiaDeck.Add(deck[i]);
+        for (int i = 0; i < listOfCards.Count; i++) {
+            copiedList.Add(listOfCards[i]);
+        }
+        for (int i = 0; i < listOfCards.Count; i++) {
+            listOfCards[i] = copiedList[shuffledPositions[i] - 1];
         }
 
-        for (int i = 0; i < deck.Count; i++) {
-            deck[i] = copiaDeck[positionsToShuffle[i] - 1];
-        }
-
-        return deck;
+        return listOfCards;
     }
 
-    //Para tomar la primera carta del mazo.
     public Card Draw (List<Card> deck) {
-        deck = Shuffle(deck);
 
+        deck = Shuffle(deck);
         return deck[0];
     }
 
-    //Para cuando pide robar una carta en especifico.
-    public Card Draw (List<Card> deck, Card card) {
+    public Card Draw(List<Card> deck, Card card) {
         
-        if(deck.Contains(card))
+        if (deck.Contains(card))
             return card;
-        else
+        else {
             Utils.Error("Esa carta no aparece en el deck");
-        
-        return null;
+            return null;
+        }
     }
 }

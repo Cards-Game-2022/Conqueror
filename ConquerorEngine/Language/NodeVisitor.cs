@@ -1,7 +1,5 @@
-namespace Conqueror.Logic.Interpreter;
+using System;
+namespace Conqueror.Logic.Language;
 
-class NodeVisitor {
-    public int visit(int node) { 
-        return 1;
-    }
+class NodeVisitor { 
 }

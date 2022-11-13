@@ -1,4 +1,4 @@
-namespace Conqueror.Logic.Interpreter;
+namespace Conqueror.Logic.Language;
 
 class AST{
 

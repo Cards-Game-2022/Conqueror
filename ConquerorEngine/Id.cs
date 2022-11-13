@@ -1,6 +1,6 @@
 namespace Conqueror.Logic;
 
-class Id {
+public class Id {
     private int card;
     private int character;
 

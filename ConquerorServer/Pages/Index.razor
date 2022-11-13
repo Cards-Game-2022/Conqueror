@@ -7,7 +7,7 @@
 
     <div class="border-0 mt-5 mx-0 shadow overflow-hidden MainMenu" style="width: 280px;">
         <ul class="list-unstyled mb-0">
-            <li><a class="dropdown-item d-flex align-items-center gap-2 MainMenu-elements" href="/selectPlayer">                        
+            <li><a class="dropdown-item d-flex align-items-center gap-2 MainMenu-elements" href="/pvp">                        
                     Iniciar torneo
                 </a></li>
             <li><a class="dropdown-item d-flex align-items-center gap-2 MainMenu-elements" href="/gameEnvironment">                        
@@ -27,11 +27,11 @@
 
 
 @{
-	Start();   
+	Background();   
 }
 @code{
 
-    private async void Start() {
+    private async void Background() {
         await JS.InvokeVoidAsync("IndexBg");
     }
 }

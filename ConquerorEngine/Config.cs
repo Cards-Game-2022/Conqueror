@@ -1,12 +1,12 @@
 namespace Conqueror.Logic;
 
 static class Config {
-    static public string pathCharacters = @"../ConquerorServer/wwwroot/DB/Characters.json";
-    static public string pathLastID = @"../ConquerorServer/wwwroot/DB/Id.json";
-    static public string pathCard = @"../ConquerorServer/wwwroot/DB/Card.json";
-    static public string pathImageCharacters = @"../images/Characters";
-    static public int basicLife = 30;
-    static public string[] systemVariables = { "MyLife", "EnemyLife" };
+    static public string PathCharacters = @"../ConquerorServer/wwwroot/DB/Characters.json";
+    static public string PathLastID = @"../ConquerorServer/wwwroot/DB/Id.json";
+    static public string PathCard = @"../ConquerorServer/wwwroot/DB/Card.json";
+    static public string PathImageCharacters = @"Images/Characters";
+    static public int BasicLife = 30;
+    static public string[] SystemVariables = { "MyLife", "EnemyLife" };
 
-    static public int charms = 10;
+    static public int Charms = 5;
 }

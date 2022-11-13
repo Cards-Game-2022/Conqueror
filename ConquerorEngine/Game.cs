@@ -1,89 +1,91 @@
 using System;
-using Conqueror.Logic.Interpreter;
+using Conqueror.Logic.Language;
 namespace Conqueror.Logic;
 
 public class Game {
-    Language lg;
-    Database db;
+    public Player Player1;
+    public Player Player2;
+    private Deck Deck;
+    private Manager cq;
+    public Game(int level) {
+        cq = new Manager();
 
-    public Game() {
-        db = new Database();
+        Deck = new Deck();
+        Character c1 = cq.GetCharacter(1);
+        Character c2 = cq.GetCharacter(0);
+        Player1 = new PlayerHuman(c1.Name, c1.UrlPhoto, c1.Id);
+        if (level == 0) {
+            Player2 = new PlayerHuman(c2.Name, c2.UrlPhoto, c2.Id);
 
-        db.InitCards();
-        db.InitCharacters();
-        //game.CreateCard("Helbrand", "1.png", 1, 1, "Una carta de prueba", "Te malanguea");
-        //game.CreateCard("Prueba 2", "1.png", 2, 1, "Una carta de prueba", "Te malanguea");
-        //game.CreateCard("Prueba 4", "1.png", 4, 1, "Una carta de prueba", "Te malanguea");
-
-        CreateCharacter("David", "photo101.png");
-        CreateCharacter("Marian", "photo104.png");
-    }   
-
-    public Player[] NewGame() {
-
-        Deck Mazo = new Deck();
-        
-        Character c1 = GetCharacter(1);
-        Character c2 = GetCharacter(2);
-
-        Player player1 = new Player(c1.Name, c1.UrlPhoto, c1.Id);
-        Player player2 = new Player(c2.Name, c2.UrlPhoto, c2.Id);
-
-        CreateDeck(Mazo.deckCards);
-
-        for (int i = 0; i < 5; i++) {
-            player1.Hand.AddCard(Mazo.Draw(Mazo.deckCards));
-            player2.Hand.AddCard(Mazo.Draw(Mazo.deckCards));
+        } else {
+            Player2 = new PlayerIA(c2.Name, c2.UrlPhoto, c2.Id);
         }
-
-        Player[] aux = { player1, player2 };
-        return aux;
-    }
-
-    public void CreateCard(string name, string url, int rarity, int charms, string text, string effect) {
-        // obtengo los ultimos id, creo la nueva carta con el ultimo id + 1 y actulizo la base de datos
-        Id id = db.GetLastId();
-
-        Card card = new Card(name, url, id.Card + 1, rarity, charms, text, effect);
         
-        db.StoreCard(card);
-
-        db.UpdateId(id.Card + 1, id.Character);
-    }
-
-    public void UpdateCard(int id, Card card) {
-
-    }
-
-    public void CreateCharacter(string name, string url) {
-        Id id = db.GetLastId();
-        
-        Character character = new Character(name, Config.pathImageCharacters + "/" + url, id.Character + 1);
-
-        db.StoreCharacter(character);
-        db.UpdateId(id.Card, id.Character + 1);
-    }
+        CreateDeck(Deck.mainDeck);
+        for (int i = 0; i < 5; i++) {
+            Player1.Hand.AddCard(Deck.Draw(Deck.mainDeck));
+            Player2.Hand.AddCard(Deck.Draw(Deck.mainDeck));
+        }
+    }   
     
-    public Character GetCharacter(int id) {  
-        return db.GetCharacter(id);
-    } 
+    public void Activate() {
 
-    public Card GetCard(int id) {  
-        return db.GetCard(id);
-    } 
+        Dictionary<string, int> scope;
+        scope = new Dictionary<string, int>();
+        scope.Add("MyLife", Player1.Life);
+        scope.Add("EnemyLife", Player2.Life);
+        scope.Add("MyCharms", Player1.Charms);
+        scope.Add("EnemyCharms", Player2.Charms);
+        scope = Player1.Launch(scope); // metodo para seleccionar la carta a jugar
+        if (Player1.Pos == -1) {
+            return;
+        }
+        Player1.Life = scope["MyLife"];
+        Player2.Life = scope["EnemyLife"];
+        Player1.Charms = scope["MyCharms"]- Player1.Hand.CardsList[Player1.Pos].Charms;;
+        Player2.Charms = scope["EnemyCharms"];
 
-    public void ActivateEffect(string effect, Player p1, Player p2, bool isP1) {
-        Lexer lexer = new Lexer(effect); 
-        Console.WriteLine(lg.Expr());
-
-        //lg.Interpreter(effect, p1, p2, isP1);
+        Player1.RemoveCard();
+        Player1.ResetPos();
     }
-
+    public void ChangePlayers() {
+        Player p1 = Player1;
+        Player p2 = Player2;
+        Player1 = p2;
+        Player2 = p1;
+    }
+    public string IsGameEnd() {
+        if (Player1.Life <= 0 && Player2.Life <= 0) {
+            return "Ninguno";
+        } else {
+            if (Player1.Life <= 0) {
+                return Player2.Name;
+            } 
+            if (Player2.Life <= 0) { 
+                return Player1.Name;
+            }
+        }
+        return null;
+    }
+    public void DrawCard() {
+        Player1.Hand.AddCard(Deck.Draw(Deck.mainDeck));
+    }
+    public void AddCharms() {   
+        Player1.Charms ++;
+    }
     public void CreateDeck(List<Card> deck) {
-        foreach(Card card in db.Cards){
+        foreach(Card card in cq.db.Cards){
             for(int i = 0; i<card.Rarity; i++) {  
                 deck.Add(card);    
             }
         }
     }
+    /*
+    TODO: Hacer que cuando se active una carta, se verifique si se puede
+    poner por los charms.
+    TODO: Si no se puede, mostrar error.
+    TODO: Editar el cartel del ganador
+    TODO: Hacer una IA que ataque por la carta mas fuerte
+    TODO: Hacer muchas mas cartas
+    */
 }

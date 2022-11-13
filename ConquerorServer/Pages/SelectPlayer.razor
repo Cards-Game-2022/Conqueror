@@ -35,13 +35,13 @@
     </div>
 
 @{
-    SelectPlayerBG();
+    Background();
 }
 
 @code{
 
 
-    private async void SelectPlayerBG() {
+    private async void Background() {
         await JS.InvokeVoidAsync("SelectPlayerBG");
     }
 }

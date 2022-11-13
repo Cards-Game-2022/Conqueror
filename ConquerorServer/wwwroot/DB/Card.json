@@ -4,26 +4,26 @@
     "UrlPhoto": "images/photo103.png",
     "Id": 1,
     "Rarity": 1,
-    "Charms": 1,
-    "Text": "Una carta de prueba",
-    "Effect": "Te malanguea"
+    "Charms": 3,
+    "Text": "Texto del Helbrand",
+    "Effect": "BEGIN EnemyLife:= EnemyLife - 20; END."
   },
   {
     "Name": "Prueba 2",
     "UrlPhoto": "images/photo104.png",
     "Id": 2,
-    "Rarity": 2,
+    "Rarity": 4,
     "Charms": 1,
-    "Text": "Una carta de prueba",
-    "Effect": "Te malanguea"
+    "Text": "Texto de prueba 2",
+    "Effect": "BEGIN EnemyLife:= EnemyLife - 5; END."
   },
   {
     "Name": "Prueba 4",
     "UrlPhoto": "images/photo105.png",
     "Id": 3,
-    "Rarity": 4,
-    "Charms": 1,
-    "Text": "Una carta de prueba",
-    "Effect": "Te malanguea"
+    "Rarity": 2,
+    "Charms": 2,
+    "Text": "Texto de prueba 4",
+    "Effect": "BEGIN EnemyLife:= EnemyLife - 10; END."
   }
 ]
