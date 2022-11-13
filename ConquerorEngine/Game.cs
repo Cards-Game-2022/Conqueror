@@ -82,10 +82,13 @@ public class Game {
     }
     /*
     TODO: Hacer que cuando se active una carta, se verifique si se puede
-    poner por los charms.
-    TODO: Si no se puede, mostrar error.
+          poner por los charms. Si no se puede, mostrar error.
     TODO: Editar el cartel del ganador
     TODO: Hacer una IA que ataque por la carta mas fuerte
-    TODO: Hacer muchas mas cartas
+    TODO: Hacer muchas mas cartas == Hacer mas metodos
+    TODO: Buscar un gif para el efecto de daño
+    TODO: Poner un cuadrito con la carta que se jugo y un tiempo de espera
+          para cuando este jugando la IA
+    TODO: Crear un mazo para cada player    
     */
 }
