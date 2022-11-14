@@ -5,21 +5,16 @@ using System.Collections.Generic;
 namespace Conqueror.Logic;
 
 public class Database {
-    // TODO: En general quitaria la mayoria de las líneas en blanco, generalmente no aportan claridad
     public List<Card> Cards {
         get; private set;
     }
     public List<Character> Characters {
         get; private set;
     }
-
     public Database() {
         InitCards();
         InitCharacters();
     }
-
-    //los metodos de crear y cargar cambiaron segun las sugerencias de mi tio
-
     public void InitCharacters() {
         if (Characters == null) {
             if (File.Exists(Config.PathCharacters)) {
