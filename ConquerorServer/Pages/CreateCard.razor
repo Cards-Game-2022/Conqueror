@@ -1,71 +1,68 @@
 @page "/createCard"
 @inject IJSRuntime JS;
 
+<div class = "backgrounds create-card-background">
+    <h1 class="text-center" id="">Crear Carta</h1>
+    <form autocomplete="off">
+        <div class="row">
+            <div class="col-12 col-lg-4">
+                <div class="form-floating mb-3 Floating-Form">
+                    <input type="text" @bind="name" class="form-control rounded-4 Form-Elements" id="floatingInput" placeholder="Nombre de la Carta">
+                    <label for="floatingInput" >Nombre de la Carta: </label>
+                </div>
+                <div class="form-floating mb-3 Floating-Form">
+                    <input type="text" @bind="text" class="form-control rounded-4 Form-Elements" id="floatingPassword" placeholder="Texto">
+                    <label for="floatingPassword">Texto de la Carta simplificado: </label>
+                </div>
+                <div class="form-floating mb-3 Floating-Form">
+                    <input type="number" @bind="charms" class="form-control rounded-4 Form-Elements" id="floatingPassword" placeholder="Texto">
+                    <label for="floatingPassword">Coste de Charms: </label>
+                </div>
+                <div class="form-floating mb-3 Floating-Form">
+                    <input type="number" @bind="rarity" class="form-control rounded-4 Form-Elements" id="floatingPassword" placeholder="Texto">
+                    <label for="floatingPassword">Rareza: </label>
+                </div>
+                <div class="form-floating mb-3 Floating-Form">
+                    <!--
+                    <input type="file" class="form-control rounded-4" id="floatingPassword" placeholder="puta"/>
+                    <label>Select image to upload: <input type="button" /></label>
+                    -->
+                    <input type="file" @bind="photo" class="form-control rounded-4 Form-Elements" id="floatingPassword" placeholder="Texto">
+                    <label for="floatingPassword">Imagen: </label>
+                    
+                </div>
+            </div>
+            <div class="col-12 col-lg-8">
+                <div class="text-center mt-2">
+                    <div>
+                        <h2>Forma de usar el mini-lenguaje para crear efectos</h2>
+                        <p>Solo existen variables enteras y las definidas en el lenguaje, las cuales detallaremos ahora.</p>
 
-<h1 class="text-center" id="">Crear Carta</h1>
-<form autocomplete="off">
-    <div class="row">
-        <div class="col-12 col-lg-4">
-            <div class="form-floating mb-3 Floating-Form">
-                <input type="text" @bind="name" class="form-control rounded-4 Form-Elements" id="floatingInput" placeholder="Nombre de la Carta">
-                <label for="floatingInput" >Nombre de la Carta: </label>
-            </div>
-            <div class="form-floating mb-3 Floating-Form">
-                <input type="text" @bind="text" class="form-control rounded-4 Form-Elements" id="floatingPassword" placeholder="Texto">
-                <label for="floatingPassword">Texto de la Carta simplificado: </label>
-            </div>
-            <div class="form-floating mb-3 Floating-Form">
-                <input type="number" @bind="charms" class="form-control rounded-4 Form-Elements" id="floatingPassword" placeholder="Texto">
-                <label for="floatingPassword">Coste de Charms: </label>
-            </div>
-            <div class="form-floating mb-3 Floating-Form">
-                <input type="number" @bind="rarity" class="form-control rounded-4 Form-Elements" id="floatingPassword" placeholder="Texto">
-                <label for="floatingPassword">Rareza: </label>
-            </div>
-            <div class="form-floating mb-3 Floating-Form">
-                <!--
-                <input type="file" class="form-control rounded-4" id="floatingPassword" placeholder="puta"/>
-                <label>Select image to upload: <input type="button" /></label>
-                -->
-                <input type="file" @bind="photo" class="form-control rounded-4 Form-Elements" id="floatingPassword" placeholder="Texto">
-                <label for="floatingPassword">Imagen: </label>
-                
-            </div>
-        </div>
-        <div class="col-12 col-lg-8">
-            <div class="text-center mt-2">
-                <div>
-                    <h2>Forma de usar el mini-lenguaje para crear efectos</h2>
-                    <p>Solo existen variables enteras y las definidas en el lenguaje, las cuales detallaremos ahora.</p>
+                        <div class="bg-black p-3">
+                            <code>MyLife,
+                                MyCharms,
+                                EnemyLife,
+                                EnemyCharms
+                            </code> 
+                        </div>
+                    </div>
 
-                    <div class="bg-black p-3">
-                        <code>MyLife,
-                            MyCharms,
-                            EnemyLife,
-                            EnemyCharms
-                        </code> 
+                    <p class="text-black mt-5">Editor de texto:</p>
+                    <div class="form-floating mb-3">
+                        <textarea @bind="effect" name="" id="" cols="40" rows="20"></textarea>
+                    </div>
+
+                    <div class="mb-3 d-flex justify-content-around">
+                        <button class="btn btn-primary">Atrás</button>
+                        <button class="btn btn-primary" @onclick="Handler">Aceptar</button>
                     </div>
                 </div>
-
-                <p class="text-black mt-5">Editor de texto:</p>
-                <div class="form-floating mb-3">
-                    <textarea @bind="effect" name="" id="" cols="40" rows="20"></textarea>
-                </div>
-
-                <div class="mb-3 d-flex justify-content-around">
-                    <button class="btn btn-primary">Atrás</button>
-                    <button class="btn btn-primary" @onclick="Handler">Aceptar</button>
-                </div>
             </div>
         </div>
-    </div>
-</form>
+    </form>
+</div>
 
 
-
-@{
-    Background();    
-}
 
 @code{  
     private string name = "";
@@ -84,11 +81,5 @@
         {
             Console.WriteLine(e.Message);
         }
-    }   
-
-    private async void Background() {
-        await JS.InvokeVoidAsync("CreateCardBG");
-    }
-
-    
+    }      
 }

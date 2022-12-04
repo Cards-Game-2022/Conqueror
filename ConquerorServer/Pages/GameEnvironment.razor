@@ -1,9 +1,11 @@
 @page "/gameEnvironment"
-@inject IJSRuntime JS
+@inject IJSRuntime JS;
 
-    
+
+<div class = "backgrounds game-environment-background">
+
 <div class="text-light">
-    
+
     <div class="d-flex justify-content-around mt-4">
 
         <div>
@@ -110,10 +112,7 @@
     </div>
 
     <input type="hidden" name="winner" @bind="winner">
-
-@{
-    Background(); 
-}
+</div>
 
 @code{
     private Game game = new Game(1);
@@ -126,9 +125,7 @@
     private bool gameStart;
     private string winner;
 
-    private async void Background() {
-        await JS.InvokeVoidAsync("GameEnvironmentBg");
-    }   
+  
     private async void Launch(){
         try
         {

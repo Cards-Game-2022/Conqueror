@@ -4,9 +4,7 @@
 
 .Modal-Transition {
     transition: transform 0.1s ease-out;
-
 }
-
 
 .fondo{  
     position: fixed; 
@@ -180,4 +178,8 @@ body {
     border-left: 100px solid transparent;
     border-right: 100px solid transparent;
     border-bottom: 50px solid #63639c;
+}
+
+.game-environment-background {
+    background-image: url("../images/fondo7.jpeg"); 
 }

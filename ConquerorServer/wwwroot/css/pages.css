@@ -152,4 +152,17 @@ body {
   border-right: 10px solid rgba(62, 78, 219, 0.555);
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent; 
-} 
+}
+
+.backgrounds {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0 0;
+  padding: 0 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}

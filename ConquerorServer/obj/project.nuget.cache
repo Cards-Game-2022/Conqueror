@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+m8zq4+W0wBb7slkhZcf+aKv2zGpNRH1wsPdoMhdiHUD938AxXoVn/N6Cz6FuAsMpKI5x1YrosOyEyAiIFaR/g==",
+  "dgSpecHash": "aPjH87px+PZ1dyntkGl5TFNGbZ9L33H20eFxS5ye8AlxC3aRFN7WTl6SDwMpcNWESoLtw6VeZkDG6vJQc6+TMg==",
   "success": true,
-  "projectFilePath": "/home/marian_susana/Documents/temporal/Conqueror/ConquerorServer/ConquerorServer.csproj",
+  "projectFilePath": "/home/marian_susana/Documents/Conqueror/ConquerorServer/ConquerorServer.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

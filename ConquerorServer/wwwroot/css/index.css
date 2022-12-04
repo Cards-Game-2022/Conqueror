@@ -1,8 +1,7 @@
 
 .main-menu-background {
-    background-image: url("images/main-menu.jpg") rgb(31, 22, 114); 
+    background-image: url("../images/main-menu.jpg"); 
 }
-
 
 .GameTitle {
     color: white;
@@ -10,7 +9,6 @@
     font-weight: lighter;
     font-family: 'Barbarian', sans-serif;
 }
-
 
 .MainMenu-elements {
     padding-top: 0.5rem !important;
@@ -22,7 +20,6 @@
     font-weight: bolder;
     background-color: #ddd7f166;
 }
-
 
 .ajust-height {
     height: 70px;
