@@ -46,3 +46,13 @@
     min-height: 300px;
 }
 
+.github-links {
+    margin-left: 85%;
+    color: white;
+    text-decoration: none;
+
+}
+.github-links:hover {
+    text-decoration: none;
+    color: white;
+}

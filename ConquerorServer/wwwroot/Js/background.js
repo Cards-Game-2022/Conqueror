@@ -19,6 +19,7 @@ function IndexBg() {
 
 function GameEnvironmentBg() {
   const body = document.querySelector("body")
+  body.style.background = "url(../images/fondo7.jpeg)";
+  body.style.backgroundSize = "cover";
 
-  body.style.background = "url(../images/game.jpg)";
 }

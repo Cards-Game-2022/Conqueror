@@ -2,7 +2,6 @@ namespace Conqueror.Logic;
 
 public class Manager {
     public Database db;
-
     public Manager() {
         db = new Database();
         db.InitCards();

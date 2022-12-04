@@ -1,12 +1,12 @@
 ﻿[
   {
     "Name": "David",
-    "UrlPhoto": "images/dragon.gif",
+    "UrlPhoto": "images/Characters/dragon.gif",
     "Id": 1
   },
   {
     "Name": "Marian",
-    "UrlPhoto": "images/mechanic.gif",
+    "UrlPhoto": "images/Characters/dragon2.gif",
     "Id": 0
   }
 ]

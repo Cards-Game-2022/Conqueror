@@ -7,12 +7,12 @@
     <div class="d-flex justify-content-around mt-4">
 
         <div>
-            <h4 class="player-name">@game.Player1.Name</h4>
-            <p class="bg-danger p-2 card-points">Vida : @game.Player1.Life</p>
+            <h4 class="player-name">@Game.Player1.Name</h4>
+            <p class="bg-danger p-2 card-points">Vida : @Game.Player1.Life</p>
         </div>
         <div>
-            <h4 class="player-name">@game.Player2.Name</h4>
-            <p class="bg-danger p-2 card-points">Vida : @game.Player2.Life</p>
+            <h4 class="player-name">@Game.Player2.Name</h4>
+            <p class="bg-danger p-2 card-points">Vida : @Game.Player2.Life</p>
         </div>
     </div>
 
@@ -24,37 +24,50 @@
 
     <div class="row mt-5 players-field">
         <div class="col-5">
-            <img src="@game.Player1.UrlPhoto" alt="" class="img-fluid img-player">
+            <img src="@Game.Player1.UrlPhoto" alt="" class="img-fluid img-player">
 
         </div>
         <div class="col-5">
-            <img src="@game.Player2.UrlPhoto" alt="" class="img-fluid img-player">
+            <img src="@Game.Player2.UrlPhoto" alt="" class="img-fluid img-player">
 
+        </div>
+            
+            <img src="images/attack.gif" id="effect-enemy" alt="" class="img-fluid position-absolute z-index-1">
         </div>
     </div>
 
     <div class="d-flex justify-content-center mt-5">
         <div>
-            <div class="text-light bg-gradient bg-dark p-2">
-                Charms: @game.Player1.Charms
+            <div class="text-light bg-gradient bg-dark p-2 charms-button">
+                Charms: 
+                <br>@Game.Player1.Charms
             </div>
         </div>
 
         <div class="d-flex justify-content-center flex-wrap text-black ms-2 me-2">
-            @foreach (var item in game.Player1.Hand.CardsList)
+            @foreach (var item in Game.Player1Hand)
             {
-                <div class="cursor mt-1" @onclick="@(e => Modal(@item))"  data-bs-toggle="modal" data-bs-target="#exampleModalCenteredScrollable">
-                    <div class="card my-card">
-                        <img src="@item.UrlPhoto" class="img-fluid m-1" alt="">
+                 <div class="cursor mt-1 card-margin" @onclick="@(e => Modal(@item))"  data-bs-toggle="modal" data-bs-target="#exampleModalCenteredScrollable">
+ 
+                    <div class="card card-background">
 
-                        <div class="card-body p-2">
-                            <p class="m-0 p-0 card-text">@item.Name</p> 
-                            <span class="m-0 p-0 text-muted">Charms: @item.Charms</span>
+                        <div class="charms" id="none">
+                            <p class=" text-light">@item.Charms</p>
+                        </div>
+                        <div class="  p-0">
+
+                            <div class="img-rotate"><img src="@item.UrlPhoto" class="img-fluid m-1" width="179" alt="">
+                            </div>
+
+                        </div>
+
+                        <div class="  p-2">
+                            <p class="h5 m-0 p-0 card-text text-center">@item.Name</p>
                         </div>
                     </div>
                 </div>
             } 
-            @if(game.Player1.Hand.CardsList.Count == 0)
+            @if(Game.Player1Hand.Count == 0)
             {
                 <div class="cursor mt-1">
                     <div class="card my-card">
@@ -69,11 +82,9 @@
         </div>
         
         <div>
-            <button class="btn btn-primary" @onclick="ChangePlayers">Fin del Turno</button>
+            <button class="btn btn-primary" id = "click" @onclick="ChangePlayers">Fin del Turno</button>
         </div>
-    </div>
-
-    
+    </div> 
 
 
     <div class="modal fade text-black" id="exampleModalCenteredScrollable" tabindex="-1"
@@ -98,8 +109,7 @@
         </div>
     </div>
 
-</div>
-<input type="hidden" name="winner" @bind="winner">
+    <input type="hidden" name="winner" @bind="winner">
 
 @{
     Background(); 
@@ -118,8 +128,7 @@
 
     private async void Background() {
         await JS.InvokeVoidAsync("GameEnvironmentBg");
-    }
-    
+    }   
     private async void Launch(){
         try
         {
@@ -128,7 +137,7 @@
             }
 
             pos = GetPos();
-            game.Player1.Pos = pos;
+            Game.Player1.Pos = pos;
             game.Activate();// activa la carta que se selecciono
 
             // chequea si el juego termino
@@ -145,35 +154,36 @@
         }
         
     }
-
-
     private int GetPos() {
-        for (int i = 0; i < game.Player1.Hand.CardsList.Count; i++)
+        for (int i = 0; i < Game.Player1Hand.Count; i++)
         {
-            if (game.Player1.Hand.CardsList[i].Id == id) {
+            if (Game.Player1Hand[i].Id == id) {
             //Console.WriteLine(game.Player1.Hand.CardsList[i].Id + " " + id);
                 return i;
             }
         }
         return -1;
     }
-
     private async void ChangePlayers() {
-        game.ChangePlayers();
-        game.DrawCard();
-        game.AddCharms();
+        if (game.IsGameEnd() != null)
+        return;
+        
+        else {
+            game.ChangePlayers();
+            game.DrawCard();
+            game.AddCharms();
 
-        game.Activate(); // realiza el movimiento de la IA
-        // chequea si el juego termino de nuevo
-        winner = game.IsGameEnd();
-        ShowWinner(winner);
+            game.Activate(); // realiza el movimiento de la IA
+            // chequea si el juego termino de nuevo
+            winner = game.IsGameEnd();
+            ShowWinner(winner);
 
-        pos = -1;
-        game.ChangePlayers();
-        game.DrawCard();
-        game.AddCharms();
+            pos = -1;
+            game.ChangePlayers();
+            game.DrawCard();
+            game.AddCharms();
+        }
     }
-
     private void Modal(Card cd) { 
         this.id =  cd.Id;
         name = cd.Name;
@@ -182,7 +192,6 @@
         charms = cd.Charms;
         
     }
-
     private void ResetModal() {
         id = -1;
         name = null;
@@ -190,11 +199,8 @@
         text = null;
         charms = 0;
     }
-
-
     private async void ShowWinner(string winner) {
         if (winner != null) {
-            Console.WriteLine("Hasta aqui todo bien");
            await JS.InvokeVoidAsync("WinnerMessage");
 
         }

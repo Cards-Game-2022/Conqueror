@@ -6,3 +6,178 @@
     transition: transform 0.1s ease-out;
 
 }
+
+
+.fondo{  
+    position: fixed; 
+    height: 60%;
+    width: 100%;
+    z-index: -1;
+}
+.background {
+    background-color: aqua;
+    background: url("images/fondo1.gif");
+    background-repeat: no-repeat;
+    background-size: cover; 
+    height: 70vh;
+    width: 100%;
+    position: absolute;
+}
+
+.head {
+    height: 70vh; 
+} 
+body {
+    background-color: aqua;
+    background: url("images/hand.webp"); 
+    background-size: cover;  
+}
+
+
+.background div, img , p, h4{
+    position: relative;
+}
+
+.img {
+    width: 50vh; 
+    transition: transform 500ms;
+}
+
+.img-enemy, .img-player {
+    height: 50vh;
+    min-height: 170px;
+}
+
+.img-enemy {
+    transform: scaleX(-1);
+    color: #63639c; 
+    float: right;
+} 
+.editor {
+    display: block;
+    position: relative;
+    min-height: 200px;
+    height: 100px;
+    overflow: scroll;
+}
+.gap {
+    margin: 2em;
+}
+
+.at {
+    position: absolute; 
+    z-index: 20;
+}
+
+#effect-enemy {
+    display: none;
+}
+
+
+.charms {
+    position: absolute;
+    z-index: 1;
+    width: 40px;
+    left: -22;
+    height: 40px;
+    background-color: #63639c;
+    transform: rotate(45deg);
+}
+.charms p {
+    transform: rotate(-45deg);
+    font-size: large;
+    padding-left: 29%;
+    padding-top: 10%;
+}
+.charms-button {
+    font-size: 20px;
+}
+.card-margin {
+    margin-left: 2%;
+}
+
+.img-rotate { 
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    transform: rotate(90deg);
+}
+.img-rotate img {
+    transform: rotate(-90deg);
+}
+
+.my-card { 
+    margin-right: 5px;
+    border: #63639c solid 4px;   
+}
+
+.card-background {
+    background: linear-gradient(rgb(122, 64, 64), rgb(95, 86, 86));
+}
+
+.z-index-1 { 
+    z-index: 23; 
+}
+
+
+.text {
+    display: none;
+    position: absolute; 
+    top: 45vh;
+    left: 35vw;
+    background-color: rgb(127, 255, 212);
+    
+    border-radius: 5px;
+}
+
+.text::before {
+    content: '';
+    position: absolute;
+    right: 100%; 
+    bottom: 30%;
+    width: 0;
+    border-right: 10px solid rgba(62, 78, 219, 0.555);
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent; 
+} 
+
+
+.cont {
+    background: blue;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.shape {
+    background: blueviolet;
+}
+
+.hexagono {
+    width: 200px;
+    height: 105px;
+    background: #63639c;
+    position: relative;
+}
+.hexagono::before {
+    content: "";
+    position: absolute;
+    top: 150px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 50px solid #63639c;
+}
+.hexagono::after {
+    content: "";
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 50px solid #63639c;
+}

@@ -3,14 +3,21 @@ using Conqueror.Logic.Language;
 namespace Conqueror.Logic;
 
 public class Game {
-    public Player Player1;
-    public Player Player2;
-    private Deck Deck;
+    public static Player Player1;
+    public static Player Player2;
+    public static List<Card> Player1Deck = new();
+    public static List<Card> Player2Deck = new();
+    public static List<Card> Player1Hand = new();
+    public static List<Card> Player2Hand = new();
+
     private Manager cq;
+
+    public Game(){
+
+    }
     public Game(int level) {
         cq = new Manager();
 
-        Deck = new Deck();
         Character c1 = cq.GetCharacter(1);
         Character c2 = cq.GetCharacter(0);
         Player1 = new PlayerHuman(c1.Name, c1.UrlPhoto, c1.Id);
@@ -21,13 +28,14 @@ public class Game {
             Player2 = new PlayerIA(c2.Name, c2.UrlPhoto, c2.Id);
         }
         
-        CreateDeck(Deck.mainDeck);
+        CreateDeck(Player1Deck);
+        CreateDeck(Player2Deck);
         for (int i = 0; i < 5; i++) {
-            Player1.Hand.AddCard(Deck.Draw(Deck.mainDeck));
-            Player2.Hand.AddCard(Deck.Draw(Deck.mainDeck));
+            Player1Hand.Add(ListOfCards.Draw(Player1Deck));
+            Player2Hand.Add(ListOfCards.Draw(Player2Deck));
         }
-    }   
-    
+
+    }      
     public void Activate() {
 
         Dictionary<string, int> scope;
@@ -36,16 +44,16 @@ public class Game {
         scope.Add("EnemyLife", Player2.Life);
         scope.Add("MyCharms", Player1.Charms);
         scope.Add("EnemyCharms", Player2.Charms);
-        scope = Player1.Launch(scope); // metodo para seleccionar la carta a jugar
+        scope = Player1.Launch(scope, Player1Hand); // metodo para seleccionar la carta a jugar
         if (Player1.Pos == -1) {
             return;
         }
         Player1.Life = scope["MyLife"];
         Player2.Life = scope["EnemyLife"];
-        Player1.Charms = scope["MyCharms"]- Player1.Hand.CardsList[Player1.Pos].Charms;;
+        Player1.Charms = scope["MyCharms"] - Player1Hand[Player1.Pos].Charms;
         Player2.Charms = scope["EnemyCharms"];
 
-        Player1.RemoveCard();
+        Player1.RemoveCard(Player1Hand);
         Player1.ResetPos();
     }
     public void ChangePlayers() {
@@ -53,6 +61,18 @@ public class Game {
         Player p2 = Player2;
         Player1 = p2;
         Player2 = p1;
+
+        List<Card> deck1 = Player1Deck;
+        List<Card> deck2 = Player2Deck;
+        Player1Deck = deck2;
+        Player2Deck = deck1;
+
+        List<Card> hand1 = Player1Hand;
+        List<Card> hand2 = Player2Hand;
+        Player1Hand = hand2;
+        Player2Hand = hand1;
+
+
     }
     public string IsGameEnd() {
         if (Player1.Life <= 0 && Player2.Life <= 0) {
@@ -67,9 +87,6 @@ public class Game {
         }
         return null;
     }
-    public void DrawCard() {
-        Player1.Hand.AddCard(Deck.Draw(Deck.mainDeck));
-    }
     public void AddCharms() {   
         Player1.Charms ++;
     }
@@ -79,6 +96,18 @@ public class Game {
                 deck.Add(card);    
             }
         }
+    }
+    public bool IsValid(int pos) {
+        if (pos >= 0) {
+            if (Player1Hand.Count > pos && Player1Hand[pos].Charms <= Player1.Charms) {
+                return true;
+            }
+        }
+        return false;
+    }    
+    
+    public void DrawCard() {
+        Player1Hand.Add(ListOfCards.Draw(Player1Deck));
     }
     /*
     TODO: Hacer que cuando se active una carta, se verifique si se puede

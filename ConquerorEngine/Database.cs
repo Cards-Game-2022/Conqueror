@@ -27,7 +27,6 @@ public class Database {
             Characters = new List<Character>();
         }
     }
-
     public void StoreCharacter(Character ch) {
         InitCharacters();
         Characters.Add(ch);
@@ -37,6 +36,7 @@ public class Database {
     }
     public void InitCards() {
         if (Cards == null) {
+
             if (File.Exists(Config.PathCard)) {
                 string jsonString = File.ReadAllText(Config.PathCard);
                 if (jsonString != "") {
@@ -47,7 +47,6 @@ public class Database {
             Cards = new List<Card>();
         }
     }
-
     public void StoreCard(Card cd) {
         InitCards();
         Cards.Add(cd);
@@ -55,7 +54,6 @@ public class Database {
         string jsonString = JsonSerializer.Serialize(Cards, options);
         File.WriteAllText(Config.PathCard, jsonString);
     }
-
     public Id GetLastId() {
         // abre el txt y revisa si lo que contiene es un numero si no devuelve 0
         if (File.Exists(Config.PathCharacters)) {
@@ -66,7 +64,6 @@ public class Database {
         }
         return new Id(0, 0);
     }
-
     public void UpdateId(int card, int character) {
         Id id = new Id(card, character);
 
@@ -74,7 +71,6 @@ public class Database {
         string jsonString = JsonSerializer.Serialize(id, options);
         File.WriteAllText(Config.PathLastID, jsonString); 
     }
-
     public Character GetCharacter(int id) {
         foreach (var item in Characters) {
             if (id == item.Id) {

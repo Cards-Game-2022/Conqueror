@@ -10,13 +10,25 @@ function WinnerMessage(){
 }
 
 function refreshPage(){
-    window.location.reload();
+    window.location = window.location.href+'?eraseCache=true';
+    //window.location.reload(true);
 } 
- /*
-function toWinner(winner) {
-   // alert("El ganador es: " + winner);
 
-    location.href = "/winner?win=" + document.getElementsByName("winner").values;
+
+
+document.getElementById("click").addEventListener("click", executeEffect)
+document.getElementById("none").addEventListener("click", deleteEffect)
+
+function executeEffect() { 
+    value = document.getElementById("value")
+    effect = document.getElementById("effect-enemy")
+    effect.style.display = "block"
+    //effect.src = value.value
 }
 
-*/
+function deleteEffect() {
+
+    effect = document.getElementById("effect-enemy")
+    effect.style.display = "none"
+}
+ 

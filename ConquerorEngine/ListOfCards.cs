@@ -1,15 +1,10 @@
-using System.Collections.Generic;
+using System.Collections;
 
 namespace Conqueror.Logic;
 
-public class Deck {
-    public List<Card> mainDeck;
+public static class ListOfCards {
 
-    public Deck() {
-        mainDeck = new List<Card>();
-    }        
-    
-    public List<Card> Shuffle (List<Card> listOfCards) {
+    public static List<Card> Shuffle (List<Card> listOfCards) {
 
         int[] shuffledPositions = new int[listOfCards.Count];
         Random randomGenerator = new Random();
@@ -38,14 +33,12 @@ public class Deck {
 
         return listOfCards;
     }
-
-    public Card Draw (List<Card> deck) {
+    public static Card Draw (List<Card> deck) {
 
         deck = Shuffle(deck);
         return deck[0];
     }
-
-    public Card Draw(List<Card> deck, Card card) {
+    public static Card Draw(List<Card> deck, Card card) {
         
         if (deck.Contains(card))
             return card;
@@ -54,4 +47,13 @@ public class Deck {
             return null;
         }
     }
+    public static void AddCard(Card card, List<Card> deck) {
+        deck.Add(card);
+    }
+    public static void RemoveCard(Card card, List<Card> deck) {
+        if(card.Id >= 0 && card.Id < deck.Count) {
+            deck.Remove(card);
+        }
+    }
 }
+
