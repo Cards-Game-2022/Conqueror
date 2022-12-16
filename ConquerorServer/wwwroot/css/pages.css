@@ -131,29 +131,6 @@ body {
     color:white;
 }
 
-
-.ShowWinner {
-  display: none;
-  position: absolute;   
-  background-color: rgba(209, 250, 237, 0.63);
-  border-radius: 5px;
-  z-index: 100;
-  padding: 50px;
-  font-size: 18px;
-
-}
-
-.ShowWinner::before {
-  content: '';
-  position: absolute;
-  right: 100%; 
-  bottom: 30%;
-  width: 0;
-  border-right: 10px solid rgba(62, 78, 219, 0.555);
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent; 
-}
-
 .backgrounds {
   background-position: center center;
   background-size: cover;

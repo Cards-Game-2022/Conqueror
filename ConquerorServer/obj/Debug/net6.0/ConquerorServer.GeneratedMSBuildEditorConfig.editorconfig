@@ -39,10 +39,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2VsZWN0UGxheWVyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/marian_susana/Documents/Conqueror/ConquerorServer/Pages/Winner.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvV2lubmVyLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
 [/home/marian_susana/Documents/Conqueror/ConquerorServer/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL1N1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 

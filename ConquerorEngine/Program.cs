@@ -1,4 +1,5 @@
 ﻿using System;
 using Conqueror.Logic;
 
-Game game = new Game(1);
+Game game = new Game();
+

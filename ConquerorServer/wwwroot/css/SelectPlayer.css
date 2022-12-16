@@ -1,4 +1,7 @@
+.select-player-background {
+    background-image: url("../images/player.jpg");
 
+}
 
 .card-player-image{
     border-top-right-radius: 20px;

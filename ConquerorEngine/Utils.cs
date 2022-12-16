@@ -6,9 +6,23 @@ static class Utils {
     public static void Error(string text) {
         throw new Exception(text);
     }
+    /// <summary>
+    /// Crea un scope basado en el estado actual del juego
+    /// </summary>
+    /// <param name="st">Estado actual del juego</param>
+    public static Dictionary<string, int> CreateScope(Status st) {
+        Dictionary<string, int> scope = new();
+        scope.Add("MyLife", st.playerStatuses[0].life);
+        scope.Add("EnemyLife", st.playerStatuses[1].life);
+        scope.Add("MyCharms", st.playerStatuses[0].charms);
+        scope.Add("EnemyCharms", st.playerStatuses[1].charms);
+        return scope;
+    }
+    /// <summary>
+    /// Crea un scope desde un estado inicial de juego predefinido
+    /// </summary>
     public static Dictionary<string, int> CreateScope() {
-        Dictionary<string, int> scope;
-        scope = new Dictionary<string, int>();
+        Dictionary<string, int> scope = new();
         scope.Add("MyLife", Config.BasicLife);
         scope.Add("EnemyLife", Config.BasicLife);
         scope.Add("MyCharms", Config.Charms);

@@ -1,123 +1,147 @@
 using System;
+using System.Collections;
 using Conqueror.Logic.Language;
+
 namespace Conqueror.Logic;
 
-public class Game {
-    public static Player Player1;
-    public static Player Player2;
-    public static List<Card> Player1Deck = new();
-    public static List<Card> Player2Deck = new();
-    public static List<Card> Player1Hand = new();
-    public static List<Card> Player2Hand = new();
+public class Game : IEnumerable<Status>, IGraphics {
+    
+    public Status st = new(2);
 
-    private Manager cq;
-
-    public Game(){
+    public Game() {
 
     }
     public Game(int level) {
-        cq = new Manager();
-
-        Character c1 = cq.GetCharacter(1);
-        Character c2 = cq.GetCharacter(0);
-        Player1 = new PlayerHuman(c1.Name, c1.UrlPhoto, c1.Id);
-        if (level == 0) {
-            Player2 = new PlayerHuman(c2.Name, c2.UrlPhoto, c2.Id);
-
-        } else {
-            Player2 = new PlayerIA(c2.Name, c2.UrlPhoto, c2.Id);
-        }
+        InitializePlayers(level);
         
-        CreateDeck(Player1Deck);
-        CreateDeck(Player2Deck);
-        for (int i = 0; i < 5; i++) {
-            Player1Hand.Add(ListOfCards.Draw(Player1Deck));
-            Player2Hand.Add(ListOfCards.Draw(Player2Deck));
+    }
+    
+    public void InitializePlayers(int level) {
+        Manager cq = new Manager();
+        
+        Character c0 = cq.GetCharacter(0);
+        Character c1 = cq.GetCharacter(1);
+
+        if (level != 2) {
+            st.playerStatuses[0].player = new PlayerHuman(c0.Name, c0.UrlPhoto, c0.Id);
+            if (level == 0) {
+                st.playerStatuses[1].player = new PlayerHuman(c1.Name, c1.UrlPhoto, c1.Id);           
+            } else {
+                st.playerStatuses[1].player = new PlayerIA(c1.Name, c1.UrlPhoto, c1.Id);    
+            }
         }
-
-    }      
-    public void Activate() {
-
-        Dictionary<string, int> scope;
-        scope = new Dictionary<string, int>();
-        scope.Add("MyLife", Player1.Life);
-        scope.Add("EnemyLife", Player2.Life);
-        scope.Add("MyCharms", Player1.Charms);
-        scope.Add("EnemyCharms", Player2.Charms);
-        scope = Player1.Launch(scope, Player1Hand); // metodo para seleccionar la carta a jugar
-        if (Player1.Pos == -1) {
-            return;
+        else {
+            st.playerStatuses[0].player = new PlayerIA(c0.Name, c0.UrlPhoto, c0.Id);
+            st.playerStatuses[1].player = new PlayerIA(c1.Name, c1.UrlPhoto, c1.Id);            
         }
-        Player1.Life = scope["MyLife"];
-        Player2.Life = scope["EnemyLife"];
-        Player1.Charms = scope["MyCharms"] - Player1Hand[Player1.Pos].Charms;
-        Player2.Charms = scope["EnemyCharms"];
-
-        Player1.RemoveCard(Player1Hand);
-        Player1.ResetPos();
+    }    
+    public void Activate(Card card) {
+        Dictionary<string, int> scope = Utils.CreateScope(st);
+        
+        if (st.playerStatuses[0].player is PlayerIA) {
+            card = PlayerIA.SelectIACard(st.playerStatuses[0]); // metodo para seleccionar la carta a jugar
+        }
+        if (st.playerStatuses[0].player is PlayerHuman) {
+            if (!IsValid(card, st.playerStatuses[0])) {
+                //no se debe hacer aqui esta revision
+                return;
+            }
+        }
+        scope = st.playerStatuses[0].player.Launch(card, scope, st.playerStatuses[0].playerHand); 
+        st.UpdateStatus(scope, card);
+        StabilizeLife();        
     }
     public void ChangePlayers() {
-        Player p1 = Player1;
-        Player p2 = Player2;
-        Player1 = p2;
-        Player2 = p1;
+        List<PlayerStatus> copia = new();
+        copia.Add(st.playerStatuses[1]);
+        copia.Add(st.playerStatuses[0]);
 
-        List<Card> deck1 = Player1Deck;
-        List<Card> deck2 = Player2Deck;
-        Player1Deck = deck2;
-        Player2Deck = deck1;
-
-        List<Card> hand1 = Player1Hand;
-        List<Card> hand2 = Player2Hand;
-        Player1Hand = hand2;
-        Player2Hand = hand1;
-
-
+        st.playerStatuses = copia;
     }
-    public string IsGameEnd() {
-        if (Player1.Life <= 0 && Player2.Life <= 0) {
-            return "Ninguno";
+    public bool GameOver() {
+        if (st.playerStatuses[0].life <= 0 || st.playerStatuses[1].life <= 0) { 
+            return true;
         } else {
-            if (Player1.Life <= 0) {
-                return Player2.Name;
-            } 
-            if (Player2.Life <= 0) { 
-                return Player1.Name;
-            }
-        }
-        return null;
-    }
-    public void AddCharms() {   
-        Player1.Charms ++;
-    }
-    public void CreateDeck(List<Card> deck) {
-        foreach(Card card in cq.db.Cards){
-            for(int i = 0; i<card.Rarity; i++) {  
-                deck.Add(card);    
-            }
+            return false;
         }
     }
-    public bool IsValid(int pos) {
-        if (pos >= 0) {
-            if (Player1Hand.Count > pos && Player1Hand[pos].Charms <= Player1.Charms) {
-                return true;
-            }
-        }
+    public static bool IsValid(Card cd, PlayerStatus playerStatus) {
+        if (playerStatus.charms >= cd.Charms ) {
+            return true;
+        }        
         return false;
-    }    
-    
-    public void DrawCard() {
-        Player1Hand.Add(ListOfCards.Draw(Player1Deck));
+    }        
+    public string GetWinner() {
+        if (st.playerStatuses[0].life > st.playerStatuses[1].life)
+        return st.playerStatuses[0].player.Name;
+        else if (st.playerStatuses[0].life < st.playerStatuses[1].life)
+        return st.playerStatuses[1].player.Name;
+        else 
+        return "";
     }
-    /*
-    TODO: Hacer que cuando se active una carta, se verifique si se puede
-          poner por los charms. Si no se puede, mostrar error.
-    TODO: Editar el cartel del ganador
-    TODO: Hacer una IA que ataque por la carta mas fuerte
-    TODO: Hacer muchas mas cartas == Hacer mas metodos
-    TODO: Buscar un gif para el efecto de daño
-    TODO: Poner un cuadrito con la carta que se jugo y un tiempo de espera
-          para cuando este jugando la IA
-    TODO: Crear un mazo para cada player    
-    */
+    public void ChangeTurns() {
+        ChangePlayers();
+        Actions.Draw(st.playerStatuses[0]);
+        Actions.AddCharms(st.playerStatuses[0]);
+         
+        if (st.playerStatuses[0].player is PlayerIA) {
+            Input(new Card());
+        } 
+    }    
+    public void StabilizeLife() {       
+        foreach (PlayerStatus state in st.playerStatuses) {
+            if (state.life < 0) {
+                state.life = 0;
+            }
+        }
+    }
+    /// <summary>
+    /// Aun no esta hecho para usarse.
+    /// </summary>
+    public List<Card> StorePlayedCard(List<Card> playedCards, Card card) {
+        playedCards.Add(card);
+        return playedCards;
+    }
+
+    public IEnumerator<Status> GetEnumerator() {
+        while (!GameOver()) {
+            ChangeTurns();            
+            yield return this.st;
+        }
+        ShowWinner();
+    }
+
+    IEnumerator IEnumerable.GetEnumerator() {
+        return GetEnumerator();
+    }
+
+    /// <summary>
+    /// Metodo para recibir la carta jugada
+    /// </summary>
+    public void Input(Card card) {
+        if (!GameOver()) {
+            Activate(card);
+            this.GetEnumerator().MoveNext();
+        }
+    }
+    
+    /// <summary>
+    /// Metodo para mostrar las cartas. Se hace en el razor
+    /// </summary>
+    public void Output() {
+        
+    }
+    
+    /// <summary>
+    /// Metodo para mostrar el ganador en consola
+    /// </summary>
+    public void ShowWinner() {
+        
+        string winner = GetWinner();
+        if (winner != null && winner != "")
+            Console.WriteLine("Ha ganado " + winner);
+        else 
+            Console.WriteLine("No ha ganado nadie. Empate");
+    }
+    
 }

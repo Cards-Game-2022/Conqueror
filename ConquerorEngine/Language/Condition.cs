@@ -14,3 +14,4 @@ class Condition {
         this.Cond = cond;
     }
 }
+

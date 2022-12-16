@@ -7,7 +7,7 @@ namespace Conqueror.Logic;
     static public string PathImageCharacters = @"Images/Characters";
     static public int BasicLife = 30;
     static public string[] SystemVariables = { "MyLife", "EnemyLife" };
-    static public int Charms = 10;
+    static public int Charms = 5;
 
     
 }

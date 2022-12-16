@@ -5,6 +5,7 @@ using System.Collections.Generic;
 namespace Conqueror.Logic;
 
 public class Database {
+   
     public List<Card> Cards {
         get; private set;
     }
@@ -17,14 +18,14 @@ public class Database {
     }
     public void InitCharacters() {
         if (Characters == null) {
+            Characters = new List<Character>();
             if (File.Exists(Config.PathCharacters)) {
                 string jsonString = File.ReadAllText(Config.PathCharacters);
                 if (jsonString != "") {
                     Characters = JsonSerializer.Deserialize<List<Character>>(jsonString);
                     return;
                 }
-            }
-            Characters = new List<Character>();
+            }            
         }
     }
     public void StoreCharacter(Character ch) {
@@ -36,15 +37,14 @@ public class Database {
     }
     public void InitCards() {
         if (Cards == null) {
-
+            Cards = new List<Card>();
             if (File.Exists(Config.PathCard)) {
                 string jsonString = File.ReadAllText(Config.PathCard);
                 if (jsonString != "") {
                     Cards = JsonSerializer.Deserialize<List<Card>>(jsonString);
                     return;
                 }
-            }
-            Cards = new List<Card>();
+            }            
         }
     }
     public void StoreCard(Card cd) {
@@ -54,7 +54,7 @@ public class Database {
         string jsonString = JsonSerializer.Serialize(Cards, options);
         File.WriteAllText(Config.PathCard, jsonString);
     }
-    public Id GetLastId() {
+    public static Id GetLastId() {
         // abre el txt y revisa si lo que contiene es un numero si no devuelve 0
         if (File.Exists(Config.PathCharacters)) {
             string jsonString = File.ReadAllText(Config.PathLastID);
@@ -64,7 +64,7 @@ public class Database {
         }
         return new Id(0, 0);
     }
-    public void UpdateId(int card, int character) {
+    public static void UpdateId(int card, int character) {
         Id id = new Id(card, character);
 
         var options = new JsonSerializerOptions { WriteIndented = true };

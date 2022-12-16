@@ -1,122 +1,129 @@
 @page "/gameEnvironment"
 @inject IJSRuntime JS;
 
+    <div class="text-light">
 
-<div class = "backgrounds game-environment-background">
-
-<div class="text-light">
-
-    <div class="d-flex justify-content-around mt-4">
-
-        <div>
-            <h4 class="player-name">@Game.Player1.Name</h4>
-            <p class="bg-danger p-2 card-points">Vida : @Game.Player1.Life</p>
-        </div>
-        <div>
-            <h4 class="player-name">@Game.Player2.Name</h4>
-            <p class="bg-danger p-2 card-points">Vida : @Game.Player2.Life</p>
-        </div>
-    </div>
-
-    <div id="text" class="text-black text-center ShowWinner">
-        <p>Gano: @winner</p>
-        <a href="/"> Volver al menu principal.</a>
-        <button type="submit" onClick="refreshPage()"> Volver a jugar</button>
-    </div>
-
-    <div class="row mt-5 players-field">
-        <div class="col-5">
-            <img src="@Game.Player1.UrlPhoto" alt="" class="img-fluid img-player">
-
-        </div>
-        <div class="col-5">
-            <img src="@Game.Player2.UrlPhoto" alt="" class="img-fluid img-player">
-
-        </div>
-            
-            <img src="images/attack.gif" id="effect-enemy" alt="" class="img-fluid position-absolute z-index-1">
-        </div>
-    </div>
-
-    <div class="d-flex justify-content-center mt-5">
-        <div>
-            <div class="text-light bg-gradient bg-dark p-2 charms-button">
-                Charms: 
-                <br>@Game.Player1.Charms
+        <div class="d-flex justify-content-around mt-4">
+            <div style="text-align: center;">   
+                <h4 class="player-name">@game.st.playerStatuses[0].player.Name</h4>
+                <div class = "life-charms"> 
+                    <p class="life-button bg-danger p-2 card-points">&nbsp;&nbsp;Vida : @game.st.playerStatuses[0].life &nbsp;&nbsp;</p>
+                    <p class="charms-button text-light bg-gradient bg-dark p-2">Charms: @game.st.playerStatuses[0].charms</p>
+                </div>
+            </div>
+            <div style="text-align: center;">
+                <h4 class="player-name">@game.st.playerStatuses[1].player.Name</h4>
+                <div class = "life-charms"> 
+                    <p class="life-button bg-danger p-2 card-points">&nbsp;&nbsp;Vida : @game.st.playerStatuses[1].life &nbsp;&nbsp;</p>
+                    <p class="charms-button text-light bg-gradient bg-dark p-2">Charms: @game.st.playerStatuses[1].charms</p>
+                </div>
             </div>
         </div>
 
-        <div class="d-flex justify-content-center flex-wrap text-black ms-2 me-2">
-            @foreach (var item in Game.Player1Hand)
-            {
-                 <div class="cursor mt-1 card-margin" @onclick="@(e => Modal(@item))"  data-bs-toggle="modal" data-bs-target="#exampleModalCenteredScrollable">
- 
-                    <div class="card card-background">
+        <div id="show-winner" class="text-black text-center ShowWinner">
+            <p>Gano: @game.GetWinner()</p>
+            <a class = "GoToMainMenu" href="/"> Volver al menu principal.</a>
+            <button class = "ReloadGame" type="submit" @onclick="RefreshPage"> Volver a jugar</button>
+        </div>
 
-                        <div class="charms" id="none">
-                            <p class=" text-light">@item.Charms</p>
-                        </div>
-                        <div class="  p-0">
+        <div id = "error-message" class = "text-black text-center ErrorMessage">
+            <p> Jugada Incorrecta </p>
+        </div>
 
-                            <div class="img-rotate"><img src="@item.UrlPhoto" class="img-fluid m-1" width="179" alt="">
+        <div class="row mt-5 players-field">
+            <div class="col-5">
+                <img src="@game.st.playerStatuses[0].player.UrlPhoto" alt="" class="img-fluid img-player">
+
+            </div>
+            <div class="col-5">
+                <img src="@game.st.playerStatuses[1].player.UrlPhoto" alt="" class="img-fluid img-player">
+
+            </div>
+                
+                <img src="images/attack.gif" id="effect-enemy" alt="" class="img-fluid position-absolute z-index-1">
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center mt-5">
+            <div>
+                <button class="btn btn-primary" @onclick="@(e => ShowWinner(game.st.playerStatuses[1].player.Name))">Rendirse</button>
+            </div>
+
+            <div class="d-flex justify-content-center flex-wrap text-black ms-2 me-2">
+                @foreach (var item in game.st.playerStatuses[0].playerHand)
+                {
+                    
+                //  <div class="cursor mt-1 card-margin" @onclick="@(e => Modal(@item))"  data-bs-toggle="modal" data-bs-target="#exampleModalCenteredScrollable">
+                    <div class="cursor mt-1 card-margin" @onclick="@(e => @game.Input(item))">
+                        <div class="card card-background">
+
+                            <div class="charms" id="none">
+                                <p class=" text-light">@item.Charms</p>
+                            </div>
+                            <div class="  p-0">
+
+                                <div class="img-rotate"><img src="@item.UrlPhoto" class="img-fluid m-1" width="179" alt="">
+                                </div>
+
                             </div>
 
-                        </div>
-
-                        <div class="  p-2">
-                            <p class="h5 m-0 p-0 card-text text-center">@item.Name</p>
-                        </div>
-                    </div>
-                </div>
-            } 
-            @if(Game.Player1Hand.Count == 0)
-            {
-                <div class="cursor mt-1">
-                    <div class="card my-card">
-                        <img src="" class="" alt="">
-                            <h3>No hay cartas</h3>
-                        <div class="card-body p-2">
-                            <p class="m-0 p-0 card-text">No hay cartas</p> 
+                            <div class="  p-2">
+                                <p class="h5 m-0 p-0 card-text text-center">@item.Name</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-            }
-        </div>
-        
-        <div>
-            <button class="btn btn-primary" id = "click" @onclick="ChangePlayers">Fin del Turno</button>
-        </div>
-    </div> 
+                } 
+                @if(game.st.playerStatuses[0].playerHand.Count == 0)
+                {
+                    <div class="cursor mt-1">
+                        <div class="card my-card">
+                            <img src="" class="" alt="">
+                                <h3>No hay cartas</h3>
+                            <div class="card-body p-2">
+                                <p class="m-0 p-0 card-text">No hay cartas</p> 
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+            <!--
+            <div>
+                <button class="btn btn-primary" id = "click" @onclick="ChangePlayers">Fin del Turno</button>
+            </div>
+            -->
+        </div> 
 
+    <!--Modal comentado-->
+<!--
+        <div class="modal fade text-black" id="exampleModalCenteredScrollable" tabindex="-1"
+            aria-labelledby="exampleModalCenteredScrollableTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalCenteredScrollableTitle">@name</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="@photo" alt="" width="450" height="500">
 
-    <div class="modal fade text-black" id="exampleModalCenteredScrollable" tabindex="-1"
-        aria-labelledby="exampleModalCenteredScrollableTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalCenteredScrollableTitle">@name</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <img src="@photo" alt="" width="450" height="500">
-
-                    <p>Charms: @charms </p>
-                    <p>@text </p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Atras</button>
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" @onclick="Launch">Lanzar</button>
+                        <p>Charms: @charms </p>
+                        <p>@text </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Atras</button>
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" @onclick="Launch">Lanzar</button>
+                    </div>
                 </div>
             </div>
+            
         </div>
-    </div>
+-->
 
-    <input type="hidden" name="winner" @bind="winner">
-</div>
-
+@{
+    Background();
+}
 @code{
-    private Game game = new Game(1);
-    private int id;
+    /*private int id;
     private string name;
     private string photo;
     private string text;
@@ -124,77 +131,37 @@
     private int pos = -1;
     private bool gameStart;
     private string winner;
+    */
 
-  
-    private async void Launch(){
-        try
-        {
-            if (game.IsGameEnd() != null) {
-                return;
-            }
+    
+    //Posdata: David, odio razor.
+    //Todavia no he hecho lo de lograr que las IA jueguen, pero ya se puede jugar contra la IA.
+    //Ahora mismo estan bien implementados IA vs Humano, y Humano vs Humano.
+    //Los modal estan comentados porque no he trabajado en eso.
+    //Me falta tambien el boton de finalizar turno que es relativamente facil
+    //La pagina de PVP esta borrada o comentada completa. Igual no te preocupes por eso que es copiar este mismo codigo
+    //Me falta hacer el boton en el menu principal de IA vs IA
 
-            pos = GetPos();
-            Game.Player1.Pos = pos;
-            game.Activate();// activa la carta que se selecciono
 
-            // chequea si el juego termino
-            winner = game.IsGameEnd();
-            ShowWinner(winner);            
-            pos = -1;
-                
-            
-            ResetModal(); // quita todos los datos del modal
-        }
-        catch (System.Exception e)
-        {
-            Console.WriteLine(e.Message);
-        }
-        
+    /// <summary>
+    /// El 0 es Humano vs Humano
+    /// El 1 es Humano vs IA
+    /// El 2 es IA vs IA.
+    /// </summary>
+    Game game = new Game(0);
+
+    private async void PlayIA(Game game) {
+        game.Input(PlayerIA.SelectIACard(game.st.playerStatuses[0]));
     }
-    private int GetPos() {
-        for (int i = 0; i < Game.Player1Hand.Count; i++)
-        {
-            if (Game.Player1Hand[i].Id == id) {
-            //Console.WriteLine(game.Player1.Hand.CardsList[i].Id + " " + id);
-                return i;
-            }
-        }
-        return -1;
+    private async void GameIsOver() {
+        if(game.GameOver())
+        await JS.InvokeVoidAsync("WinnerMessage");
     }
-    private async void ChangePlayers() {
-        if (game.IsGameEnd() != null)
-        return;
-        
-        else {
-            game.ChangePlayers();
-            game.DrawCard();
-            game.AddCharms();
-
-            game.Activate(); // realiza el movimiento de la IA
-            // chequea si el juego termino de nuevo
-            winner = game.IsGameEnd();
-            ShowWinner(winner);
-
-            pos = -1;
-            game.ChangePlayers();
-            game.DrawCard();
-            game.AddCharms();
-        }
+    private async void Background() {
+        await JS.InvokeVoidAsync("GameEnvironmentBG");
     }
-    private void Modal(Card cd) { 
-        this.id =  cd.Id;
-        name = cd.Name;
-        photo = cd.UrlPhoto;
-        text = cd.Text;
-        charms = cd.Charms;
-        
-    }
-    private void ResetModal() {
-        id = -1;
-        name = null;
-        photo = null;
-        text = null;
-        charms = 0;
+    private async void RefreshPage() {
+        await JS.InvokeVoidAsync("refreshPage");
     }
     private async void ShowWinner(string winner) {
         if (winner != null) {
@@ -202,4 +169,26 @@
 
         }
     }
+    /* Modal comentado
+    private void Modal(Card cd) {        
+        this.id =  cd.Id;
+        name = cd.Name;
+        photo = cd.UrlPhoto;
+        text = cd.Text;
+        charms = cd.Charms;
+    }
+    private void ResetModal() {
+        id = -1;
+        name = null;
+        photo = null;
+        text = null;
+        charms = 0;        
+    }
+    */
+    
+    /* Mensaje de error comentado
+    private async void ErrorMessage() {
+        await JS.InvokeVoidAsync("ErrorMessage");
+    }
+    */
 }
