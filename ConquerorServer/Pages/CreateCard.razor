@@ -5,9 +5,9 @@
     <h1 class="text-center" id="">Crear Carta</h1>
     <form autocomplete="off">
         <div class="row">
-            <div class="col-12 col-lg-4">
+            <div class="col-12 col-lg-4 Create-Cards-Main-Form">
                 <div class="form-floating mb-3 Floating-Form">
-                    <input type="text" @bind="name" class="form-control rounded-4 Form-Elements" id="floatingInput" placeholder="Nombre de la Carta">
+                    <input type="text" @bind="name" class="form-control rounded-4 Form-Elements" id="floatingInput" placeholder="Texto">
                     <label for="floatingInput" >Nombre de la Carta: </label>
                 </div>
                 <div class="form-floating mb-3 Floating-Form">
@@ -23,22 +23,18 @@
                     <label for="floatingPassword">Rareza: </label>
                 </div>
                 <div class="form-floating mb-3 Floating-Form">
-                    <!--
-                    <input type="file" class="form-control rounded-4" id="floatingPassword" placeholder="puta"/>
-                    <label>Select image to upload: <input type="button" /></label>
-                    -->
                     <input type="file" @bind="photo" class="form-control rounded-4 Form-Elements" id="floatingPassword" placeholder="Texto">
                     <label for="floatingPassword">Imagen: </label>
                     
                 </div>
             </div>
             <div class="col-12 col-lg-8">
-                <div class="text-center mt-2">
-                    <div>
-                        <h2>Forma de usar el mini-lenguaje para crear efectos</h2>
+                <div class="text-center mt-2 Instructions-background">
+                    <div class="instructions-margin">
+                        <h2>Instrucciones:</h2>
                         <p>Solo existen variables enteras y las definidas en el lenguaje, las cuales detallaremos ahora.</p>
 
-                        <div class="bg-black p-3">
+                        <div class="p-3">
                             <code>MyLife,
                                 MyCharms,
                                 EnemyLife,
@@ -47,19 +43,20 @@
                         </div>
                     </div>
 
-                    <p class="text-black mt-5">Editor de texto:</p>
+                    <p class="">Escriba el efecto de la carta:</p>
                     <div class="form-floating mb-3">
-                        <textarea @bind="effect" name="" id="" cols="40" rows="20"></textarea>
+                        <textarea @bind="effect" name="" id="" cols="30" rows="5"></textarea>
                     </div>
-
                     <div class="mb-3 d-flex justify-content-around">
                         <button class="btn btn-primary">Atrás</button>
                         <button class="btn btn-primary" @onclick="Handler">Aceptar</button>
                     </div>
+                    <br>                    
                 </div>
             </div>
         </div>
     </form>
+    
 </div>
 
 
@@ -71,14 +68,12 @@
     private string rarity;
     private string photo;
     private string effect;
-    private void Handler(){
+    private void Handler() {
         Manager cq = new Manager();
-        try
-        {
+        try {
             cq.CreateCard(name, photo, Int32.Parse(rarity), Int32.Parse(charms), text, effect);
         }
-        catch (System.Exception e)
-        {
+        catch (System.Exception e) {
             Console.WriteLine(e.Message);
         }
     }      

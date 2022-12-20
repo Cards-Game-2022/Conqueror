@@ -35,6 +35,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[/home/marian_susana/Documents/Conqueror/ConquerorServer/Pages/JV.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSlYucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/marian_susana/Documents/Conqueror/ConquerorServer/Pages/PVP.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUFZQLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [/home/marian_susana/Documents/Conqueror/ConquerorServer/Pages/SelectPlayer.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2VsZWN0UGxheWVyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 

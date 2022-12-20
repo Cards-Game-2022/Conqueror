@@ -69,6 +69,10 @@ public class Card {
         } else {
             Utils.Error("Valor incorrecto para rarity. Debe ser no negativo");
         }
+
+        if (this.urlPhoto == null) {
+            this.urlPhoto = "images/photo102.png";
+        }
     }
     
 }

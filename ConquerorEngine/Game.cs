@@ -36,7 +36,7 @@ public class Game : IEnumerable<Status>, IGraphics {
         }
     }    
     public void Activate(Card card) {
-        Dictionary<string, int> scope = Utils.CreateScope(st);
+        Dictionary<string, int> scope = Status.CreateScope(st);
         
         if (st.playerStatuses[0].player is PlayerIA) {
             card = PlayerIA.SelectIACard(st.playerStatuses[0]); // metodo para seleccionar la carta a jugar
@@ -51,13 +51,13 @@ public class Game : IEnumerable<Status>, IGraphics {
         st.UpdateStatus(scope, card);
         StabilizeLife();        
     }
-    public void ChangePlayers() {
+    /* public void ChangePlayers() {
         List<PlayerStatus> copia = new();
         copia.Add(st.playerStatuses[1]);
         copia.Add(st.playerStatuses[0]);
 
         st.playerStatuses = copia;
-    }
+    } */
     public bool GameOver() {
         if (st.playerStatuses[0].life <= 0 || st.playerStatuses[1].life <= 0) { 
             return true;
@@ -80,7 +80,7 @@ public class Game : IEnumerable<Status>, IGraphics {
         return "";
     }
     public void ChangeTurns() {
-        ChangePlayers();
+        st.ChangePlayers();
         Actions.Draw(st.playerStatuses[0]);
         Actions.AddCharms(st.playerStatuses[0]);
          
@@ -116,8 +116,9 @@ public class Game : IEnumerable<Status>, IGraphics {
     }
 
     /// <summary>
-    /// Metodo para recibir la carta jugada
+    /// Recibe la carta jugada
     /// </summary>
+    /// <param name="card">carta jugada</param>
     public void Input(Card card) {
         if (!GameOver()) {
             Activate(card);
@@ -126,14 +127,14 @@ public class Game : IEnumerable<Status>, IGraphics {
     }
     
     /// <summary>
-    /// Metodo para mostrar las cartas. Se hace en el razor
+    /// Muestra las acciones
     /// </summary>
     public void Output() {
         
     }
     
     /// <summary>
-    /// Metodo para mostrar el ganador en consola
+    /// Muestra el ganador
     /// </summary>
     public void ShowWinner() {
         

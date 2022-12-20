@@ -56,5 +56,26 @@ input[type="file"]::file-selector-button {
 }
 
 .create-card-background {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   background-image: url("../images/cards.jpg");
+}
+.Create-Cards-Main-Form {
+  position: relative;
+  left: 3%;
+}
+.Instructions-background {
+  background-color:#212529f0;
+  color: white;
+  font-size: 18px;
+  margin-left: 20%;
+  margin-right: 2%;
+  border-radius: 2%;
+}
+.instructions-margin {
+  margin-left: 7%;
+  margin-right: 7%;
 }

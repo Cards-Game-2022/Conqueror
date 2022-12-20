@@ -4,7 +4,7 @@ using System;
 using Conqueror.Logic;
 namespace Conqueror.Logic.Language;
 
-class Interpreter : NodeVisitor{
+class Interpreter : NodeVisitor {
     public Dictionary<string, int> Scope;
     private Parser parser;
     

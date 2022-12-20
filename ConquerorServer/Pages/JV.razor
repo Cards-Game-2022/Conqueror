@@ -1,4 +1,4 @@
-@page "/gameEnvironment"
+@page "/JV"
 @inject IJSRuntime JS;
 
     <div class="text-light">
@@ -19,16 +19,12 @@
                 </div>
             </div>
         </div>
-        @if(game.GameOver())
-        {
-            //StateHasChanged();
-            <p>PUTA</p>
-            <div id="show-winner" class="text-black text-center ShowWinner">
-                <p>Gano: @game.GetWinner()</p>
-                <a class = "GoToMainMenu" href="/"> Volver al menu principal.</a>
-                <button class = "ReloadGame" type="submit" @onclick="RefreshPage"> Volver a jugar</button>
-            </div>
-        }
+
+        <div id="show-winner" class="text-black text-center ShowWinner">
+            <p>Gano: @game.GetWinner()</p>
+            <a class = "GoToMainMenu" href="/"> Volver al menu principal.</a>
+            <button class = "ReloadGame" type="submit" @onclick="RefreshPage"> Volver a jugar</button>
+        </div>
 
         <div id = "error-message" class = "text-black text-center ErrorMessage">
             <p> Jugada Incorrecta </p>
@@ -58,7 +54,7 @@
                 {
                     
                 //  <div class="cursor mt-1 card-margin" @onclick="@(e => Modal(@item))"  data-bs-toggle="modal" data-bs-target="#exampleModalCenteredScrollable">
-                    <div class="cursor mt-1 card-margin" @onclick="@(e => @game.Input(item))">
+                    //<div class="cursor mt-1 card-margin" @onclick="@(e => @game.Input(item))">
                         <div class="card card-background">
 
                             <div class="charms" id="none">
@@ -75,7 +71,7 @@
                                 <p class="h5 m-0 p-0 card-text text-center">@item.Name</p>
                             </div>
                         </div>
-                    </div>
+                    //</div>
                 } 
                 @if(game.st.playerStatuses[0].playerHand.Count == 0)
                 {
@@ -152,8 +148,15 @@
     /// El 1 es Humano vs IA
     /// El 2 es IA vs IA.
     /// </summary>
-    Game game = new Game(1);
+    Game game = new Game(2);
 
+    private void NextMove(KeyboardEventArgs param) {
+        if (param.Key == "Enter") {
+            game.GetEnumerator().MoveNext();
+            Console.WriteLine("IM HERE");
+        }
+        
+    }
     private async void PlayIA(Game game) {
         game.Input(PlayerIA.SelectIACard(game.st.playerStatuses[0]));
     }
