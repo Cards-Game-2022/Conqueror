@@ -44,13 +44,7 @@ public class Card {
     public Card() {
 
     }
-    public Card(string name) {
-        this.name = name; 
-    }
-    public Card(string name, string url) {
-        this.name = name;
-        this.urlPhoto = url; 
-    }
+    
     public Card(string name, string url, int id, int rarity, int charms, string text, string effect) {
         this.name = name;
         this.urlPhoto = url; 
@@ -70,7 +64,7 @@ public class Card {
             Utils.Error("Valor incorrecto para rarity. Debe ser no negativo");
         }
 
-        if (this.urlPhoto == null) {
+        if (this.urlPhoto == null || this.urlPhoto == "") {
             this.urlPhoto = "images/photo102.png";
         }
     }

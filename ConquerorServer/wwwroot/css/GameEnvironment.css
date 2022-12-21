@@ -194,14 +194,15 @@ body {
 
 .ShowWinner {
     display: none;
-    position: absolute;   
+    position: inherit;   
     background-color: rgba(252, 112, 9, 0.48);
     border-radius: 12px;
     border-style: solid;
     border-color:black;
     padding: 3%;
     font-size: 125%;
-    left: 40%;
+    margin: auto;
+    width: 450px;
 }
 
 .ShowWinner::before {

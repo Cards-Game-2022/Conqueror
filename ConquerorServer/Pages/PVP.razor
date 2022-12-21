@@ -21,10 +21,11 @@
         </div>
         
             <div id="show-winner" class="text-black text-center ShowWinner">
-                <p>Gano: @game.GetWinner()</p>
+                <p>@game.GetWinner()</p>
                 <a class = "GoToMainMenu" href="/"> Volver al menu principal.</a>
                 <button class = "ReloadGame" type="submit" @onclick="RefreshPage"> Volver a jugar</button>
             </div>
+            
         
 
         <div id = "error-message" class = "text-black text-center ErrorMessage">
@@ -47,7 +48,7 @@
 
         <div class="d-flex justify-content-center mt-5">
             <div>
-                <button class="btn btn-primary" @onclick="ShowWinner">Rendirse</button>
+                <button class="btn btn-primary" @onclick="Surrender">Rendirse</button>
             </div>
 
             <div class="d-flex justify-content-center flex-wrap text-black ms-2 me-2">
@@ -55,7 +56,7 @@
                 {
                     
                 //  <div class="cursor mt-1 card-margin" @onclick="@(e => Modal(@item))"  data-bs-toggle="modal" data-bs-target="#exampleModalCenteredScrollable">
-                    <div class="cursor mt-1 card-margin" @onclick="@(e => @game.Input(item))">
+                    <div class="cursor mt-1 card-margin" @onclick="@(e => Play(@item))">
                         <div class="card card-background">
 
                             <div class="charms" id="none">
@@ -130,18 +131,8 @@
     private string text;
     private int charms;
     private int pos = -1;
-    private bool gameStart;
-    private string winner;
-    */
-
     
-    //Posdata: David, odio razor.
-    //Todavia no he hecho lo de lograr que las IA jueguen, pero ya se puede jugar contra la IA.
-    //Ahora mismo estan bien implementados IA vs Humano, y Humano vs Humano.
-    //Los modal estan comentados porque no he trabajado en eso.
-    //Me falta tambien el boton de finalizar turno que es relativamente facil
-    //La pagina de PVP esta borrada o comentada completa. Igual no te preocupes por eso que es copiar este mismo codigo
-    //Me falta hacer el boton en el menu principal de IA vs IA
+    */
 
 
     /// <summary>
@@ -151,26 +142,30 @@
     /// </summary>
     Game game = new Game(0);
 
-    
-
-    private async void PlayIA(Game game) {
-        game.Input(PlayerIA.SelectIACard(game.st.playerStatuses[0]));
-    }
-    private async void GameIsOver() {
-        if(game.GameOver())
-        await JS.InvokeVoidAsync("WinnerMessage");
-    }
     private async void Background() {
         await JS.InvokeVoidAsync("GameEnvironmentBG");
     }
     private async void RefreshPage() {
-        await JS.InvokeVoidAsync("refreshPage");
+        await JS.InvokeVoidAsync("RefreshPage");
     }
     private async void ShowWinner() {
-        string winner = game.st.playerStatuses[1].player.Name;
-        if (winner != null) {
-           await JS.InvokeVoidAsync("WinnerMessage");
+        await JS.InvokeVoidAsync("WinnerMessage");
+    }
+    private async void Surrender() {
+        game.st.playerStatuses[0].life = 0;
+        ShowWinner();
+    }
 
+    private async void Play(Card cd) {
+        if (!game.GameOver()) {
+            if(Game.IsValid(cd, game.st.playerStatuses[0])) {
+                game.Input(cd);
+                game.GetEnumerator().MoveNext();
+            }
+            else ErrorMessage();
+        }
+        else {
+            ShowWinner();
         }
     }
     /* Modal comentado
@@ -190,9 +185,8 @@
     }
     */
     
-    /* Mensaje de error comentado
+    
     private async void ErrorMessage() {
         await JS.InvokeVoidAsync("ErrorMessage");
     }
-    */
 }

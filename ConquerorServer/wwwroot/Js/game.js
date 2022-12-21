@@ -1,11 +1,9 @@
-function WinnerMessage(){
+function WinnerMessage() {
     text = document.getElementById("show-winner");    
     text.style.display = "grid"
-    
-    
 }
 
-function refreshPage(){
+function RefreshPage() {
     window.location = window.location.href+'?eraseCache=true';
 }
 

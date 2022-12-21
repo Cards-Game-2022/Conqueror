@@ -12,7 +12,7 @@ namespace Conqueror.Logic.Language;
 // SEMI: ;
 // LPAREN, RPAREN: ()
 // EOF: ~
-class Token {
+public class Token {
     // tipos de token: VAR, OP, INT, BOOL, LPAREN, RPAREN, STRUCT, EOF
     public string Type {
         private set; get;

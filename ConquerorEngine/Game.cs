@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using Conqueror.Logic.Language;
 
@@ -36,28 +35,25 @@ public class Game : IEnumerable<Status>, IGraphics {
         }
     }    
     public void Activate(Card card) {
-        Dictionary<string, int> scope = Status.CreateScope(st);
-        
-        if (st.playerStatuses[0].player is PlayerIA) {
-            card = PlayerIA.SelectIACard(st.playerStatuses[0]); // metodo para seleccionar la carta a jugar
-        }
-        if (st.playerStatuses[0].player is PlayerHuman) {
-            if (!IsValid(card, st.playerStatuses[0])) {
-                //no se debe hacer aqui esta revision
-                return;
-            }
-        }
-        scope = st.playerStatuses[0].player.Launch(card, scope, st.playerStatuses[0].playerHand); 
-        st.UpdateStatus(scope, card);
+
+        Context newContext = Launch(card, Utils.CreateScope(st), st);
+        st.UpdateStatus(newContext, card);
         StabilizeLife();        
     }
-    /* public void ChangePlayers() {
-        List<PlayerStatus> copia = new();
-        copia.Add(st.playerStatuses[1]);
-        copia.Add(st.playerStatuses[0]);
 
-        st.playerStatuses = copia;
-    } */
+    public Context Launch(Card card, Context scope, Status st)
+    {
+        if (card != null) {        
+            Actions.RemoveCard(card, st.playerStatuses[0].playerHand);
+            Utils.InterpretEffect(scope, card.Effect);
+            return scope;
+        }        
+        else {
+            Utils.Error("Accion invalida");
+            return null;
+        }
+    }
+
     public bool GameOver() {
         if (st.playerStatuses[0].life <= 0 || st.playerStatuses[1].life <= 0) { 
             return true;
@@ -73,20 +69,18 @@ public class Game : IEnumerable<Status>, IGraphics {
     }        
     public string GetWinner() {
         if (st.playerStatuses[0].life > st.playerStatuses[1].life)
-        return st.playerStatuses[0].player.Name;
+        return "El ganador es: " + st.playerStatuses[0].player.Name;
+
         else if (st.playerStatuses[0].life < st.playerStatuses[1].life)
-        return st.playerStatuses[1].player.Name;
+        return "El ganador es: " + st.playerStatuses[1].player.Name;
+
         else 
-        return "";
+        return "No hubo ganadores";
     }
     public void ChangeTurns() {
         st.ChangePlayers();
         Actions.Draw(st.playerStatuses[0]);
         Actions.AddCharms(st.playerStatuses[0]);
-         
-        if (st.playerStatuses[0].player is PlayerIA) {
-            Input(new Card());
-        } 
     }    
     public void StabilizeLife() {       
         foreach (PlayerStatus state in st.playerStatuses) {
@@ -103,27 +97,33 @@ public class Game : IEnumerable<Status>, IGraphics {
         return playedCards;
     }
 
-    public IEnumerator<Status> GetEnumerator() {
-        while (!GameOver()) {
-            ChangeTurns();            
-            yield return this.st;
-        }
-        ShowWinner();
+    public IEnumerator<Status> GetEnumerator() {    
+            if (!GameOver()) {            
+                ChangeTurns();
+                PlayIA();
+                yield return this.st;
+            }
+            else
+            yield break;
+            
     }
 
     IEnumerator IEnumerable.GetEnumerator() {
-        return GetEnumerator();
+        return GetEnumerator();        
     }
 
+    public void PlayIA() {
+        if (st.playerStatuses[0].player is PlayerIA) {
+            Input(PlayerIA.SelectIACard(st.playerStatuses[0]));
+        }
+    }
     /// <summary>
     /// Recibe la carta jugada
     /// </summary>
     /// <param name="card">carta jugada</param>
     public void Input(Card card) {
-        if (!GameOver()) {
+            if (card != null)
             Activate(card);
-            this.GetEnumerator().MoveNext();
-        }
     }
     
     /// <summary>
@@ -131,18 +131,6 @@ public class Game : IEnumerable<Status>, IGraphics {
     /// </summary>
     public void Output() {
         
-    }
-    
-    /// <summary>
-    /// Muestra el ganador
-    /// </summary>
-    public void ShowWinner() {
-        
-        string winner = GetWinner();
-        if (winner != null && winner != "")
-            Console.WriteLine("Ha ganado " + winner);
-        else 
-            Console.WriteLine("No ha ganado nadie. Empate");
     }
     
 }

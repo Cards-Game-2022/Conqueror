@@ -6,34 +6,40 @@ static class Utils {
     public static void Error(string text) {
         throw new Exception(text);
     }
+    public static string[] Names = { "StillCardEnemy", "ChangeHands" };
+
     /// <summary>
     /// Crea un scope basado en el estado actual del juego
     /// </summary>
     /// <param name="st">Estado actual del juego</param>
-    public static Dictionary<string, int> CreateScope(Status st) {
-        Dictionary<string, int> scope = new();
-        scope.Add("MyLife", st.playerStatuses[0].life);
-        scope.Add("EnemyLife", st.playerStatuses[1].life);
-        scope.Add("MyCharms", st.playerStatuses[0].charms);
-        scope.Add("EnemyCharms", st.playerStatuses[1].charms);
-        return scope;
+    public static Context CreateScope(Status st) {
+        
+        Context ctx = new Context();
+        ctx.Add(new Token("INT", "MyLife"), st.playerStatuses[0].life);
+        ctx.Add(new Token("INT", "EnemyLife"), st.playerStatuses[1].life);
+        ctx.Add(new Token("INT", "MyCharms"), st.playerStatuses[0].charms);
+        ctx.Add(new Token("INT", "EnemyCharms"), st.playerStatuses[1].charms);
+        ctx.Add(new Token("CONST", "CantMyCards"), st.playerStatuses[0].playerHand.Count);
+
+        return ctx;
     }
     /// <summary>
     /// Crea un scope desde un estado inicial de juego predefinido
     /// </summary>
-    public static Dictionary<string, int> CreateScope() {
-        Dictionary<string, int> scope = new();
-        scope.Add("MyLife", Config.BasicLife);
-        scope.Add("EnemyLife", Config.BasicLife);
-        scope.Add("MyCharms", Config.Charms);
-        scope.Add("EnemyCharms", Config.Charms);
-        return scope;
+    public static Context CreateScope() {
+        Context ctx = new Context();
+        ctx.Add(new Token("INT", "MyLife"), Config.BasicLife);
+        ctx.Add(new Token("INT", "EnemyLife"), Config.BasicLife);
+        ctx.Add(new Token("INT", "MyCharms"), Config.Charms);
+        ctx.Add(new Token("INT", "EnemyCharms"), Config.Charms);
+        ctx.Add(new Token("CONST", "CantMyCards"), Config.StartingCardsCount);
+        return ctx;
     }
-    public static Dictionary<string, int> InterpretEffect(Dictionary<string, int> scope, string effect) {
+     public static Context InterpretEffect(Context scope, string effect) {
         Lexer lexer = new Lexer(effect); 
         Parser pr = new Parser(lexer);
         Interpreter i = new Interpreter(pr, scope);
         i.Interpret();
-        return i.Scope;
+        return scope;
     }
 } 

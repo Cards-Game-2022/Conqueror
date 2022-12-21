@@ -27,8 +27,8 @@ public static class Actions {
         Shuffle(deck); //barajar el deck pero que no aparezcan todas las cartas ordenadas cuando se crea
     }
     public static void CreateHand(List<Card> hand, List<Card> deck) {
-        if (deck.Count >= 5) {
-            for (int i = 0; i<5; i++) {  
+        if (deck.Count >= Config.StartingCardsCount) {
+            for (int i = 0; i < Config.StartingCardsCount; i++) {  
                 hand.Add(deck[0]);
                 deck.Remove(deck[0]);   
             }

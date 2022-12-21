@@ -56,20 +56,22 @@ class Lexer {
             Advance();
         }
 
-        switch (result) {
-            case "BEGIN":
-                return new Token("BEGIN", "BEGIN");
+        if (IsFunction(result)) {
+            return new Token("FUNCTION", result);
+        }
 
-            case "IF":
-                return new Token("IF", "IF");
-
-            case "END":
-                return new Token("END", "END");
+        switch (result) { 
+            case "if":
+                return new Token("IF", "if");
+            case "while":
+                return new Token("WHILE", "while"); 
 
             default:
                 return new Token("ID", result);
         }
     }
+
+    
     
     public Token GetNextToken() {
         //Console.WriteLine(currentChar);
@@ -124,15 +126,15 @@ class Lexer {
             if (IsAlpha(currentChar)) {
                 return Id();
             }
-            if (currentChar == ':' && Peek() == '=') {
-                Advance();
-                Advance();
-                return new Token("ASSIGN", ":=");
-            }if (currentChar == '=' && Peek() == '=') {
-                Advance();
-                Advance();
-                return new Token("EQUAL", "==");
-            }
+            if (currentChar == '=') {
+                Advance(); 
+                if (currentChar != '=') {
+                    return new Token("ASSIGN", "=");
+                } else { 
+                    Advance();
+                    return new Token("EQUAL", "==");
+                }
+            } 
             if (currentChar == ';') {
                 Advance();
                 return new Token("SEMI", ";");
@@ -141,8 +143,16 @@ class Lexer {
                 Advance();
                 return new Token("DOT", ".");
             }
+            if (currentChar == '{') { 
+                Advance();
+                return new Token("BEGIN", "{");
+            }
+            if (currentChar == '}') { 
+                Advance();
+                return new Token("END", "}");
+            }
             
-            Console.WriteLine(currentChar);
+            //Console.WriteLine(currentChar);
             Utils.Error("Caracter invalido");
         }     
         return new Token("EOF", "~");
@@ -159,5 +169,14 @@ class Lexer {
     }
     private bool IsSpace(char ch) {
         return ch == '\n' || ch == '\r' || ch == ' ';
+    }
+
+    private bool IsFunction(string name) {
+        foreach (var item in Utils.Names) {
+            if (item == name) {
+                return true;
+            }
+        }
+        return false;
     }
 }

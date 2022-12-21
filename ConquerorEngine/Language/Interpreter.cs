@@ -1,24 +1,26 @@
 using System.Collections.Generic;
 using Microsoft.VisualBasic.CompilerServices;
 using System;
-using Conqueror.Logic;
 namespace Conqueror.Logic.Language;
 
-class Interpreter : NodeVisitor {
-    public Dictionary<string, int> Scope;
+class Interpreter {
+    public Context Context;
     private Parser parser;
     
-    public Interpreter(Parser parser, Dictionary<string, int> scope) {
+    public Interpreter(Parser parser, Context context) {
         this.parser = parser;
-        this.Scope = scope;
+        this.Context = context;
     }
 
-    public Object Visit(Object node) { 
+    public AST Visit(AST node) { 
         if (node is BinOp) { 
             return VisitBinOp(node);
         }
-        if (node is Num) { 
+        if (node is Num) {  
             return VisitNum(node);
+        }
+        if (node is Bool) {
+            return VisitBool(node);
         }
         if (node is UnaryOp) {
             return VisitUnaryOP(node);
@@ -39,112 +41,176 @@ class Interpreter : NodeVisitor {
         if (node is Condition) {
             VisitCondition(node);
         }
-        return null;
-    }
-
-    private Object VisitBinOp(Object node) {
-        BinOp op = (BinOp)node;
-
-        int l = 0, r = 0;
-        Object vl = Visit(op.Left);
-        Object vr = Visit(op.Right);
-        //Console.WriteLine(vl.ToString() + " " + vr);
-
-        string sl = vl.ToString();
-        string sr = vr.ToString();
-    //Console.WriteLine(op.Op.Type);
-        switch (op.Op.Type) {
-            case "PLUS":
-                return Int32.Parse(sl) + Int32.Parse(sr); 
-
-            case "MINUS": 
-                return Int32.Parse(sl) - Int32.Parse(sr);
-
-            case "MUL":
-                return Int32.Parse(sl) * Int32.Parse(sr);
-
-            case "DIV": 
-                if (sr == "0") {
-                    Utils.Error("Division por cero");
-                } 
-                return Int32.Parse(sl) / Int32.Parse(sr);
-            
-            case "LESS":
-                return Int32.Parse(sl) < Int32.Parse(sr);
-            
-            case "MORE":
-                return Int32.Parse(sl) > Int32.Parse(sr);
-            
-            case "EQUAL":
-                return Int32.Parse(sl) == Int32.Parse(sr);
-            
-            case "AND":
-                return sl == "True" && sr == "True";
-
-            case "OR":
-                return sl == "True" || sr == "True";
+        if (node is While) {
+            VisitWhile(node);
+        }
+        if (node is Function) {
+            VisitFunction(node);
         }
         return null;
     }
 
-    private Object VisitNum(Object node) {
-        Num n = (Num)node;
-        return n.Value;
+    private AST VisitBinOp(AST node) {
+        BinOp op = (BinOp)node;
+
+        int l = 0, r = 0;
+        AST sl = Visit(op.Left);
+        AST sr = Visit(op.Right);
+        //Console.WriteLine(vl.ToString() + " " + vr);
+        if (!((sl is Num) && (sr is Num)) && !((sl is Bool) && (sr is Bool))) {
+            Console.WriteLine(sl + " " + sr);
+            Utils.Error("Tipos de datos incorrectos en la expresion");
+        }
+
+        if (sr is Num) {
+            int vl = ((Num)sl).Value;
+            int vr = ((Num)sr).Value;
+            switch (op.Op.Type) {
+                case "PLUS":
+                    return new Num(vl + vr); 
+
+                case "MINUS": 
+                    return new Num(vl - vr);
+
+                case "MUL":
+                    return new Num(vl * vr);
+
+                case "DIV": 
+                    if (vr == 0) {
+                        Utils.Error("Division por cero");
+                    } 
+                    return new Num(vl / vr);
+                case "LESS":
+                    return new Bool (vl < vr);
+            
+                case "MORE":
+                    return new Bool (vl > vr);
+                
+                case "EQUAL": 
+                    return new Bool (vl == vr); 
+            }
+        }
+        if (sr is Bool) {
+            bool vl = ((Bool)sl).Value;
+            bool vr = ((Bool)sr).Value;
+            switch (op.Op.Type) {
+                
+                case "AND":
+                    return new Bool(vl == true && vr == true);
+
+                case "OR":
+                    return new Bool(vl == true || vr == true);
+            }
+        }
+        
+    //Console.WriteLine(op.Op.Type);
+        
+        return null;
     }
 
+    private Num VisitNum(AST node) {
+        Num n = (Num)node;
+        return n;
+    }
+    private Bool VisitBool(AST node) {
+        Bool n = (Bool)node;
+        return n;
+    }
 
-    public Object VisitUnaryOP(Object node) {
+    public AST VisitUnaryOP(AST node) {
         UnaryOp uop = (UnaryOp)node;
         string value = Visit(uop.Expr).ToString();
-        return Int32.Parse(value) * (uop.Token.Type == "PLUS" ? 1 : -1);
+        return new Num(Int32.Parse(value) * (uop.Token.Type == "PLUS" ? 1 : -1));
     }
 
-    public void VisitCompount(Object node) {
-        List<Object> children = ((Compound)node).Children;
+    public void VisitCompount(AST node) {
+        List<AST> children = ((Compound)node).Children;
         foreach (var item in children) {
             Visit(item);
         }
     }
 
-    public Object VisitNoOp(Object node) {
+    public AST VisitNoOp(AST node) {
         return null;
     }
 
-    public void VisitAssign(Object node) {
+    public void VisitAssign(AST node) {
         Assign assign = (Assign)node;
         string name = ((Var)assign.Left).Value;
-        Object visit = Visit(assign.Right);
-        string res = visit.ToString();
-        int result = Int32.Parse(res);
+        
+        if (Context.GetType(name) != "INT") {
+            Utils.Error("Intendo de modificar una variable que no es INT");
+        }
+        AST visit = Visit(assign.Right);
+        Num result = (Num)visit; 
 
-        if (Scope.ContainsKey(name)) {
-            Scope[name] = result;
+        // expresiones tipo EnemyLife= ;
+        if (result == null) {
+            Utils.Error("Sintaxis incorrecta, falta valor a la variable");
+        }
+
+        if (Context.ContainsId(name)) {
+            Context.Update(name, result.Value);
         } else {
-            Scope.Add(name, result);
+            Context.Add(new Token("INT", name), result.Value);
         }
     }
 
-    public Object VisitVar(Object node) {
+    public AST VisitVar(AST node) {
         string name = ((Var)node).Value;
-        if (!Scope.ContainsKey(name)) {
+        if (!Context.ContainsId(name)) {
             Utils.Error("Uso de variable no creada previamente");
         }
-        return Scope[name];
+        return new Num(Context.GetValue(name));
     }
 
-    public void VisitCondition(Object node) {
+    public void VisitWhile(AST node) {
+        While condition = (While)node;
+        if (!(condition.Cond is BinOp)) {
+            Utils.Error("Error se esperaba una operacion binaria de comparacion");
+        }
+        bool folow = true;
+        int calls = 0;
+
+        while (folow) {
+            calls++;
+            if (calls > 100000) {
+                Utils.Error("Ciclo infinito");
+            }
+            AST mk = VisitBinOp(condition.Cond);
+            Bool cond = (Bool)mk;
+            if (cond.Value == true) {
+                Visit(condition.Compound);
+            } else {
+                folow = false;
+            }
+        }
+        
+    }
+
+    public void VisitCondition(AST node) {
         Condition condition = (Condition)node;
         if (!(condition.Cond is BinOp)) {
             Utils.Error("Error se esperaba una operacion binaria de comparacion");
         }
-        Object mk = VisitBinOp(condition.Cond);
-        if (mk.ToString() == "True") {
+        AST mk = VisitBinOp(condition.Cond);
+        Bool cond = (Bool)mk;
+        if (cond.Value == true) {
             Visit(condition.Compound);
+        }
+    }
+    public void VisitFunction(AST node) {
+        Function func = (Function)node;
+        string name = func.Name;
+        if (Context.ContainsId(name)) {
+            Context.Update(name, Context.GetValue(name) + 1);
+        } else {
+            Context.Add(new Token("INT", name), 1);
         }
     }
 
     public void Interpret() {
-        Object tree = parser.Parse();
+        AST tree = parser.Parse();
         Visit(tree);
     }
 }

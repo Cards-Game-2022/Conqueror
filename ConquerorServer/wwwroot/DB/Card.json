@@ -6,7 +6,7 @@
     "Rarity": 1,
     "Charms": 3,
     "Text": "Texto del Helbrand",
-    "Effect": "BEGIN EnemyLife:= EnemyLife - 20; END."
+    "Effect": "EnemyLife= EnemyLife - 20;"
   },
   {
     "Name": "Prueba 2",
@@ -15,7 +15,7 @@
     "Rarity": 4,
     "Charms": 1,
     "Text": "Texto de prueba 2",
-    "Effect": "BEGIN EnemyLife:= EnemyLife - 5; END."
+    "Effect": "EnemyLife= EnemyLife - 5;"
   },
   {
     "Name": "Prueba 4",
@@ -24,7 +24,7 @@
     "Rarity": 2,
     "Charms": 2,
     "Text": "Texto de prueba 4",
-    "Effect": "BEGIN EnemyLife:= EnemyLife - 10; END."
+    "Effect": "EnemyLife= EnemyLife - 10;"
   },
   {
     "Name": "Culebra",
@@ -33,7 +33,7 @@
     "Rarity": 5,
     "Charms": 2,
     "Text": "Te arregla la vida",
-    "Effect": "BEGIN MyLife:= MyLife \u002B 5; END."
+    "Effect": "MyLife= MyLife \u002B 5;"
   },
   {
     "Name": "Merlin",
@@ -42,7 +42,7 @@
     "Rarity": 1,
     "Charms": 3,
     "Text": "Reduce la vida del enemigo a la mitad",
-    "Effect": "BEGIN EnemyLife:= EnemyLife/2; END."
+    "Effect": "EnemyLife= EnemyLife/2;"
   },
   {
     "Name": "Grindelwald",
@@ -51,7 +51,7 @@
     "Rarity": 3,
     "Charms": 1,
     "Text": "Aumenta tus charms en 3",
-    "Effect": "BEGIN MyCharms:= MyCharms \u002B 3; END."
+    "Effect": "MyCharms= MyCharms \u002B 3;"
   },
   {
     "Name": "Fluffy",
@@ -60,6 +60,6 @@
     "Rarity": 4,
     "Charms": 1,
     "Text": "Disminuye los charms de tu enemigo en 2",
-    "Effect": "BEGIN EnemyCharms:= EnemyCharms - 2; END."
+    "Effect": "EnemyCharms= EnemyCharms - 2;"
   }
 ]

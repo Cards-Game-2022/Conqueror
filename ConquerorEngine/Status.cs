@@ -1,13 +1,14 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Conqueror.Logic.Language;
 using System.Threading.Tasks;
 
 namespace Conqueror.Logic;
 
 public class Status {
    
-    public List<PlayerStatus> playerStatuses {get; private set;}
+    public List<PlayerStatus> playerStatuses { get; private set; }
     /// <summary>
     /// Constructor de estados
     /// </summary>
@@ -24,11 +25,11 @@ public class Status {
     /// <param name="scope">estado de juego actual</param>
     /// <param name="cd">carta que modifica el estado de juego</param>
     /// <returns></returns>
-    public Status UpdateStatus(Dictionary<string, int> scope, Card cd) {    
-        playerStatuses[0].life = scope["MyLife"];
-        playerStatuses[1].life = scope["EnemyLife"];
-        playerStatuses[0].charms = scope["MyCharms"] - cd.Charms;
-        playerStatuses[1].charms = scope["EnemyCharms"];
+    public Status UpdateStatus(Context ctx, Card cd) {    
+        playerStatuses[0].life = ctx.GetValue("MyLife");
+        playerStatuses[1].life = ctx.GetValue("EnemyLife");
+        playerStatuses[0].charms = ctx.GetValue("MyCharms") - cd.Charms;
+        playerStatuses[1].charms = ctx.GetValue("EnemyCharms");
 
         return this;
     }
