@@ -31,7 +31,6 @@ body {
     background-size: cover;  
 }
 
-
 .background div, img , p, h4{
     position: relative;
 }
@@ -67,11 +66,6 @@ body {
     position: absolute; 
     z-index: 20;
 }
-
-#effect-enemy {
-    display: none;
-}
-
 
 .charms {
     position: absolute;
@@ -247,4 +241,22 @@ body {
 .ReloadGame:hover { 
     color: black;
     text-decoration: none;
+}
+
+#effect-enemy {
+	left: 52%;
+	bottom: 45%;
+	position: absolute;
+	display: none; 
+	width: 35%;
+}
+.Changes-Ocurred {    
+        text-align: center;
+        position: relative;
+        width: 20%;
+        font-size: 18px;
+        border-radius: 10px;
+}
+.players-field {
+    justify-content: center;
 }

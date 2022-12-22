@@ -11,6 +11,15 @@
                     <p class="charms-button text-light bg-gradient bg-dark p-2">Charms: @game.st.playerStatuses[0].charms</p>
                 </div>
             </div>
+            
+            <div class = "Changes-Ocurred">
+                <div id="message-enemy" class="list-group position-absolute opacity-75" style="display: none;"> 
+                    <a href="#" class="list-group-item list-group-item-action list-group-item-danger">Perdido 14 puntos de vida</a> 
+                    <a href="#" class="list-group-item list-group-item-action list-group-item-danger">Perdido 4 Charms</a> 
+                </div>
+            </div>
+
+
             <div style="text-align: center;">
                 <h4 class="player-name">@game.st.playerStatuses[1].player.Name</h4>
                 <div class = "life-charms"> 
@@ -22,7 +31,7 @@
 
         <div id="show-winner" class="text-black text-center ShowWinner">
                 <p>@game.GetWinner()</p>
-                <a class = "GoToMainMenu" href="/"> Volver al menu principal.</a>
+                <a class = "GoToMainMenu" href="/StartMenu"> Volver al menu principal.</a>
                 <button class = "ReloadGame" type="submit" @onclick="RefreshPage"> Volver a jugar</button>
             </div>
         
@@ -30,19 +39,17 @@
             <p> Jugada Incorrecta </p>
         </div>
 
-        <div class="row mt-5 players-field">
+        <div class="row players-field">
             <div class="col-5">
                 <img src="@game.st.playerStatuses[0].player.UrlPhoto" alt="" class="img-fluid img-player">
 
             </div>
             <div class="col-5">
                 <img src="@game.st.playerStatuses[1].player.UrlPhoto" alt="" class="img-fluid img-player">
-
-            </div>
-                
-                <img src="images/attack.gif" id="effect-enemy" alt="" class="img-fluid position-absolute z-index-1">
+                <img src="images/black.gif" id="effect-enemy" class="img-fluid z-index-1">
             </div>
         </div>
+    </div>
 
         <div class="d-flex justify-content-center mt-5">
             <div>
@@ -54,8 +61,8 @@
                 {
                     
                 //  <div class="cursor mt-1 card-margin" @onclick="@(e => Modal(@item))"  data-bs-toggle="modal" data-bs-target="#exampleModalCenteredScrollable">
-                    <div class="cursor mt-1 card-margin" @onclick="@(e => Play(@item))">
-                        <div class="card card-background">
+                    <div class="cursor mt-1 card-margin" @onclick="@(e => Play(@item))" >
+                        <div class="card card-background" @onclick="@(e => Effect())">
 
                             <div class="charms" id="none">
                                 <p class=" text-light">@item.Charms</p>
@@ -88,10 +95,12 @@
             </div>
             
             <div>
-                <button class="btn btn-primary" id = "click" @onclick="@(e => @game.GetEnumerator().MoveNext())">Fin del Turno</button>
+                <button class="btn btn-primary" @onclick="@(e => @game.GetEnumerator().MoveNext())">Fin del Turno</button>
             </div>
-
-        </div> 
+            
+        </div>
+            
+ 
 
     <!--Modal comentado-->
 <!--
@@ -134,15 +143,6 @@
     */
 
     
-    //Posdata: David, odio razor.
-    //Todavia no he hecho lo de lograr que las IA jueguen, pero ya se puede jugar contra la IA.
-    //Ahora mismo estan bien implementados IA vs Humano, y Humano vs Humano.
-    //Los modal estan comentados porque no he trabajado en eso.
-    //Me falta tambien el boton de finalizar turno que es relativamente facil
-    //La pagina de PVP esta borrada o comentada completa. Igual no te preocupes por eso que es copiar este mismo codigo
-    //Me falta hacer el boton en el menu principal de IA vs IA
-
-
     /// <summary>
     /// El 0 es Humano vs Humano
     /// El 1 es Humano vs IA
@@ -178,6 +178,9 @@
     private async void ErrorMessage() {
         await JS.InvokeVoidAsync("ErrorMessage");
     }
+    private async void Effect() {
+        await JS.InvokeVoidAsync("ExecuteEffect");
+    }
     /* Modal comentado
     private void Modal(Card cd) {        
         this.id =  cd.Id;
@@ -194,8 +197,5 @@
         charms = 0;        
     }
     */
-    
-    
-    
     
 }

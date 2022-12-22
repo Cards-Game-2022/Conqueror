@@ -1,40 +1,19 @@
 ﻿@page "/"
 @inject IJSRuntime JS;
 
-<div class = "backgrounds main-menu-background">
+<button class="btn btn-primary" id="click-to-play" @onclick="PlayVideo">Click para comenzar</button>
+    
+    <video id="medio">
+        <source src="video/video.mp4">
+    </video>
 
-    <footer>
-        <a href = "https://github.com/david-dlb" class = "github-links">github.com/david-dlb</a>
-    </footer>
-    <footer>
-        <a href = "https://github.com/marians002" class = "github-links">github.com/marians002</a>
-    </footer>
-
-
-    <h1 class="text-center mt-6 GameTitle">Conqueror ✶</h1>
-
-    <div class="d-flex justify-content-center">
-
-        <div class="border-0 mt-5 mx-0 shadow overflow-hidden MainMenu" style="width: 280px;">
-            <ul class="list-unstyled mb-0">
-                <li><a class="dropdown-item d-flex align-items-center gap-2 MainMenu-elements" href="/gameEnvironment">                        
-                        Iniciar torneo
-                    </a></li>
-                <li><a class="dropdown-item d-flex align-items-center gap-2 MainMenu-elements" href="/PVP">                        
-                        Partida rápida
-                    </a></li>
-                <li><a class="dropdown-item d-flex align-items-center gap-2 MainMenu-elements" href="/JV">                        
-                        Jugadores virtuales 
-                    </a></li>
-                <li><a class="dropdown-item d-flex align-items-center gap-2 MainMenu-elements" href="/createCard">                 
-                        Crear cartas
-                    </a></li>
-            </ul>
-        </div>
-    </div>
-
-</div> 
+    <a href="/StartMenu" class="video-buttons" id="skipButton"><button class="btn btn-primary">Pasar Video</button></a>
+    <a href="/StartMenu" class="video-buttons" id="GoToMenu"><button class="btn btn-primary">Menú Principal</button></a>
 
 
-
-
+@code{
+    private async void PlayVideo() {
+        await JS.InvokeVoidAsync("iniciar");
+        await JS.InvokeVoidAsync("Finished");
+    }
+}   

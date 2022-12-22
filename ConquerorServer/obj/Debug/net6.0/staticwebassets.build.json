@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "HksfrwfI3ah3OOhuW7E2zy4mTLmNf+wEEaupxW1XRhA=",
+  "Hash": "RP1ItuE/1x30pM4xF60nWkmkVMQ9SN9650JFsAyDEYg=",
   "Source": "ConquerorServer",
   "BasePath": "_content/ConquerorServer",
   "Mode": "Default",
@@ -151,6 +151,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/css/GameEnvironment.css"
+    },
+    {
+      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/css/History.css",
+      "SourceId": "ConquerorServer",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "BasePath": "_content/ConquerorServer",
+      "RelativePath": "css/History.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/History.css"
     },
     {
       "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/css/index.css",
@@ -357,6 +374,23 @@
       "OriginalItemSpec": "wwwroot/css/SelectPlayer.css"
     },
     {
+      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/css/StartMenu.css",
+      "SourceId": "ConquerorServer",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "BasePath": "_content/ConquerorServer",
+      "RelativePath": "css/StartMenu.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/StartMenu.css"
+    },
+    {
       "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/DB/Card.json",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
@@ -527,6 +561,23 @@
       "OriginalItemSpec": "wwwroot/font/index.html"
     },
     {
+      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/animated-gifs-of-fighting-game-backgrounds-13.gif",
+      "SourceId": "ConquerorServer",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "BasePath": "_content/ConquerorServer",
+      "RelativePath": "images/animated-gifs-of-fighting-game-backgrounds-13.gif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/animated-gifs-of-fighting-game-backgrounds-13.gif"
+    },
+    {
       "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/attack.gif",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
@@ -542,6 +593,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/images/attack.gif"
+    },
+    {
+      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/black.gif",
+      "SourceId": "ConquerorServer",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "BasePath": "_content/ConquerorServer",
+      "RelativePath": "images/black.gif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/black.gif"
     },
     {
       "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/cards.jpg",
@@ -967,6 +1035,74 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/Js/game.js"
+    },
+    {
+      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/Js/history.js",
+      "SourceId": "ConquerorServer",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "BasePath": "_content/ConquerorServer",
+      "RelativePath": "Js/history.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/Js/history.js"
+    },
+    {
+      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/Js/video.js",
+      "SourceId": "ConquerorServer",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "BasePath": "_content/ConquerorServer",
+      "RelativePath": "Js/video.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/Js/video.js"
+    },
+    {
+      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/video/Rolling star.mp3",
+      "SourceId": "ConquerorServer",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "BasePath": "_content/ConquerorServer",
+      "RelativePath": "video/Rolling star.mp3",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/video/Rolling star.mp3"
+    },
+    {
+      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/video/video.mp4",
+      "SourceId": "ConquerorServer",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "BasePath": "_content/ConquerorServer",
+      "RelativePath": "video/video.mp4",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/video/video.mp4"
     }
   ]
 }

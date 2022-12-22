@@ -1,0 +1,18 @@
+@page "/History"
+@inject IJSRuntime JS;
+
+<img src="images/animated-gifs-of-fighting-game-backgrounds-13.gif" class="body-background" alt="">
+<h1 id="text" class="text-center text-light pt-5"></h1>
+<button @onclick="StartMusic" id="ver-historia" class="btn btn-primary">Ver Historia</button>
+<a href="/gameEnvironment"><button class="btn btn-primary">Pasar Historia</button></a>
+
+<audio id="audio-player">
+    <source id="source" src="video/Rolling star.mp3">
+</audio>
+
+
+@code{
+    private async void StartMusic() {
+     await JS.InvokeVoidAsync("StartHistory");
+    }
+}

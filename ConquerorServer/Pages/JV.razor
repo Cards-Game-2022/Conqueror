@@ -11,6 +11,14 @@
                     <p class="charms-button text-light bg-gradient bg-dark p-2">Charms: @game.st.playerStatuses[0].charms</p>
                 </div>
             </div>
+
+            <div class = "Changes-Ocurred">
+                <div id="message-enemy" class="list-group position-absolute opacity-75" style="display: none;"> 
+                    <a href="#" class="list-group-item list-group-item-action list-group-item-danger">Perdido 14 puntos de vida</a> 
+                    <a href="#" class="list-group-item list-group-item-action list-group-item-danger">Perdido 4 Charms</a> 
+                </div>
+            </div>
+
             <div style="text-align: center;">
                 <h4 class="player-name">@game.st.playerStatuses[1].player.Name</h4>
                 <div class = "life-charms"> 
@@ -22,7 +30,7 @@
 
         <div id="show-winner" class="text-black text-center ShowWinner">
             <p>@game.GetWinner()</p>
-            <a class = "GoToMainMenu" href="/"> Volver al menu principal.</a>
+            <a class = "GoToMainMenu" href="/StartMenu"> Volver al menu principal.</a>
             <button class = "ReloadGame" type="submit" @onclick="RefreshPage"> Volver a jugar</button>
         </div>
 
@@ -30,17 +38,15 @@
             <p> Jugada Incorrecta </p>
         </div>
 
-        <div class="row mt-5 players-field">
+        <div class="row players-field">
             <div class="col-5">
                 <img src="@game.st.playerStatuses[0].player.UrlPhoto" alt="" class="img-fluid img-player">
 
             </div>
             <div class="col-5">
                 <img src="@game.st.playerStatuses[1].player.UrlPhoto" alt="" class="img-fluid img-player">
-
+                <img src="images/black.gif" id="effect-enemy" class="img-fluid z-index-1">
             </div>
-                
-                <img src="images/attack.gif" id="effect-enemy" alt="" class="img-fluid position-absolute z-index-1">
             </div>
         </div>
 
@@ -83,7 +89,7 @@
                 }
             </div>
 
-            <div>
+            <div @onclick="@(e => Effect())">
                 <button class="btn btn-primary" id = "click" @onclick="Play">Siguiente jugada</button>
             </div>
 
@@ -160,6 +166,9 @@
     }
     private async void RefreshPage() {
         await JS.InvokeVoidAsync("RefreshPage");
+    }
+    private async void Effect() {
+        await JS.InvokeVoidAsync("ExecuteEffect");
     }
     
     /* Modal comentado

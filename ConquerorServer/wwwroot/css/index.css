@@ -1,55 +1,34 @@
 
-.main-menu-background {
-    background-image: url("../images/main-menu.jpg"); 
+#medio {
+	width: 100%;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+}
+nav{ 
+    margin: 5px 0px; 
+}
+.titulo { 
+    font: bold 36px verdana, sans-serif; 
+    text-shadow: rgba(184, 8, 8, 0.219) 3px 3px 5px ;
+    padding: 20px;
+}
+.video-buttons{
+        position: absolute;
+        left: 48%;
+        top: 90%;
+}
+#skipButton{
+    display: none;
+}
+#GoToMenu{
+    display: none;
 }
 
-.GameTitle {
-    color: white;
-    font-size: 100px;
-    font-weight: lighter;
-    font-family: 'Barbarian', sans-serif;
-}
-
-.MainMenu-elements {
-    padding-top: 0.5rem !important;
-    padding-bottom: 0.5rem !important;
-    justify-content: center;
-    font-family: 'Unutterable', Georgia, 'Times New Roman', Times, serif;
-    color: black;
-    font-size: 22px;
-    font-weight: bolder;
-    background-color: #ddd7f166;
-}
-
-.ajust-height {
-    height: 70px;
-}
-
-.cursor {
-    cursor: pointer;
-}
-
-.my-card {
-    box-shadow: rgb(0 0 0) 1px 1px 7px 1px; 
-}
-
-.players-field { 
-}
-
-.img-player {
-    width: 100%;
-    height: 100%;
-    max-height: 500px;
-    min-height: 300px;
-}
-
-.github-links {
-    margin-left: 85%;
-    color: white;
-    text-decoration: none;
-
-}
-.github-links:hover {
-    text-decoration: none;
-    color: white;
+#click-to-play{
+    position: absolute;
+    left: 48%;
+    top: 4%;
+    z-index: 1;
 }

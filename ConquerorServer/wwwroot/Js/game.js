@@ -2,11 +2,9 @@ function WinnerMessage() {
     text = document.getElementById("show-winner");    
     text.style.display = "grid"
 }
-
 function RefreshPage() {
     window.location = window.location.href+'?eraseCache=true';
 }
-
 function ErrorMessage() {
     error = document.getElementById("error-message");
     error.style.display = "grid";
@@ -15,19 +13,15 @@ function ErrorMessage() {
         error.style.display = "none"
     }, 1500)
 }
-
-document.getElementById("click").addEventListener("click", executeEffect)
-document.getElementById("none").addEventListener("click", deleteEffect)
-
-function executeEffect() { 
-    value = document.getElementById("value")
+function ExecuteEffect() { 
     effect = document.getElementById("effect-enemy")
+    message = document.getElementById("message-enemy")
     effect.style.display = "block"
-    //effect.src = value.value
-}
-
-function deleteEffect() {
-
-    effect = document.getElementById("effect-enemy")
-    effect.style.display = "none"
+    setTimeout(() => {
+        effect.style.display = "none"
+        message.style.display = "block"
+        setTimeout(() => {
+            message.style.display = "none"
+        }, 1000);
+    }, 1000);
 }

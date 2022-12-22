@@ -1,0 +1,52 @@
+
+.main-menu-background {
+    background-image: url("../images/main-menu.jpg"); 
+}
+
+.GameTitle {
+    color: white;
+    font-size: 100px;
+    font-weight: lighter;
+    font-family: 'Barbarian', sans-serif;
+}
+
+.MainMenu-elements {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+    justify-content: center;
+    font-family: 'Unutterable', Georgia, 'Times New Roman', Times, serif;
+    color: black;
+    font-size: 22px;
+    font-weight: bolder;
+    background-color: #ddd7f166;
+}
+
+.ajust-height {
+    height: 70px;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.my-card {
+    box-shadow: rgb(0 0 0) 1px 1px 7px 1px; 
+}
+
+.img-player {
+    width: 100%;
+    height: 100%;
+    max-height: 500px;
+    min-height: 300px;
+}
+
+.github-links {
+    margin-left: 85%;
+    color: white;
+    text-decoration: none;
+
+}
+.github-links:hover {
+    text-decoration: underline;
+    color: white;
+}
