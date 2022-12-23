@@ -48,4 +48,5 @@ public class Status {
 
         this.playerStatuses = copia;
     }
+
 }
