@@ -24,7 +24,6 @@ input[type="file"]::file-selector-button {
   }
 
   .Create-Cards-Form{
-    font-family: 'Cathedral', sans-serif;
     font-size: 25px;
     display: block;
     width: 100%;
@@ -62,20 +61,52 @@ input[type="file"]::file-selector-button {
   top: 0;
   bottom: 0;
   background-image: url("../images/cards.jpg");
+  font-family: 'BlackChery', sans-serif;
+  overflow: auto;
 }
 .Create-Cards-Main-Form {
   position: relative;
   left: 3%;
+  margin-top: 7px;
+  font-size: 140%;
 }
 .Instructions-background {
   background-color:#212529f0;
   color: white;
-  font-size: 18px;
-  margin-left: 20%;
+  font-size: 23px;
+  margin-left: 15%;
   margin-right: 2%;
   border-radius: 2%;
 }
 .instructions-margin {
   margin-left: 7%;
   margin-right: 7%;
+  padding: 2%;
+}
+#CreateCardTop {
+    font-weight: 900;
+    color: black;
+    border-style: solid;
+    margin: auto;
+    position: relative;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    width: fit-content;
+    padding: 10px;
+    margin-top: 1rem;
+    border-radius: 7px;
+    border-width: 5px;
+    background-color: #f5f5f575;
+  
+}
+
+
+#editor {        
+  display: block;
+  position: relative;
+  min-height: 200px;
+  height: 100px;
+  overflow: scroll;
+  font-size: large;  
 }

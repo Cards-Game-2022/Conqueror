@@ -3,13 +3,11 @@ using Conqueror.Logic.Language;
 namespace Conqueror.Logic;
 
 static class Utils {
-    public static void Error(string text) {
-        throw new Exception(text);
-    }
+    
     public static string[] Names = { "StillCardEnemy", "ChangeHands" };
 
     /// <summary>
-    /// Crea un scope basado en el estado actual del juego
+    /// Crea un Contexto basado en el estado actual del juego
     /// </summary>
     /// <param name="st">Estado actual del juego</param>
     public static Context CreateScope(Status st) {
@@ -23,8 +21,9 @@ static class Utils {
 
         return ctx;
     }
+    
     /// <summary>
-    /// Crea un scope desde un estado inicial de juego predefinido
+    /// Crea un Contexto desde un estado inicial de juego predefinido
     /// </summary>
     public static Context CreateScope() {
         Context ctx = new Context();
@@ -35,11 +34,26 @@ static class Utils {
         ctx.Add(new Token("CONST", "CantMyCards"), Config.StartingCardsCount);
         return ctx;
     }
-     public static Context InterpretEffect(Context scope, string effect) {
+    
+    /// <summary>
+    /// Interpreta un efecto
+    /// </summary>
+    /// <param name="scope">contexto actual del juego</param>
+    /// <param name="effect">efecto a interpretar</param>
+    /// <returns></returns>
+    public static Context InterpretEffect(Context scope, string effect) {
         Lexer lexer = new Lexer(effect); 
         Parser pr = new Parser(lexer);
         Interpreter i = new Interpreter(pr, scope);
         i.Interpret();
         return scope;
+    }
+
+    /// <summary>
+    /// Lanza una excepcion
+    /// </summary>
+    /// <param name="text">texto de la excepcion</param>
+    public static void Error(string text) {
+        throw new Exception(text);
     }
 } 

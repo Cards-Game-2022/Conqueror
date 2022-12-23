@@ -2,7 +2,7 @@
 @inject IJSRuntime JS;
 
 <div class = "backgrounds create-card-background">
-    <h1 class="text-center" id="">Crear Carta</h1>
+    <h1 class="text-center" id="CreateCardTop">Crear Carta</h1>
     <form autocomplete="off">
         <div class="row">
             <div class="col-12 col-lg-4 Create-Cards-Main-Form">
@@ -22,23 +22,21 @@
                     <input type="number" @bind="rarity" class="form-control rounded-4 Form-Elements" id="floatingPassword" placeholder="Texto">
                     <label for="floatingPassword">Rareza: </label>
                 </div>
-                <div class="form-floating mb-3 Floating-Form">
+                @* <div class="form-floating mb-3 Floating-Form">
                     <input type="file" @bind="photo" class="form-control rounded-4 Form-Elements" id="floatingPassword" placeholder="Texto">
                     <label for="floatingPassword">Imagen: </label>
                     
-                </div>
+                </div> *@
             </div>
             <div class="col-12 col-lg-8">
                 <div class="text-center mt-2 Instructions-background">
                     <div class="instructions-margin">
                         <h2>Instrucciones:</h2>
-                        <p>Solo existen variables enteras y las definidas en el lenguaje, las cuales detallaremos ahora.</p>
+                        <p>Solo existen variables enteras y las definidas por el lenguaje, que son:</p>
 
-                        <div class="p-3">
-                            <code>MyLife,
-                                MyCharms,
-                                EnemyLife,
-                                EnemyCharms
+                        <div class="">
+                            <code>MyLife&nbsp;&nbsp;&nbsp;&nbsp;EnemyLife<br>
+                                  MyCharms&nbsp;&nbsp;EnemyCharms <br>
                             </code> 
                         </div>
                     </div>
@@ -47,9 +45,10 @@
                     <div class="form-floating mb-3">
                         <textarea @bind="effect" name="" id="" cols="30" rows="5"></textarea>
                     </div>
-                    <div class="mb-3 d-flex justify-content-around">
-                        <button class="btn btn-primary">Atrás</button>
-                        <button class="btn btn-primary" @onclick="Handler">Aceptar</button>
+
+                    <div class="d-flex justify-content-around" style="margin-top: 2px;">
+                        <button class="btn btn-primary" style="font-size:80%;">Atrás</button>
+                        <button class="btn btn-primary" style="font-size:80%;" @onclick="Handler">Aceptar</button>
                     </div>
                     <br>                    
                 </div>
@@ -74,7 +73,7 @@
             cq.CreateCard(name, photo, Int32.Parse(rarity), Int32.Parse(charms), text, effect);
         }
         catch (System.Exception e) {
-            Console.WriteLine(e.Message);
+            Console.WriteLine("Se ingreso un valor incorrecto");
         }
     }      
 }

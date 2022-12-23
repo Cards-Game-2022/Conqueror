@@ -7,8 +7,8 @@
             <div style="text-align: center;">   
                 <h4 class="player-name">@game.st.playerStatuses[0].player.Name</h4>
                 <div class = "life-charms"> 
-                    <p class="life-button bg-danger p-2 card-points">&nbsp;&nbsp;Vida : @game.st.playerStatuses[0].life &nbsp;&nbsp;</p>
-                    <p class="charms-button text-light bg-gradient bg-dark p-2">Charms: @game.st.playerStatuses[0].charms</p>
+                    <p class="life-button bg-danger card-points">Vida : @game.st.playerStatuses[0].life</p>
+                    <p class="charms-button text-light bg-gradient bg-dark">Charms: @game.st.playerStatuses[0].charms</p>
                 </div>
             </div>
             
@@ -23,8 +23,8 @@
             <div style="text-align: center;">
                 <h4 class="player-name">@game.st.playerStatuses[1].player.Name</h4>
                 <div class = "life-charms"> 
-                    <p class="life-button bg-danger p-2 card-points">&nbsp;&nbsp;Vida : @game.st.playerStatuses[1].life &nbsp;&nbsp;</p>
-                    <p class="charms-button text-light bg-gradient bg-dark p-2">Charms: @game.st.playerStatuses[1].charms</p>
+                    <p class="life-button bg-danger card-points">Vida : @game.st.playerStatuses[1].life</p>
+                    <p class="charms-button text-light bg-gradient bg-dark">Charms: @game.st.playerStatuses[1].charms</p>
                 </div>
             </div>
         </div>
@@ -53,7 +53,7 @@
 
     <div class="d-flex justify-content-center mt-5 Cards-and-Buttons">
         <div>
-            <button class="btn btn-primary" @onclick="Surrender">Rendirse</button>
+            <button class="Cards-btns" id="Surrender-btn" @onclick="Surrender">Rendirse</button>
         </div>
         
 
@@ -104,7 +104,7 @@
         </div>
         
         <div>
-            <button class="btn btn-primary" @onclick="@(e => EndTurn())">Fin del Turno</button>
+            <button id = "EndTurn-btn" class="Cards-btns" @onclick="@(e => EndTurn())">Fin del Turno</button>
         </div>
         
     </div>
@@ -137,22 +137,20 @@
         ShowWinner();
     }
     private async void Play(Card cd) {
-        if (!game.GameOver()) {
-            if(Game.IsValid(cd, game.st.playerStatuses[0])) {
-                game.Input(cd);
-                Effect();
-            }
-            else ErrorMessage();
+         
+        if (Game.IsValid(cd, game.st.playerStatuses[0])) {
+            game.Input(cd);
+            Effect();
         }
-        else {
+        else ErrorMessage();
+        if (game.GameOver()) {
             ShowWinner();
         }
     }
     private async void EndTurn() {
-        if(!game.GameOver()) {
-            game.GetEnumerator().MoveNext();
-        }
-        else {
+        game.GetEnumerator().MoveNext();
+        
+        if (game.GameOver()) {
             ShowWinner();
         }
     }

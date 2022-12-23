@@ -185,7 +185,9 @@ public class Game : IEnumerable<Status>, IGraphics {
     /// <param name="card">carta jugada</param>
     public void Input(Card card) {
             if (card != null) {
-                Activate(card);
+                if (IsValid(card, st.playerStatuses[0])) {
+                    Activate(card);
+                }
             }
             else
                 return;

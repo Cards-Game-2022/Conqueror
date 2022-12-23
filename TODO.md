@@ -1,13 +1,9 @@
-## Pendiente:
+## Pendiente
 
-- IsValid en el server
-- Chequeo en el input
-- Excepciones de las cartas en la creacion de charms...
-- Cartel de ganador salir al final
-- cartel del ganador con if
 - Agregar MiniMax.
 - Copiar los estados para que las IA trabajen con el.
 - Manejar las IA como delegados.
+- Quitar clase Id y hacer todo en el database
 - Poner informacion sobre la carta que jugo el contrario y un tiempo de espera para cuando juegue la IA.
 - Hacer las funciones en el lenguaje.
 - Agregar estados al juego. Estados de las cartas o estados de los jugadores (o ambos).

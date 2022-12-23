@@ -25,6 +25,10 @@
   font-family: DragonForce;
   src: url(../font/fonts/DragonForcE.ttf);
 }
+@font-face {
+  font-family: Barbarian;
+  src: url(../font/fonts/Barbarian.ttf);
+}
 
 html,
 body {

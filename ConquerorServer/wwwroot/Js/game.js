@@ -27,5 +27,5 @@ function ExecuteEffect() {
 }
 
 function HideNextMove() {
-    document.getElementById("click").style.display = "none";
+    document.getElementById("EndTurn-btn").style.display = "none";
 }

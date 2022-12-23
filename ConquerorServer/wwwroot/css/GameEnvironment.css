@@ -4,11 +4,11 @@
 .player-name {
     color: black;
     font-weight: 1000;
-    font-size: 30px;
+    font-size: 250%;
     text-shadow: 1px 1px black;
 }
 .Cards-and-Buttons{
-    font-family: "Unutterable", sans-serif;
+    font-family: "BlackChery", sans-serif;
 }
 .Modal-Transition {
     transition: transform 0.1s ease-out;
@@ -92,9 +92,10 @@ body {
 }
 
 .charms-button, .life-button {
-	font-size: 20px;
+	font-size: 140%;
 	text-align: center;
 	border-radius: 10px;
+  padding: 2% 4%;
 }
 .life-charms{
     display: block ruby;
@@ -276,7 +277,7 @@ body {
 }
 
 .game-upper-info {
-        font-family: "Unutterable", sans-serif;
+        font-family: "BlackChery", sans-serif;
         font-weight: bolder;
 }
 
@@ -319,7 +320,7 @@ body {
   .card__banner {
     width: 100%;
     position: absolute;
-    top: 2.5%;
+    top: -1%;
     left: 50%;
     transform: translateX(-51.5%);
     background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/49240/hand-banner-gold.png")
@@ -336,7 +337,7 @@ body {
     transform: translate(-51%, 15%);
     z-index: 30;
     text-align: center;
-    font-size: 18px;
+    font-size: 21px;
     font-weight: 600;
     color: #ffffff;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
@@ -405,7 +406,7 @@ body {
     justify-content: center;
     padding: 14px;
     color: #eae3d1;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.2;
     text-align: center;
     font-weight: 400;
@@ -434,21 +435,38 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    margin-top: -1px;
+    margin-top: -2px;
     margin-left: 2px;
     width: 40%;
     opacity: 0.9;
-    font-size: 28px;
+    font-size: 34px;
     color: black;
   }
 
 .AllCardsStyle{
   justify-content: center; 
   width: fit-content; 
-  font-family: 'testFont', sans-serif; 
+  font-family: 'BlackChery', sans-serif; 
   display: flex;
   flex: wrap;
   flex-wrap: wrap; 
   padding: 15px;
 }
 
+#Surrender-btn {
+ font-size: 125%;
+}
+#EndTurn-btn {
+ font-size: 125%;
+}
+.Cards-btns {
+	border: none;
+	border-radius: 5px;
+	padding: 6% 15%;
+	background: #962d2ce8;
+	color: white;
+	font-weight: 900;
+}
+.Cards-btns:hover {
+	background: #9e2728;
+}

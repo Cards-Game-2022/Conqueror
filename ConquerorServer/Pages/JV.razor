@@ -7,8 +7,8 @@
             <div style="text-align: center;">   
                 <h4 class="player-name">@game.st.playerStatuses[0].player.Name</h4>
                 <div class = "life-charms"> 
-                    <p class="life-button bg-danger p-2 card-points">&nbsp;&nbsp;Vida : @game.st.playerStatuses[0].life &nbsp;&nbsp;</p>
-                    <p class="charms-button text-light bg-gradient bg-dark p-2">Charms: @game.st.playerStatuses[0].charms</p>
+                    <p class="life-button bg-danger card-points">Vida : @game.st.playerStatuses[0].life</p>
+                    <p class="charms-button text-light bg-gradient bg-dark">Charms: @game.st.playerStatuses[0].charms</p>
                 </div>
             </div>
 
@@ -22,8 +22,8 @@
             <div style="text-align: center;">
                 <h4 class="player-name">@game.st.playerStatuses[1].player.Name</h4>
                 <div class = "life-charms"> 
-                    <p class="life-button bg-danger p-2 card-points">&nbsp;&nbsp;Vida : @game.st.playerStatuses[1].life &nbsp;&nbsp;</p>
-                    <p class="charms-button text-light bg-gradient bg-dark p-2">Charms: @game.st.playerStatuses[1].charms</p>
+                    <p class="life-button bg-danger card-points">Vida : @game.st.playerStatuses[1].life</p>
+                    <p class="charms-button text-light bg-gradient bg-dark">Charms: @game.st.playerStatuses[1].charms</p>
                 </div>
             </div>
         </div>
@@ -50,7 +50,7 @@
 
         <div class="d-flex justify-content-center mt-5 Cards-and-Buttons">
             <div>
-                <button class="btn btn-primary" @onclick="ShowWinner">Terminar juego</button>
+                <button id="Surrender-btn" class="Cards-btns" @onclick="ShowWinner">Terminar juego</button>
             </div>
 
             <div class = "AllCardsStyle">  
@@ -98,7 +98,7 @@
             </div>
 
             <div @onclick="@(e => Effect())">
-                <button class="btn btn-primary" id = "click" @onclick="Play">Siguiente jugada</button>
+                <button id = "EndTurn-btn" class="Cards-btns" @onclick="Play">Siguiente jugada</button>
             </div>
 
         </div> 
@@ -116,10 +116,14 @@
     Game game = new Game(2);
 
     private async void Play() {
+        game.PlayIA();
+        Effect();
+
         if (!game.GameOver()) {
-            game.PlayIA();
             game.GetEnumerator().MoveNext();
-        }
+            if (game.GameOver())
+                ShowWinner();
+        }    
         else ShowWinner();
     }
     private async void ShowWinner() {

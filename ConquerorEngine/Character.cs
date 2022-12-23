@@ -23,14 +23,12 @@ public class Character {
 
     }
 
-    public Character(string name) {
-        this.name = name; 
-    }
-
-    public Character(string name, string url) {
-        this.name = name;
-        this.urlPhoto = url; 
-    }
+    /// <summary>
+    /// Constructor de personaje
+    /// </summary>
+    /// <param name="name">nombre del personaje</param>
+    /// <param name="url">direccion de la foto</param>
+    /// <param name="id">identificador del personaje</param>
     public Character(string name, string url, int id) {
         this.name = name;
         this.urlPhoto = url; 

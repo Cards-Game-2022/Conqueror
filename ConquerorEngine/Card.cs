@@ -45,6 +45,16 @@ public class Card {
 
     }
     
+    /// <summary>
+    /// Constructor de carta
+    /// </summary>
+    /// <param name="name">nombre de la carta</param>
+    /// <param name="url">direccion de la foto</param>
+    /// <param name="id">identificador de la carta</param>
+    /// <param name="rarity">rareza de la carta</param>
+    /// <param name="charms">charms que cuesta la carta</param>
+    /// <param name="text">descripcion de la carta</param>
+    /// <param name="effect">efecto de la carta en codigo</param>
     public Card(string name, string url, int id, int rarity, int charms, string text, string effect) {
         this.name = name;
         this.urlPhoto = url; 
