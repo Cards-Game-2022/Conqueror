@@ -25,3 +25,7 @@ function ExecuteEffect() {
         }, 1000);
     }, 1000);
 }
+
+function HideNextMove() {
+    document.getElementById("click").style.display = "none";
+}

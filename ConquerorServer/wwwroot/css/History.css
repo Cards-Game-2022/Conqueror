@@ -9,7 +9,34 @@
 }
 #ver-historia{
     position: absolute;
-    left: 48%;
+    left: 25%;
+    color: white;
+}
+#pasar-historia{
+    position: absolute;    
+    right: 25%;
+    color: white;
+}
+
+
+.history-buttons{
+    font-family: "Unutterable";
+    background-color: #0000007a;
+    border-color: white;
+    font-size: 125%;
     top: 80%;
     z-index: 1;
+}
+
+.history-buttons:hover {
+    background-color:#000000d4;
+    cursor: pointer;
+    color: white;
+}
+
+#text {
+	font-family: 'Strange world', sans-serif;
+	font-size: 65px;
+	font-weight: 500;
+	text-shadow: 3px 3px rgb(0, 0, 0);
 }

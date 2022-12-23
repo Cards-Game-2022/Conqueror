@@ -5,25 +5,25 @@
     "Id": 1,
     "Rarity": 1,
     "Charms": 3,
-    "Text": "Texto del Helbrand",
+    "Text": "El enemigo pierde 20 de vida.",
     "Effect": "EnemyLife= EnemyLife - 20;"
   },
   {
-    "Name": "Prueba 2",
+    "Name": "El susto",
     "UrlPhoto": "images/photo104.png",
     "Id": 2,
     "Rarity": 4,
     "Charms": 1,
-    "Text": "Texto de prueba 2",
+    "Text": "El enemigo pierde 5 de vida.",
     "Effect": "EnemyLife= EnemyLife - 5;"
   },
   {
-    "Name": "Prueba 4",
+    "Name": "El susto 2.0",
     "UrlPhoto": "images/photo105.png",
     "Id": 3,
     "Rarity": 2,
     "Charms": 2,
-    "Text": "Texto de prueba 4",
+    "Text": "El enemigo pierde 10 de vida.",
     "Effect": "EnemyLife= EnemyLife - 10;"
   },
   {
@@ -32,7 +32,7 @@
     "Id": 6,
     "Rarity": 5,
     "Charms": 2,
-    "Text": "Te arregla la vida",
+    "Text": "Ganas 5 de vida",
     "Effect": "MyLife= MyLife \u002B 5;"
   },
   {

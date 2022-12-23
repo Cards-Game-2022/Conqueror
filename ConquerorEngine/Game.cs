@@ -67,15 +67,15 @@ public class Game : IEnumerable<Status>, IGraphics {
     /// <returns>El nuevo contexto</returns>
     public Context Launch(Card card, Context scope, Status st)
     {
-        if (card != null) {        
-            Actions.RemoveCard(card, st.playerStatuses[0].playerHand);
+        Actions.RemoveCard(st.playerStatuses[0].playerHand, card);
+        
+        try {
             Utils.InterpretEffect(scope, card.Effect);
-            return scope;
-        }        
-        else {
-            Utils.Error("Accion invalida");
-            return null;
         }
+        catch (Exception e) {
+            Console.WriteLine(e.Message);
+        }
+        return scope;
     }
 
     /// <summary>
@@ -153,7 +153,9 @@ public class Game : IEnumerable<Status>, IGraphics {
     public IEnumerator<Status> GetEnumerator() {    
             if (!GameOver()) {            
                 ChangeTurns();
-                PlayIA();
+                if (PlayIA()) {
+                    ChangeTurns();
+                }
                 yield return this.st;
             }
             else
@@ -168,10 +170,13 @@ public class Game : IEnumerable<Status>, IGraphics {
     /// <summary>
     /// Realiza los movimientos del jugador si es un jugador virtual
     /// </summary>
-    public void PlayIA() {
+    /// <returns>Si es o no un jugador virtual</returns>
+    public bool PlayIA() {
         if (st.playerStatuses[0].player is PlayerIA) {
             Input(PlayerIA.SelectIACard(st.playerStatuses[0]));
+            return true;
         }
+        return false;
     }
     
     /// <summary>
@@ -179,8 +184,11 @@ public class Game : IEnumerable<Status>, IGraphics {
     /// </summary>
     /// <param name="card">carta jugada</param>
     public void Input(Card card) {
-            if (card != null)
-            Activate(card);
+            if (card != null) {
+                Activate(card);
+            }
+            else
+                return;
 
             //Si el jugador es humano, no puede activar ninguna otra carta y se cambia el turno automaticamente
             if (st.playerStatuses[0].player is PlayerHuman) {

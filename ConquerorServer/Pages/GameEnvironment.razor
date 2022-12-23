@@ -3,7 +3,7 @@
 
     <div class="text-light">
 
-        <div class="d-flex justify-content-around mt-4">
+        <div class="d-flex justify-content-around mt-4 game-upper-info">
             <div style="text-align: center;">   
                 <h4 class="player-name">@game.st.playerStatuses[0].player.Name</h4>
                 <div class = "life-charms"> 
@@ -51,97 +51,70 @@
         </div>
     </div>
 
-        <div class="d-flex justify-content-center mt-5">
-            <div>
-                <button class="btn btn-primary" @onclick="Surrender">Rendirse</button>
-            </div>
-
-            <div class="d-flex justify-content-center flex-wrap text-black ms-2 me-2">
-                @foreach (var item in game.st.playerStatuses[0].playerHand)
-                {
-                    
-                //  <div class="cursor mt-1 card-margin" @onclick="@(e => Modal(@item))"  data-bs-toggle="modal" data-bs-target="#exampleModalCenteredScrollable">
-                    <div class="cursor mt-1 card-margin" @onclick="@(e => Play(@item))" >
-                        <div class="card card-background" @onclick="@(e => Effect())">
-
-                            <div class="charms" id="none">
-                                <p class=" text-light">@item.Charms</p>
-                            </div>
-                            <div class="  p-0">
-
-                                <div class="img-rotate"><img src="@item.UrlPhoto" class="img-fluid m-1" width="179" alt="">
-                                </div>
-
-                            </div>
-
-                            <div class="  p-2">
-                                <p class="h5 m-0 p-0 card-text text-center">@item.Name</p>
-                            </div>
-                        </div>
-                    </div>
-                } 
-                @if(game.st.playerStatuses[0].playerHand.Count == 0)
-                {
-                    <div class="cursor mt-1">
-                        <div class="card my-card">
-                            <img src="" class="" alt="">
-                                <h3>No hay cartas</h3>
-                            <div class="card-body p-2">
-                                <p class="m-0 p-0 card-text">No hay cartas</p> 
-                            </div>
-                        </div>
-                    </div>
-                }
-            </div>
-            
-            <div>
-                <button class="btn btn-primary" @onclick="@(e => @game.GetEnumerator().MoveNext())">Fin del Turno</button>
-            </div>
-            
+    <div class="d-flex justify-content-center mt-5 Cards-and-Buttons">
+        <div>
+            <button class="btn btn-primary" @onclick="Surrender">Rendirse</button>
         </div>
-            
- 
+        
 
-    <!--Modal comentado-->
-<!--
-        <div class="modal fade text-black" id="exampleModalCenteredScrollable" tabindex="-1"
-            aria-labelledby="exampleModalCenteredScrollableTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalCenteredScrollableTitle">@name</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <img src="@photo" alt="" width="450" height="500">
+        <div style="justify-content: center; width: fit-content; font-family: 'f Frabotta', sans-serif; display: flex;flex: wrap;flex-wrap: wrap; padding: 15px;">  
+            @foreach (var item in game.st.playerStatuses[0].playerHand)
+            {
+                <div @onclick="@(e => Play(@item))">
 
-                        <p>Charms: @charms </p>
-                        <p>@text </p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Atras</button>
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" @onclick="Launch">Lanzar</button>
+                    <a target="_blank" class="card card--square">
+                        <div class="card__orb">
+                            <img src="images/card-elements/hand-orb-red.png" alt="" class="card__orb__image">
+                            <p class="card__orb__value">@item.Charms</p>
+                        </div>
+                        <div class="card__banner">
+                            <img src="" alt="" class="card__banner">
+                                <div class="card__banner__text">@item.Name</div>
+                        </div>
+                        <div class="card__image">
+                            <img src="images/card-elements/hand-frame-square-blue.png" alt="" class="card__image__border">
+                            <svg class="card__image__svg" xmlns="" xmlns:xlink="" x="0px" y="0px" viewBox="0 0 260 222.2" style="enable-background:new 0 0 260 222.2;" xml:space="preserve">
+                                <clipPath id="mask-square">
+                                <polygon points="0,0 0,158.7 15.3,172.7 239.3,172.7 251.7,160.3 251.7,0 "></polygon>
+                                </clipPath>
+                                <image clip-path="url(#mask-square)" height="100%" width="100%" href=@item.UrlPhoto></image>   
+                            </svg>
+                        </div>
+                        <div class="card__description" style = "z-index: 1">
+                            <div class="card__description__text">
+                                @item.Text
+                            </div>
+                        </div>
+                        <img src="images/card-elements/hand-card-back-red.png" alt="" class="card__background">
+                    </a>
+                </div>
+            }
+            @if(game.st.playerStatuses[0].playerHand.Count == 0)
+            {
+                <div class="cursor mt-1">
+                    <div class="card my-card">
+                        <img src="" class="" alt="">
+                            <h3>No hay cartas</h3>
+                        <div class="card-body p-2">
+                            <p class="m-0 p-0 card-text">No hay cartas</p> 
+                        </div>
                     </div>
                 </div>
-            </div>
-            
+            } 
         </div>
--->
+        
+        <div>
+            <button class="btn btn-primary" @onclick="@(e => EndTurn())">Fin del Turno</button>
+        </div>
+        
+    </div>
+           
+ 
 
 @{
     Background();
 }
 @code{
-    /*private int id;
-    private string name;
-    private string photo;
-    private string text;
-    private int charms;
-    private int pos = -1;
-    private bool gameStart;
-    private string winner;
-    */
-
     
     /// <summary>
     /// El 0 es Humano vs Humano
@@ -167,9 +140,17 @@
         if (!game.GameOver()) {
             if(Game.IsValid(cd, game.st.playerStatuses[0])) {
                 game.Input(cd);
-                game.GetEnumerator().MoveNext();
+                Effect();
             }
             else ErrorMessage();
+        }
+        else {
+            ShowWinner();
+        }
+    }
+    private async void EndTurn() {
+        if(!game.GameOver()) {
+            game.GetEnumerator().MoveNext();
         }
         else {
             ShowWinner();
@@ -180,22 +161,5 @@
     }
     private async void Effect() {
         await JS.InvokeVoidAsync("ExecuteEffect");
-    }
-    /* Modal comentado
-    private void Modal(Card cd) {        
-        this.id =  cd.Id;
-        name = cd.Name;
-        photo = cd.UrlPhoto;
-        text = cd.Text;
-        charms = cd.Charms;
-    }
-    private void ResetModal() {
-        id = -1;
-        name = null;
-        photo = null;
-        text = null;
-        charms = 0;        
-    }
-    */
-    
+    }   
 }

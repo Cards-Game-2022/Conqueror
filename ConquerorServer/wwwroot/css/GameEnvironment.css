@@ -1,7 +1,15 @@
 .Player-Image {
     border-radius: 20px;
 }
-
+.player-name {
+    color: black;
+    font-weight: 1000;
+    font-size: 30px;
+    text-shadow: 1px 1px black;
+}
+.Cards-and-Buttons{
+    font-family: "Unutterable", sans-serif;
+}
 .Modal-Transition {
     transition: transform 0.1s ease-out;
 }
@@ -94,6 +102,11 @@ body {
 .card-margin {
     margin-left: 2%;
     margin-bottom: 1%;
+}
+.card-margin:hover{
+    transform: scale(1.2);
+    transition: transform 0.15s;
+    cursor: pointer;
 }
 
 .img-rotate { 
@@ -260,3 +273,168 @@ body {
 .players-field {
     justify-content: center;
 }
+
+.game-upper-info {
+        font-family: "Unutterable", sans-serif;
+        font-weight: bolder;
+}
+
+
+
+/* Cards */
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .card {
+    width: 200px;
+    margin: 20px;
+    position: relative;
+    transition: transform 0.3s;
+  }
+  
+  @media (max-width: 779px) {
+    .card {
+      margin: 10px;
+    }
+  }
+  
+  .card:hover {
+    transform: scale(1.2);
+    transition: transform 0.15s;
+    cursor: pointer;
+  }
+  
+  .card__background {
+    width: 100%;
+  }
+  
+  .card__banner {
+    width: 100%;
+    position: absolute;
+    top: 2.5%;
+    left: 50%;
+    transform: translateX(-51.5%);
+    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/49240/hand-banner-gold.png")
+      0 0 no-repeat;
+    background-size: 100% auto;
+    z-index: 20;
+  }
+  
+  .card__banner__text {
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-51%, 15%);
+    z-index: 30;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+  }
+  
+  .card__image {
+    background: red;
+    width: 82%;
+    position: absolute;
+    left: 47%;
+    transform: translateX(-50%);
+    z-index: 10;
+  }
+  
+  .card--square .card__image {
+    top: 13%;
+  }
+  .card--round .card__image {
+    top: 2%;
+  }
+  .card--pointy .card__image {
+    top: 13.5%;
+    width: 79%;
+    left: 46.5%;
+  }
+  
+  .card__image__border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+  }
+  
+  .card__image__svg {
+    width: calc(100% - 2px);
+    position: absolute;
+    top: -10px;
+    left: 2px;
+    z-index: 10;
+  }
+  
+  .card--square .card__image__svg {
+    top: -5px;
+  }
+  .card--round .card__image__svg {
+    top: -0px;
+  }
+  .card--pointy .card__image__svg {
+    top: -4px;
+  }
+  
+  .card__image__sparkles {
+    mix-blend-mode: color-dodge;
+  }
+  
+  .card__description {
+    width: 80%;
+    height: 37%;
+    position: absolute;
+    bottom: 11%;
+    left: 50%;
+    transform: translateX(-53%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+    color: #eae3d1;
+    font-size: 16px;
+    line-height: 1.2;
+    text-align: center;
+    font-weight: 400;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  }
+  
+  .card__description strong {
+    color: #efc851;
+    font-weight: 400;
+  }
+  
+  .card__orb {
+    width: 23%;
+    position: absolute;
+    top: -4%;
+    left: -6%;
+    z-index: 50;
+  }
+  
+  .card__orb__image {
+    width: 100%;
+  }
+  
+  .card__orb__value {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: -3px;
+    margin-left: -1px;
+    width: 40%;
+    opacity: 0.9;
+    font-size: 28px;
+    color: black;
+  }

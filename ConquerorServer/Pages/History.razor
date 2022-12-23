@@ -1,11 +1,13 @@
 @page "/History"
 @inject IJSRuntime JS;
 
-<img src="images/animated-gifs-of-fighting-game-backgrounds-13.gif" class="body-background" alt="">
+<img src="images/history.gif" class="body-background" alt="">
 <h1 id="text" class="text-center text-light pt-5"></h1>
-<button @onclick="StartMusic" id="ver-historia" class="btn btn-primary">Ver Historia</button>
-<a href="/gameEnvironment"><button class="btn btn-primary">Pasar Historia</button></a>
 
+<div class = "d-flex justify-content-center">
+    <button @onclick="StartMusic" id="ver-historia" class="btn history-buttons">Ver Historia</button>
+    <a href="/gameEnvironment"><button class="btn history-buttons" id= "pasar-historia">Pasar Historia</button></a>
+</div>
 <audio id="audio-player">
     <source id="source" src="video/Rolling star.mp3">
 </audio>

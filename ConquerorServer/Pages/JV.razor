@@ -34,10 +34,7 @@
             <button class = "ReloadGame" type="submit" @onclick="RefreshPage"> Volver a jugar</button>
         </div>
 
-        <div id = "error-message" class = "text-black text-center ErrorMessage">
-            <p> Jugada Incorrecta </p>
-        </div>
-
+        
         <div class="row players-field">
             <div class="col-5">
                 <img src="@game.st.playerStatuses[0].player.UrlPhoto" alt="" class="img-fluid img-player">
@@ -50,31 +47,42 @@
             </div>
         </div>
 
-        <div class="d-flex justify-content-center mt-5">
-            
 
-            <div class="d-flex justify-content-center flex-wrap text-black ms-2 me-2">
+        <div class="d-flex justify-content-center mt-5 Cards-and-Buttons">
+            <div>
+                <button class="btn btn-primary" @onclick="ShowWinner">Terminar juego</button>
+            </div>
+
+            <div style="justify-content: center; width: fit-content; font-family: 'f Frabotta', sans-serif; display: flex;flex: wrap;flex-wrap: wrap; padding: 15px;">  
                 @foreach (var item in game.st.playerStatuses[0].playerHand)
                 {
-                    <div class="cursor mt-1 card-margin">
-                        <div class="card card-background">
-
-                            <div class="charms" id="none">
-                                <p class=" text-light">@item.Charms</p>
+                    
+                        <a target="_blank" class="card card--square">
+                            <div class="card__orb">
+                                <img src="images/card-elements/hand-orb-red.png" alt="" class="card__orb__image">
+                                <p class="card__orb__value">@item.Charms</p>
                             </div>
-                            <div class="  p-0">
-
-                                <div class="img-rotate"><img src="@item.UrlPhoto" class="img-fluid m-1" width="179" alt="">
+                            <div class="card__banner">
+                                <img src="" alt="" class="card__banner">
+                                    <div class="card__banner__text">@item.Name</div>
+                            </div>
+                            <div class="card__image">
+                                <img src="images/card-elements/hand-frame-square-blue.png" alt="" class="card__image__border">
+                                <svg class="card__image__svg" xmlns="" xmlns:xlink="" x="0px" y="0px" viewBox="0 0 260 222.2" style="enable-background:new 0 0 260 222.2;" xml:space="preserve">
+                                    <clipPath id="mask-square">
+                                    <polygon points="0,0 0,158.7 15.3,172.7 239.3,172.7 251.7,160.3 251.7,0 "></polygon>
+                                    </clipPath>
+                                    <image clip-path="url(#mask-square)" height="100%" width="100%" href=@item.UrlPhoto></image>   
+                                </svg>
+                            </div>
+                            <div class="card__description" style = "z-index: 1">
+                                <div class="card__description__text">
+                                    @item.Text
                                 </div>
-
                             </div>
-
-                            <div class="  p-2">
-                                <p class="h5 m-0 p-0 card-text text-center">@item.Name</p>
-                            </div>
-                        </div>
-                    //</div>
-                } 
+                            <img src="images/card-elements/hand-card-back-red.png" alt="" class="card__background">
+                        </a>
+                }
                 @if(game.st.playerStatuses[0].playerHand.Count == 0)
                 {
                     <div class="cursor mt-1">
@@ -86,7 +94,7 @@
                             </div>
                         </div>
                     </div>
-                }
+                } 
             </div>
 
             <div @onclick="@(e => Effect())">
@@ -95,56 +103,11 @@
 
         </div> 
 
-    <!--Modal comentado-->
-<!--
-        <div class="modal fade text-black" id="exampleModalCenteredScrollable" tabindex="-1"
-            aria-labelledby="exampleModalCenteredScrollableTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalCenteredScrollableTitle">@name</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <img src="@photo" alt="" width="450" height="500">
-
-                        <p>Charms: @charms </p>
-                        <p>@text </p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Atras</button>
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" @onclick="Launch">Lanzar</button>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
--->
-
 @{
     Background();
 }
 @code{
-    /*private int id;
-    private string name;
-    private string photo;
-    private string text;
-    private int charms;
-    private int pos = -1;
-    private bool gameStart;
-    private string winner;
-    */
-
     
-    //Posdata: David, odio razor.
-    //Todavia no he hecho lo de lograr que las IA jueguen, pero ya se puede jugar contra la IA.
-    //Ahora mismo estan bien implementados IA vs Humano, y Humano vs Humano.
-    //Los modal estan comentados porque no he trabajado en eso.
-    //Me falta tambien el boton de finalizar turno que es relativamente facil
-    //La pagina de PVP esta borrada o comentada completa. Igual no te preocupes por eso que es copiar este mismo codigo
-    //Me falta hacer el boton en el menu principal de IA vs IA
-
-
     /// <summary>
     /// El 0 es Humano vs Humano
     /// El 1 es Humano vs IA
@@ -154,12 +117,14 @@
 
     private async void Play() {
         if (!game.GameOver()) {
+            game.PlayIA();
             game.GetEnumerator().MoveNext();
         }
         else ShowWinner();
     }
     private async void ShowWinner() {
         await JS.InvokeVoidAsync("WinnerMessage");
+        await JS.InvokeVoidAsync("HideNextMove");
     }
     private async void Background() {
         await JS.InvokeVoidAsync("GameEnvironmentBG");
@@ -171,26 +136,4 @@
         await JS.InvokeVoidAsync("ExecuteEffect");
     }
     
-    /* Modal comentado
-    private void Modal(Card cd) {        
-        this.id =  cd.Id;
-        name = cd.Name;
-        photo = cd.UrlPhoto;
-        text = cd.Text;
-        charms = cd.Charms;
-    }
-    private void ResetModal() {
-        id = -1;
-        name = null;
-        photo = null;
-        text = null;
-        charms = 0;        
-    }
-    */
-    
-    /* Mensaje de error comentado
-    private async void ErrorMessage() {
-        await JS.InvokeVoidAsync("ErrorMessage");
-    }
-    */
 }

@@ -1,15 +1,16 @@
 ﻿@page "/"
 @inject IJSRuntime JS;
 
-<button class="btn btn-primary" id="click-to-play" @onclick="PlayVideo">Click para comenzar</button>
+<button class="btn btn-primary justify-content-center" id="click-to-play" @onclick="PlayVideo">Click para comenzar</button>
     
     <video id="medio">
         <source src="video/video.mp4">
     </video>
 
-    <a href="/StartMenu" class="video-buttons" id="skipButton"><button class="btn btn-primary">Pasar Video</button></a>
-    <a href="/StartMenu" class="video-buttons" id="GoToMenu"><button class="btn btn-primary">Menú Principal</button></a>
-
+<div style = "position: relative;">
+    <a href="/StartMenu" class="justify-content-center video-buttons" id="skipButton"><button class="btn video-btn">Pasar Video</button></a>
+    <a href="/StartMenu" class="justify-content-center video-buttons" id="GoToMenu"><button class="btn video-btn">Menú Principal</button></a>
+</div>
 
 @code{
     private async void PlayVideo() {

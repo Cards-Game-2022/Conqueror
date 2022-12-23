@@ -9,6 +9,7 @@ namespace Conqueror.Logic;
 public class Status {
    
     public List<PlayerStatus> playerStatuses { get; private set; }
+    
     /// <summary>
     /// Constructor de estados
     /// </summary>
@@ -19,10 +20,11 @@ public class Status {
             playerStatuses.Add(new PlayerStatus());
         }
     }
+    
     /// <summary>
     /// Actualiza el estado de juego
     /// </summary>
-    /// <param name="scope">estado de juego actual</param>
+    /// <param name="ctx">estado de juego actual</param>
     /// <param name="cd">carta que modifica el estado de juego</param>
     /// <returns></returns>
     public Status UpdateStatus(Context ctx, Card cd) {    
@@ -33,34 +35,15 @@ public class Status {
 
         return this;
     }
+
+    /// <summary>
+    /// Se intercambian los jugadores
+    /// </summary>
     public void ChangePlayers() {
         List<PlayerStatus> copia = new();
         copia.Add(this.playerStatuses[1]);
         copia.Add(this.playerStatuses[0]);
 
         this.playerStatuses = copia;
-    }
-        /// <summary>
-    /// Crea un scope basado en el estado actual del juego
-    /// </summary>
-    /// <param name="st">Estado actual del juego</param>
-    public static Dictionary<string, int> CreateScope(Status st) {
-        Dictionary<string, int> scope = new();
-        scope.Add("MyLife", st.playerStatuses[0].life);
-        scope.Add("EnemyLife", st.playerStatuses[1].life);
-        scope.Add("MyCharms", st.playerStatuses[0].charms);
-        scope.Add("EnemyCharms", st.playerStatuses[1].charms);
-        return scope;
-    }
-    /// <summary>
-    /// Crea un scope desde un estado inicial de juego predefinido
-    /// </summary>
-    public static Dictionary<string, int> CreateScope() {
-        Dictionary<string, int> scope = new();
-        scope.Add("MyLife", Config.BasicLife);
-        scope.Add("EnemyLife", Config.BasicLife);
-        scope.Add("MyCharms", Config.Charms);
-        scope.Add("EnemyCharms", Config.Charms);
-        return scope;
     }
 }
