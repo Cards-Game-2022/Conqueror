@@ -1,5 +1,31 @@
 @import url("open-iconic/font/css/open-iconic-bootstrap.min.css");
 
+@font-face {
+  font-family: Wonderland;
+  src: url(../font/fonts/Beyond\ Wonderland.ttf);
+}
+@font-face {
+  font-family: Unutterable;
+  src: url(../font/fonts/Unutterable-z8E8X.ttf);
+}
+@font-face {
+  font-family: Frabotta;
+  src: url(../font/fonts/Frabotta-gx855.otf);
+}
+
+@font-face {
+  font-family: BlackChery;
+  src: url(../font/fonts/BLKCHCRY.TTF);
+}
+@font-face {
+  font-family: DavysRibbons;
+  src: url(../font/fonts/DavysRibbons.ttf);
+}
+@font-face {
+  font-family: DragonForce;
+  src: url(../font/fonts/DragonForcE.ttf);
+}
+
 html,
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;

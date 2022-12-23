@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "VIcl2sUrJ163JxF/hlJE4M/GJx0PK7hFm52lSJdz/6k=",
+  "Hash": "tO0UyG9lH6itzbZd/jmqd5O2EeHbu5qBk3x3l3LhIqE=",
   "Source": "ConquerorServer",
   "BasePath": "_content/ConquerorServer",
   "Mode": "Default",
@@ -525,6 +525,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/font/bootstrap-icons.scss"
+    },
+    {
+      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/font/fonts/Beyond Wonderland.ttf",
+      "SourceId": "ConquerorServer",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "BasePath": "_content/ConquerorServer",
+      "RelativePath": "font/fonts/Beyond Wonderland.ttf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/font/fonts/Beyond Wonderland.ttf"
     },
     {
       "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/font/fonts/bootstrap-icons.woff",

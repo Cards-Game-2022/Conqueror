@@ -57,12 +57,12 @@
         </div>
         
 
-        <div style="justify-content: center; width: fit-content; font-family: 'f Frabotta', sans-serif; display: flex;flex: wrap;flex-wrap: wrap; padding: 15px;">  
+        <div class="AllCardsStyle">  
             @foreach (var item in game.st.playerStatuses[0].playerHand)
             {
                 <div @onclick="@(e => Play(@item))">
 
-                    <a target="_blank" class="card card--square">
+                    <a href="gameEnvironment" class="card card--square">
                         <div class="card__orb">
                             <img src="images/card-elements/hand-orb-red.png" alt="" class="card__orb__image">
                             <p class="card__orb__value">@item.Charms</p>
