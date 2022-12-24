@@ -57,6 +57,10 @@ public class Status {
         this.playerStatuses = copia;
     }
 
+    /// <summary>
+    /// Crea un estado de juego a partir del estado actual con restricciones
+    /// </summary>
+    /// <returns>Un estado que no contiene la mano ni el deck del enemigo</returns>
     public Status StatusForIA() {
 
         Status newStatus = new();
