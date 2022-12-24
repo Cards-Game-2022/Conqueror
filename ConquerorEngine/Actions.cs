@@ -16,19 +16,6 @@ public static class Actions {
     }
     
     /// <summary>
-    /// Disminuye en 1 los charms
-    /// </summary>
-    /// <param name="playerStatus">Estado del jugador al que se le disminuyen los charms</param>
-    public static void ReduceCharms(PlayerStatus playerStatus) {
-        if (playerStatus.charms > 0) {
-            playerStatus.charms--;
-        }
-        else {
-            Utils.Error("No se pueden disminuir los charms");
-        }
-    }
-    
-    /// <summary>
     /// Crea un deck nuevo
     /// </summary>
     /// <param name="deck">El deck que se va a rellenar</param>

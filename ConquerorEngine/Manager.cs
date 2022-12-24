@@ -51,21 +51,4 @@ public class Manager {
         Database.UpdateId(id.Card, id.Character + 1);
     }
     
-    /// <summary>
-    /// Obtiene un personaje de la base de datos
-    /// </summary>
-    /// <param name="id">id del personaje</param>
-    /// <returns>El personaje obtenido</returns>
-    public Character GetCharacter(int id) { 
-        return db.GetCharacter(id);
-    }
-
-    /// <summary>
-    /// Obtiene una carta de la base de datos
-    /// </summary>
-    /// <param name="id">id de la carta</param>
-    /// <returns>La carta obtenida</returns>
-    public Card GetCard(int id) {  
-        return db.GetCard(id);
-    } 
 }

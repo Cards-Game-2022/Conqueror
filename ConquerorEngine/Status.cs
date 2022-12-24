@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace Conqueror.Logic;
 
 public class Status {
+    
     /// <summary>
     /// Lista de todos los estados de jugadores
     /// </summary>

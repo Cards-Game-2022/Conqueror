@@ -30,8 +30,8 @@ public class Game : IEnumerable<Status>, IGraphics {
     public void InitializePlayers(int level) {
         Manager cq = new Manager();
         
-        Character c0 = cq.GetCharacter(0);
-        Character c1 = cq.GetCharacter(1);
+        Character c0 = cq.db.GetCharacter(0);
+        Character c1 = cq.db.GetCharacter(1);
 
         if (level != 2) {
             st.playerStatuses[0].player = new PlayerHuman(c0.Name, c0.UrlPhoto, c0.Id);
