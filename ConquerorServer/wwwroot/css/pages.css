@@ -29,6 +29,10 @@
   font-family: Barbarian;
   src: url(../font/fonts/Barbarian.ttf);
 }
+@font-face {
+  font-family: StrangeWorld;
+  src: url(../font/fonts/Strange\ world.ttf);
+}
 
 html,
 body {
