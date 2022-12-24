@@ -17,7 +17,7 @@ public class Status {
     /// Constructor de estados vacio
     /// </summary>
     public Status() {
-
+        playerStatuses = new();
     }
     
     /// <summary>
@@ -73,6 +73,4 @@ public class Status {
         
         return newStatus;
     }
-
-    
 }

@@ -42,8 +42,17 @@ namespace Conqueror.Logic;
             copy.charms = this.charms;
             copy.life = this.life;
             copy.player = this.player;
-            copy.playerDeck = this.playerDeck;
-            copy.playerHand = this.playerHand;
+
+            copy.playerDeck.Clear();
+            foreach(Card card in this.playerDeck) {
+                copy.playerDeck.Add(card);
+            }
+
+            copy.playerHand.Clear();
+            foreach(Card card in this.playerHand) {
+                copy.playerHand.Add(card);
+            }
+
             return copy;   
         }
     }

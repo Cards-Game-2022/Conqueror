@@ -173,7 +173,7 @@ public class Game : IEnumerable<Status>, IGraphics {
     /// <returns>Si es o no un jugador virtual</returns>
     public bool PlayIA() {
         if (st.playerStatuses[0].player is PlayerIA) {
-            Input(PlayerIA.SelectIACard(st.playerStatuses[0]));
+            Input((st.playerStatuses[0].player as PlayerIA).SelectIACard(st.StatusForIA()));
             return true;
         }
         return false;
