@@ -62,20 +62,20 @@ public class Game : IEnumerable<Status>, IGraphics {
     /// Lanza una carta
     /// </summary>
     /// <param name="card">carta que se quiere activar</param>
-    /// <param name="scope">Contexto del interprete</param>
+    /// <param name="ctx">Contexto del interprete</param>
     /// <param name="st">Estado actual del juego</param>
     /// <returns>El nuevo contexto</returns>
-    public Context Launch(Card card, Context scope, Status st)
+    public Context Launch(Card card, Context ctx, Status st)
     {
         Actions.RemoveCard(st.playerStatuses[0].playerHand, card);
         
         try {
-            Utils.InterpretEffect(scope, card.Effect);
+            Utils.InterpretEffect(ctx, card.Effect);
         }
         catch (Exception e) {
             Console.WriteLine(e.Message);
         }
-        return scope;
+        return ctx;
     }
 
     /// <summary>

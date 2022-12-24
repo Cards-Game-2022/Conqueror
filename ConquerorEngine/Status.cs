@@ -18,7 +18,7 @@ public class Status {
     /// </summary>
     /// <param name="nPlayers">Representa la cantidad de jugadores que tendra el juego</param>
     public Status(int nPlayers) {
-        playerStatuses = new();
+        playerStatuses = new(nPlayers);
         for (int i = 0; i<nPlayers; i++) {
             playerStatuses.Add(new PlayerStatus());
         }
