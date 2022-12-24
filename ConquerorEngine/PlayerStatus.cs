@@ -36,4 +36,14 @@ namespace Conqueror.Logic;
             Actions.CreateHand(playerHand, playerDeck);
             
         }
+
+        public PlayerStatus Clone() {
+            PlayerStatus copy = new PlayerStatus();
+            copy.charms = this.charms;
+            copy.life = this.life;
+            copy.player = this.player;
+            copy.playerDeck = this.playerDeck;
+            copy.playerHand = this.playerHand;
+            return copy;   
+        }
     }

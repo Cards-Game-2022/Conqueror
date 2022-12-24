@@ -14,6 +14,13 @@ public class Status {
     public List<PlayerStatus> playerStatuses { get; private set; }
     
     /// <summary>
+    /// Constructor de estados vacio
+    /// </summary>
+    public Status() {
+
+    }
+    
+    /// <summary>
     /// Constructor de estados
     /// </summary>
     /// <param name="nPlayers">Representa la cantidad de jugadores que tendra el juego</param>
@@ -50,4 +57,18 @@ public class Status {
         this.playerStatuses = copia;
     }
 
+    public Status StatusForIA() {
+
+        Status newStatus = new();
+        newStatus.playerStatuses.Add(this.playerStatuses[0].Clone());
+        Actions.Shuffle(newStatus.playerStatuses[0].playerDeck); //Barajea mi deck 
+
+        newStatus.playerStatuses.Add(this.playerStatuses[1].Clone());
+        newStatus.playerStatuses[1].playerHand.Clear();
+        newStatus.playerStatuses[1].playerDeck.Clear();
+        
+        return newStatus;
+    }
+
+    
 }
