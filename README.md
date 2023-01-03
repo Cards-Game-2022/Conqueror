@@ -2,16 +2,17 @@
 
 + **Inicio del juego**:
   
-  Para iniciar el juego, deberás acceder a la carpeta contenedora del mismo llamada Conqueror. Una vez allí, abres la carpeta en un terminal y ejectuas
+  Para iniciar el juego, deberás acceder a la carpeta contenedora del mismo llamada Conqueror. Una vez allí, abres la carpeta en un terminal y ejectuas:
   
   ```bash
   dotnet run --project ConquerorServer
   ```
 
-  Si usas linux, puedes ejecutar
-  ```bash
-  make dev
-  ```
+  Si usas linux, puedes ejecutar:
+
+```bash
+make dev
+```
 
 + **Elementos del juego**:
 
