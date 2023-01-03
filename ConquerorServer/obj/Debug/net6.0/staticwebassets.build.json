@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "wOFdscZPY9N4R4dtRpHohzrlloa1ZdUHS27b99zdN1k=",
+  "Hash": "CPvw9IgL236Rz/haK3ycCVbceNs0YVTO+B1260Y6CbM=",
   "Source": "ConquerorServer",
   "BasePath": "_content/ConquerorServer",
   "Mode": "Default",
@@ -663,6 +663,23 @@
       "OriginalItemSpec": "wwwroot/font/fonts/Frabotta-gx855.otf"
     },
     {
+      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/font/fonts/Strange world.ttf",
+      "SourceId": "ConquerorServer",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "BasePath": "_content/ConquerorServer",
+      "RelativePath": "font/fonts/Strange world.ttf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/font/fonts/Strange world.ttf"
+    },
+    {
       "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/font/fonts/Unutterable-z8E8X.ttf",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
@@ -816,6 +833,23 @@
       "OriginalItemSpec": "wwwroot/images/cards.jpg"
     },
     {
+      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/Characters/centauro.gif",
+      "SourceId": "ConquerorServer",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "BasePath": "_content/ConquerorServer",
+      "RelativePath": "images/Characters/centauro.gif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/Characters/centauro.gif"
+    },
+    {
       "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/Characters/dragon.gif",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
@@ -918,12 +952,12 @@
       "OriginalItemSpec": "wwwroot/images/Characters/photo104.png"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/fondo1.jpg",
+      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/fondo1.jpeg",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
       "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
-      "RelativePath": "images/fondo1.jpg",
+      "RelativePath": "images/fondo1.jpeg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -932,7 +966,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/images/fondo1.jpg"
+      "OriginalItemSpec": "wwwroot/images/fondo1.jpeg"
     },
     {
       "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/fondo2.jpg",
@@ -1035,6 +1069,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/images/fondo7.jpeg"
+    },
+    {
+      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/fondo8.jpg",
+      "SourceId": "ConquerorServer",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "BasePath": "_content/ConquerorServer",
+      "RelativePath": "images/fondo8.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/fondo8.jpg"
     },
     {
       "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/game.jpg",
