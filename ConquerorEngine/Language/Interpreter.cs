@@ -32,7 +32,6 @@ class Interpreter {
             return VisitNoOp(node);
         }
         if (node is Var) {
-            //Console.WriteLine(((Var)node).Value);
             return VisitVar(node);
         }
         if (node is Assign) {
@@ -56,7 +55,6 @@ class Interpreter {
         int l = 0, r = 0;
         AST sl = Visit(op.Left);
         AST sr = Visit(op.Right);
-        //Console.WriteLine(vl.ToString() + " " + vr);
         if (!((sl is Num) && (sr is Num)) && !((sl is Bool) && (sr is Bool))) {
             Console.WriteLine(sl + " " + sr);
             Utils.Error("Tipos de datos incorrectos en la expresion");
@@ -101,10 +99,7 @@ class Interpreter {
                 case "OR":
                     return new Bool(vl == true || vr == true);
             }
-        }
-        
-    //Console.WriteLine(op.Op.Type);
-        
+        }        
         return null;
     }
 
@@ -167,7 +162,7 @@ class Interpreter {
     public void VisitWhile(AST node) {
         While condition = (While)node;
         if (!(condition.Cond is BinOp)) {
-            Utils.Error("Error. Se esperaba una operacion binaria de comparacion");
+            Utils.Error("Se esperaba una operacion binaria de comparacion");
         }
         bool folow = true;
         int calls = 0;
@@ -191,7 +186,7 @@ class Interpreter {
     public void VisitCondition(AST node) {
         Condition condition = (Condition)node;
         if (!(condition.Cond is BinOp)) {
-            Utils.Error("Error. Se esperaba una operacion binaria de comparacion");
+            Utils.Error("Se esperaba una operacion binaria de comparacion");
         }
         AST mk = VisitBinOp(condition.Cond);
         Bool cond = (Bool)mk;

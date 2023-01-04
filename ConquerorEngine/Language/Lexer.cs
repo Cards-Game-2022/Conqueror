@@ -38,7 +38,7 @@ class Lexer {
         }
     }
 
-    // returna un entero multidigito
+    // retorna un entero multidigito
     private int Integer() {
         string result = ""; 
 
@@ -74,7 +74,7 @@ class Lexer {
     
     
     public Token GetNextToken() {
-        //Console.WriteLine(currentChar);
+
         while (currentChar != '~') {
             if (IsSpace(currentChar)) {
                 SkipWhiteSpace();
@@ -151,8 +151,6 @@ class Lexer {
                 Advance();
                 return new Token("END", "}");
             }
-            
-            //Console.WriteLine(currentChar);
             Utils.Error("Caracter invalido");
         }     
         return new Token("EOF", "~");

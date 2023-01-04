@@ -19,7 +19,6 @@ class NoOp : AST{
 
 }
 
-
 // clase para guardar operadores binarios en los nodos
 class BinOp : AST{
     public AST Left {

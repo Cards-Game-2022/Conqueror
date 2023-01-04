@@ -16,7 +16,7 @@ class Parser {
         AST node = Program();
         if (currentToken.Type != "EOF") {
             //Console.WriteLine(currentToken.Value);
-            Utils.Error("sintaxis incorrecta");
+            Utils.Error("Sintaxis incorrecta");
         }
         return node;
     }
@@ -40,7 +40,6 @@ class Parser {
                    | LPAREN expr RPAREN
                    | variable
         */
-        //Console.WriteLine(currentToken.Value + " " + currentToken.Type);
         Token token = new Token(currentToken);
         
         switch (token.Type) {
@@ -73,11 +72,9 @@ class Parser {
         AST node = Factor();
         if (node is Num) {
             Num n = (Num)node;
-            //Console.WriteLine(n.Value);
         }
         while (currentToken.Type == "MUL" || currentToken.Type == "DIV") {
             Token token = new Token(currentToken);
-            //Console.WriteLine("hhoa");
             if (token.Type == "MUL") {
                 Eat("MUL");
             } else {
@@ -87,7 +84,6 @@ class Parser {
         }
         if (node is Num){
         Num n = (Num)node;
-        //Console.WriteLine(n.Value + " " + currentToken.Value);
         }
         return node;
     }
@@ -98,7 +94,6 @@ class Parser {
         term   : factor ((MUL | DIV) factor)*
         factor : INTEGER | LPAREN expr RPAREN 
         */
-        //Console.WriteLine(currentToken.Value);
         AST node = Term();
         
         while (currentToken.Type == "MINUS" || currentToken.Type == "PLUS") {
@@ -109,7 +104,6 @@ class Parser {
                 Eat("MINUS");
             }
             node = new BinOp(node, token, Term());
-        //Console.WriteLine(((BinOp)node));
         } 
         return node;
     }
@@ -118,7 +112,6 @@ class Parser {
         // program: compoundStatament DOT
         List<AST> nodes = StatementList();
         Compound root = new Compound();
-        //Console.WriteLine(nodes[0]);
         foreach (var item in nodes) {
             root.Children.Add(item);
         }
@@ -146,7 +139,7 @@ class Parser {
         AST node = Statement();
         List<AST> results = new List<AST>();
         results.Add(node);  
-        // si pongo por ejempo { a:= 3 } falta el ;
+
         if (currentToken.Type != "SEMI" && !(node is NoOp)) {
             Utils.Error("Esperado ; al final de la instruccion");
         }
@@ -203,7 +196,6 @@ class Parser {
     public Var Variable() {
         //variable: ID
         Var node = new Var(currentToken);
-        //Console.WriteLine(((Var)node).Token.Type); 
         Eat("ID");
         return node;
     }
