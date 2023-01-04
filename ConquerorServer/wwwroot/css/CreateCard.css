@@ -110,3 +110,8 @@ input[type="file"]::file-selector-button {
   overflow: scroll;
   font-size: large;  
 }
+
+#InputText {
+  font-family: 'VerdanaDwnl', Verdana, sans-serif;
+  font-size: 75%;
+}

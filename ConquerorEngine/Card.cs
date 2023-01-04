@@ -75,7 +75,7 @@ public class Card {
         }
 
         if (this.urlPhoto == null || this.urlPhoto == "") {
-            this.urlPhoto = "images/photo102.png";
+            this.urlPhoto = Config.PathImageCards;
         }
     }
     

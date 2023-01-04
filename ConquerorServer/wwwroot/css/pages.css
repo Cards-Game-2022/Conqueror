@@ -33,6 +33,10 @@
   font-family: StrangeWorld;
   src: url(../font/fonts/Strange\ world.ttf);
 }
+@font-face {
+  font-family: VerdanaDwnl;
+  src: url(../font/fonts/verdana.ttf);
+}
 
 html,
 body {

@@ -184,6 +184,7 @@ public class Game : IEnumerable<Status>, IGraphics {
     /// </summary>
     /// <param name="card">carta jugada</param>
     public void Input(Card card) {
+        if (!GameOver()) {    
             if (card != null) {
                 if (IsValid(card, st.playerStatuses[0])) {
                     Activate(card);
@@ -196,6 +197,7 @@ public class Game : IEnumerable<Status>, IGraphics {
             if (st.playerStatuses[0].player is PlayerHuman) {
                 this.GetEnumerator().MoveNext();
             }
+        }
     }
     
     /// <summary>

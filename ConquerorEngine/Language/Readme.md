@@ -5,7 +5,7 @@ Caracteristicas:
 - al final de toda linea debe ir un ;
 - los bloques de codigo deben empezar por { y finalizar en } y todos los bloques excepto el ultimo de terminar en };
 - no hay tipado de varibles el unico tipo que existe es int y en las estructuras con condicion se trabaja internamente con un tipo bool
-- existen funciones predefinidas y varibles constantes predefinidas
+- existen funciones predefinidas y variables constantes predefinidas
 - no existen comentarios
 
 Sintaxis:

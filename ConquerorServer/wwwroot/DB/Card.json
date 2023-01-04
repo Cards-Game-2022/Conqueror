@@ -1,7 +1,7 @@
 [
   {
     "Name": "Helbrand",
-    "UrlPhoto": "images/photo103.png",
+    "UrlPhoto": "images/cards/helbrand.png",
     "Id": 1,
     "Rarity": 1,
     "Charms": 3,
@@ -10,7 +10,7 @@
   },
   {
     "Name": "El susto",
-    "UrlPhoto": "images/photo104.png",
+    "UrlPhoto": "images/cards/elsusto.png",
     "Id": 2,
     "Rarity": 4,
     "Charms": 1,
@@ -19,47 +19,74 @@
   },
   {
     "Name": "El susto 2.0",
-    "UrlPhoto": "images/photo105.png",
+    "UrlPhoto": "images/cards/elsusto2.png",
     "Id": 3,
-    "Rarity": 2,
+    "Rarity": 3,
     "Charms": 2,
     "Text": "El enemigo pierde 10 de vida.",
     "Effect": "EnemyLife= EnemyLife - 10;"
   },
   {
     "Name": "Culebra",
-    "UrlPhoto": "images/photo102.png",
-    "Id": 6,
+    "UrlPhoto": "images/cards/culebra.png",
+    "Id": 4,
     "Rarity": 5,
-    "Charms": 2,
+    "Charms": 1,
     "Text": "Ganas 5 de vida",
     "Effect": "MyLife= MyLife \u002B 5;"
   },
   {
     "Name": "Merlin",
-    "UrlPhoto": "images/photo102.png",
-    "Id": 8,
+    "UrlPhoto": "images/cards/merlin.png",
+    "Id": 5,
     "Rarity": 1,
     "Charms": 3,
     "Text": "Reduce la vida del enemigo a la mitad",
     "Effect": "EnemyLife= EnemyLife/2;"
   },
   {
-    "Name": "Grindelwald",
-    "UrlPhoto": "images/photo102.png",
-    "Id": 9,
-    "Rarity": 3,
+    "Name": "Ultimo conjuro",
+    "UrlPhoto": "images/cards/ultimoConjuro.png",
+    "Id": 6,
+    "Rarity": 2,
     "Charms": 1,
     "Text": "Aumenta tus charms en 3",
     "Effect": "MyCharms= MyCharms \u002B 3;"
   },
   {
-    "Name": "Fluffy",
-    "UrlPhoto": "images/photo102.png",
-    "Id": 10,
+    "Name": "El plumazo",
+    "UrlPhoto": "images/cards/plumazo.png",
+    "Id": 7,
     "Rarity": 4,
-    "Charms": 1,
+    "Charms": 2,
     "Text": "Disminuye los charms de tu enemigo en 2",
     "Effect": "EnemyCharms= EnemyCharms - 2;"
+  },
+  {
+    "Name": "Bola de Fuego",
+    "UrlPhoto": "images/cards/bolaFuego.png",
+    "Id": 8,
+    "Rarity": 4,
+    "Charms": 1,
+    "Text": "Si la vida del enemigo es menor que la mia, se reduce en 10, si no en 5.",
+    "Effect": "if (EnemyLife \u003E MyLife) {\nEnemyLife = EnemyLife - 10;\n};\nif (EnemyLife \u003C MyLife | EnemyLife == MyLife) {\nEnemyLife = EnemyLife - 5;\n};\n"
+  },
+  {
+    "Name": "La Amazona",
+    "UrlPhoto": "images/cards/amazona.png",
+    "Id": 9,
+    "Rarity": 2,
+    "Charms": 2,
+    "Text": "Iguala las vidas a 10",
+    "Effect": "MyLife = 10;\nEnemyLife = 10;"
+  },
+  {
+    "Name": "El Espadazo",
+    "UrlPhoto": "images/cards/espadazo.png",
+    "Id": 10,
+    "Rarity": 1,
+    "Charms": 6,
+    "Text": "Ambos jugadores reducen sus vidas al numero de charms que tengan",
+    "Effect": "MyLife = MyCharms;\nEnemyLife = EnemyCharms;"
   }
 ]
