@@ -15,7 +15,6 @@ class Var : AST{
     }
 }
 
-
 class Num : AST{ 
     public int Value {
         private set; get;
