@@ -139,7 +139,7 @@ class Interpreter {
         string name = ((Var)assign.Left).Value;
         
         if (Context.GetType(name) != "INT") {
-            Utils.Error("Intendo de modificar una variable que no es INT");
+            Utils.Error("Intento de modificar una variable que no es INT");
         }
         AST visit = Visit(assign.Right);
         Num result = (Num)visit; 
@@ -167,7 +167,7 @@ class Interpreter {
     public void VisitWhile(AST node) {
         While condition = (While)node;
         if (!(condition.Cond is BinOp)) {
-            Utils.Error("Error se esperaba una operacion binaria de comparacion");
+            Utils.Error("Error. Se esperaba una operacion binaria de comparacion");
         }
         bool folow = true;
         int calls = 0;
@@ -191,7 +191,7 @@ class Interpreter {
     public void VisitCondition(AST node) {
         Condition condition = (Condition)node;
         if (!(condition.Cond is BinOp)) {
-            Utils.Error("Error se esperaba una operacion binaria de comparacion");
+            Utils.Error("Error. Se esperaba una operacion binaria de comparacion");
         }
         AST mk = VisitBinOp(condition.Cond);
         Bool cond = (Bool)mk;
