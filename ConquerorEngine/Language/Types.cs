@@ -1,7 +1,7 @@
 using System;
 namespace Conqueror.Logic.Language;
 
-class Var : AST{
+class Var : AST {
     public Token Token {
         get; private set;
     }
@@ -15,7 +15,7 @@ class Var : AST{
     }
 }
 
-class Num : AST{ 
+class Num : AST { 
     public int Value {
         private set; get;
     }
@@ -27,7 +27,7 @@ class Num : AST{
         this.Value = value;
     }
 }
-class Bool : AST{ 
+class Bool : AST { 
     public bool Value {
         private set; get;
     }
