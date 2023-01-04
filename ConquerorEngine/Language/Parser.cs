@@ -15,7 +15,6 @@ class Parser {
     public AST Parse() {
         AST node = Program();
         if (currentToken.Type != "EOF") {
-            //Console.WriteLine(currentToken.Value);
             Utils.Error("Sintaxis incorrecta");
         }
         return node;
@@ -23,7 +22,6 @@ class Parser {
 
     public void Eat(string tokenType) {
         // chequea si es el token esperado
-        //Console.WriteLine(currentToken.Type + " " + tokenType);
         if (currentToken.Type == tokenType) {
             currentToken = lexer.GetNextToken();
         } else {

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "sYiLnsMqJWzCXKK8DP6eXaiNWDcWkfMzTkljHibotfc=",
+  "Hash": "tH9YjbiqOW3uplWBVFlZIkTonsIMSr9Vs9XPeZCqtHA=",
   "Source": "ConquerorServer",
   "BasePath": "_content/ConquerorServer",
   "Mode": "Default",
@@ -984,6 +984,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/images/cards/helbrand.png"
+    },
+    {
+      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/cards/ladron.png",
+      "SourceId": "ConquerorServer",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "BasePath": "_content/ConquerorServer",
+      "RelativePath": "images/cards/ladron.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/cards/ladron.png"
+    },
+    {
+      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/cards/ladronzuelo.png",
+      "SourceId": "ConquerorServer",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "BasePath": "_content/ConquerorServer",
+      "RelativePath": "images/cards/ladronzuelo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/cards/ladronzuelo.png"
     },
     {
       "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/cards/merlin.png",

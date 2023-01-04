@@ -35,7 +35,8 @@ public class Context {
         }
         Utils.Error("Intento de acceder a una variable no declarada");
         return 0;
-    }public string? GetType(string id) {
+    }
+    public string? GetType(string id) {
         foreach (var item in scope) {
             if (item.Key.Value == id) {
                 return item.Key.Type;

@@ -133,7 +133,7 @@ class Interpreter {
         Assign assign = (Assign)node;
         string name = ((Var)assign.Left).Value;
         
-        if (Context.GetType(name) != "INT") {
+        if (Context.ContainsId(name) && Context.GetType(name) != "INT") {
             Utils.Error("Intento de modificar una variable que no es INT");
         }
         AST visit = Visit(assign.Right);

@@ -43,9 +43,26 @@ public class Status {
         playerStatuses[0].charms = ctx.GetValue("MyCharms") - cd.Charms;
         playerStatuses[1].charms = ctx.GetValue("EnemyCharms");
 
+        ActivateFunctions(ctx);
         return this;
     }
 
+    /// <summary>
+    /// Activa las funciones del efecto de una carta
+    /// </summary>
+    /// <param name="ctx">estado de juego actual</param>
+    public void ActivateFunctions(Context ctx) {
+        foreach (var item in Utils.Names)
+        if (ctx.ContainsId(item)) {
+            for (int i = ctx.GetValue(item); i>0; i--) {
+                Console.WriteLine("Activo la funcion {0} {1} veces",item, i);
+                //Temporalmente lo que hace es robar i veces ya que es la funcion que esta dentro
+                //del Names y la unica que existe.
+                Actions.Draw(this.playerStatuses[0]);
+            }
+        }
+    }
+    
     /// <summary>
     /// Se intercambian los jugadores
     /// </summary>

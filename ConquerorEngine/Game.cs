@@ -206,5 +206,4 @@ public class Game : IEnumerable<Status>, IGraphics {
     public void Output() {
         
     }
-    
 }

@@ -4,7 +4,7 @@
     "UrlPhoto": "images/cards/helbrand.png",
     "Id": 1,
     "Rarity": 1,
-    "Charms": 3,
+    "Charms": 4,
     "Text": "El enemigo pierde 20 de vida.",
     "Effect": "EnemyLife= EnemyLife - 20;"
   },
@@ -88,5 +88,23 @@
     "Charms": 6,
     "Text": "Ambos jugadores reducen sus vidas al numero de charms que tengan",
     "Effect": "MyLife = MyCharms;\nEnemyLife = EnemyCharms;"
+  },
+  {
+    "Name": "El ladr\u00F3n",
+    "UrlPhoto": "images/cards/ladronzuelo.png",
+    "Id": 11,
+    "Rarity": 4,
+    "Charms": 0,
+    "Text": "Robas una carta adicional",
+    "Effect": "Robar();"
+  },
+  {
+    "Name": "El ladronzuelo",
+    "UrlPhoto": "images/cards/ladron.png",
+    "Id": 12,
+    "Rarity": 2,
+    "Charms": 3,
+    "Text": "Robas 3 cartas de tu deck",
+    "Effect": "d=0;\nwhile (d\u003C3) {\nd = d\u002B1;\nRobar();\n};"
   }
 ]

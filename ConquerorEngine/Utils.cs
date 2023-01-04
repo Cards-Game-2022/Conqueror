@@ -4,7 +4,7 @@ namespace Conqueror.Logic;
 
 static class Utils {
     
-    public static string[] Names = { "StillCardEnemy", "ChangeHands" };
+    public static string[] Names = { "Robar" };
 
     /// <summary>
     /// Crea un Contexto basado en el estado actual del juego
@@ -46,6 +46,7 @@ static class Utils {
         Parser pr = new Parser(lexer);
         Interpreter i = new Interpreter(pr, scope);
         i.Interpret();
+        
         return scope;
     }
 

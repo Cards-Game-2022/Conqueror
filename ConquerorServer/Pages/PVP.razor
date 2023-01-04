@@ -135,15 +135,16 @@
         ShowWinner();
     }
     private async void Play(Card cd) {
-        
-        if (Game.IsValid(cd, game.st.playerStatuses[0])) {
-            game.Input(cd);
-            Effect();
-
+        if (!game.GameOver()) {
+            if (Game.IsValid(cd, game.st.playerStatuses[0])) {
+                game.Input(cd);
+                Effect();
+            }
+            else ErrorMessage();        
+            if (game.GameOver()) {
+                ShowWinner();
+            }
         }
-        else ErrorMessage();
-        if (game.GameOver())
-            ShowWinner();
     }
     private async void EndTurn() {
         game.GetEnumerator().MoveNext();
