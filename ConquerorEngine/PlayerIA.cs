@@ -22,26 +22,28 @@ public class PlayerIA : Player {
     /// <param name="state">Estado actual del juego</param>
     /// <returns>La carta seleccionada</returns>
     public Card SelectIACard(Status state) {
-        
-        /* foreach (Card cd in state.playerHand) {
-            if (Game.IsValid(cd, state)) {
-                return cd;
-            }
-        }        
-        return null; */
 
         // delegado que devuelve la diferencia de la vida de los jugadores y el -1 es para cuando de primero esta el humano para que siga siendo negativo
         int pos = this.Minimax(state, 0, 4, (x, y) => (x.playerStatuses[0].life - x.playerStatuses[1].life)*(y % 2 == 0 ? 1 : - 1));
-
-        return state.playerStatuses[0].playerHand[pos];
+        try {
+            return state.playerStatuses[0].playerHand[pos];
+        } catch(Exception e) {
+            Console.WriteLine("Hubo un error en el Minimax. El pos fue {0}", pos);
+            foreach (Card cd in state.playerStatuses[0].playerHand) {
+                if (Game.IsValid(cd, state.playerStatuses[0])) {
+                    return cd;
+                }            
+            }
+            return null;
+        }
     }
 
     private int Minimax(Status node, int prof, int maxProf, Func<Status, int, int> evaluate) {
-        // prof : profundidad del arbol si llego a final evalua el nodo y devuelve el valor
+        // prof : profundidad del arbol, si llego al final evalua el nodo y devuelve el valor
         if (prof == maxProf) {
             return evaluate(node, prof);
         }
-        // crea las  variables relativas a el nodo actual
+        // crea las  variables relativas al nodo actual
         int pos = -1;
         int value = prof % 2 == 0 ? int.MinValue : int.MaxValue;  // para elegir o un maximo valor o un minimo
 

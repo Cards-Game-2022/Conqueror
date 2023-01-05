@@ -37,6 +37,10 @@ namespace Conqueror.Logic;
             
         }
 
+        /// <summary>
+        /// Clona el estado actual del juego por copia
+        /// </summary>
+        /// <returns>La copia del estado actual del juego</returns>
         public PlayerStatus Clone() {
             PlayerStatus copy = new PlayerStatus();
             copy.charms = this.charms;

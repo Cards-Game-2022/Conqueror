@@ -97,6 +97,8 @@ public class Game : IEnumerable<Status>, IGraphics {
     /// <param name="playerStatus">Estado del jugador que activa la carta</param>
     /// <returns>Si es valida la juagada o no</returns>
     public static bool IsValid(Card cd, PlayerStatus playerStatus) {
+        if (cd == null)
+            return false;
         if (playerStatus.charms >= cd.Charms || cd.Charms == 0) {
             return true;
         }        
@@ -184,12 +186,10 @@ public class Game : IEnumerable<Status>, IGraphics {
     /// </summary>
     /// <param name="card">carta jugada</param>
     public void Input(Card card) {
-        if (!GameOver()) {    
-            if (card != null) {
-                if (IsValid(card, st.playerStatuses[0])) {
-                    Activate(card);
-                }
-            }
+        if (!GameOver()) {                
+            if (IsValid(card, st.playerStatuses[0])) {
+                Activate(card);
+            }            
             else
                 return;
 

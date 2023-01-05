@@ -4,7 +4,7 @@ namespace Conqueror.Logic;
 
 static class Utils {
     
-    public static string[] Names = { "Robar" };
+    public static string[] Names = { "Draw", "ChangeHands" };
 
     /// <summary>
     /// Crea un Contexto basado en el estado actual del juego

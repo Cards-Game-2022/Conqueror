@@ -38,7 +38,7 @@ public static class Actions {
         if (deck.Count >= Config.StartingCardsCount) {
             for (int i = 0; i < Config.StartingCardsCount; i++) {  
                 hand.Add(deck[0]);
-                deck.Remove(deck[0]);   
+                deck.RemoveAt(0);   
             }
         }
         else {
@@ -63,22 +63,6 @@ public static class Actions {
     }
     
     /// <summary>
-    /// Roba una carta especifica de un deck/mano
-    /// </summary>
-    /// <param name="ListOfCards">Lugar de donde se roba la carta</param>
-    /// <param name="card">Carta a robar</param>
-    /// <returns></returns>
-    public static Card Draw(List<Card> ListOfCards, Card card) {        
-        if (ListOfCards.Contains(card)) {        
-            RemoveCard(ListOfCards, card);
-            return card;
-        } else {
-            Console.WriteLine("Esa carta no aparece en el deck");
-            return null;
-        }
-    }
-    
-    /// <summary>
     /// Elimina una carta
     /// </summary>
     /// <param name="listOfCards">Lugar de donde se va a eliminar la carta</param>
@@ -95,17 +79,17 @@ public static class Actions {
     /// <summary>
     /// Barajea un grupo de cartas
     /// </summary>
-    /// <param name="listOfCards">Grupo de cartas a barajar</param>
-    public static void Shuffle(List<Card> listOfCards) {
+    /// <param name="cardsList">Grupo de cartas a barajar</param>
+    public static void Shuffle(List<Card> cardsList) {
 
-        int[] shuffledPositions = new int[listOfCards.Count];
+        int[] shuffledPositions = new int[cardsList.Count];
         Random randomGenerator = new Random();
 
         for (int i = 0; i < shuffledPositions.Length; i++) { 
             bool added = false;
 
             while (!added) {
-                int randomNumber = randomGenerator.Next(1, listOfCards.Count + 1);
+                int randomNumber = randomGenerator.Next(1, cardsList.Count + 1);
                 if (!shuffledPositions.Contains(randomNumber)) {
                     shuffledPositions[i] = randomNumber;
                     added = true;
@@ -114,11 +98,45 @@ public static class Actions {
         }
         List<Card> copiedList = new();
 
-        for (int i = 0; i < listOfCards.Count; i++) {
-            copiedList.Add(listOfCards[i]);
+        for (int i = 0; i < cardsList.Count; i++) {
+            copiedList.Add(cardsList[i]);
         }
-        for (int i = 0; i < listOfCards.Count; i++) {
-            listOfCards[i] = copiedList[shuffledPositions[i] - 1];
+        for (int i = 0; i < cardsList.Count; i++) {
+            cardsList[i] = copiedList[shuffledPositions[i] - 1];
         }
+    }
+
+    /// <summary>
+    /// Intercambia las manos de los jugadores
+    /// </summary>
+    /// <param name="playerStatuses"></param>
+    public static void ChangeHands(List<PlayerStatus> playerStatuses) {
+        List<Card> HandCopy1 = playerStatuses[0].playerHand;
+        List<Card> HandCopy2 = playerStatuses[1].playerHand;
+        playerStatuses[0].playerHand = HandCopy2;
+        playerStatuses[1].playerHand = HandCopy1;
+    }
+
+    /// <summary>
+    /// Roba una carta de la mano del enemigo al azar
+    /// </summary>
+    /// <param name="playerStatuses">Estado de los jugadores</param>
+    public static void DrawFromEnemy(List<PlayerStatus> playerStatuses) {
+        Card cd = RandomCard(playerStatuses[1].playerHand);
+        RemoveCard(playerStatuses[1].playerHand, cd);
+        playerStatuses[0].playerHand.Add(cd);
+    }
+
+    /// <summary>
+    /// Selecciona una carta al azar de un conjunto de cartas
+    /// </summary>
+    /// <param name="cardsList">lista de cartas de donde seleccionar una</param>
+    /// <returns></returns>
+    public static Card RandomCard(List<Card> cardsList)
+    {
+        Random randomGenerator = new Random();
+        int pos = randomGenerator.Next(0, cardsList.Count - 1);
+
+        return cardsList[pos];
     }
 }

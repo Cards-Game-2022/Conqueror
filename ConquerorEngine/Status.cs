@@ -52,13 +52,17 @@ public class Status {
     /// </summary>
     /// <param name="ctx">estado de juego actual</param>
     public void ActivateFunctions(Context ctx) {
-        foreach (var item in Utils.Names)
-        if (ctx.ContainsId(item)) {
-            for (int i = ctx.GetValue(item); i>0; i--) {
-                Console.WriteLine("Activo la funcion {0} {1} veces",item, i);
-                //Temporalmente lo que hace es robar i veces ya que es la funcion que esta dentro
-                //del Names y la unica que existe.
-                Actions.Draw(this.playerStatuses[0]);
+        foreach (var item in Utils.Names) {
+            if (ctx.ContainsId(item)) {
+                for (int i = ctx.GetValue(item); i>0; i--) {
+
+                    if (item == "Draw") {
+                        Actions.Draw(this.playerStatuses[0]);
+                    } else 
+                    if (item == "ChangeHands") {
+                        Actions.ChangeHands(this.playerStatuses);
+                    }                    
+                }
             }
         }
     }
@@ -82,7 +86,8 @@ public class Status {
 
         Status newStatus = new();
         newStatus.playerStatuses.Add(this.playerStatuses[0].Clone());
-        Actions.Shuffle(newStatus.playerStatuses[0].playerDeck); //Barajea mi deck 
+        //Barajea el deck del jugador para evitar que conozca el orden de sus cartas
+        Actions.Shuffle(newStatus.playerStatuses[0].playerDeck);
 
         newStatus.playerStatuses.Add(this.playerStatuses[1].Clone());
         newStatus.playerStatuses[1].playerHand.Clear();
