@@ -30,7 +30,41 @@ public class Status {
             playerStatuses.Add(new PlayerStatus());
         }
     }
-    
+
+
+    /// <summary>
+    /// Inicializa los jugadores
+    /// </summary>
+    /// <param name="level">Define los tipos de jugadores: 
+    /// 0: Humano vs Humano. 
+    /// 1: Humano vs IA. 
+    /// 2: IA vs IA.
+    /// </param>
+    public void InitializePlayers(int level)
+    {
+        Manager mg = new Manager();
+
+        Character c0 = mg.db.GetCharacter(0);
+        Character c1 = mg.db.GetCharacter(1);
+
+        if (level != 2)
+        {
+            playerStatuses[0].player = new PlayerHuman(c0.Name, c0.UrlPhoto, c0.Id);
+            if (level == 0)
+            {
+                playerStatuses[1].player = new PlayerHuman(c1.Name, c1.UrlPhoto, c1.Id);
+            }
+            else
+            {
+                playerStatuses[1].player = new PlayerIA(c1.Name, c1.UrlPhoto, c1.Id);
+            }
+        }
+        else
+        {
+            playerStatuses[0].player = new PlayerIA(c0.Name, c0.UrlPhoto, c0.Id);
+            playerStatuses[1].player = new PlayerIA(c1.Name, c1.UrlPhoto, c1.Id);
+        }
+    }
     /// <summary>
     /// Actualiza el estado de juego
     /// </summary>
@@ -52,7 +86,7 @@ public class Status {
     /// </summary>
     /// <param name="ctx">estado de juego actual</param>
     public void ActivateFunctions(Context ctx) {
-        foreach (var item in Utils.Names) {
+        foreach (var item in Config.Names) {
             if (ctx.ContainsId(item)) {
                 for (int i = ctx.GetValue(item); i>0; i--) {
 
@@ -61,7 +95,10 @@ public class Status {
                     } else 
                     if (item == "ChangeHands") {
                         Actions.ChangeHands(this.playerStatuses);
-                    }                    
+                    } else
+                    if (item == "DrawFromEnemy") {
+                        Actions.DrawFromEnemy(this.playerStatuses);
+                    }                   
                 }
             }
         }

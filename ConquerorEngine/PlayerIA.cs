@@ -16,6 +16,7 @@ public class PlayerIA : Player {
     public PlayerIA(string name, string urlPhoto, int id) : base(name, urlPhoto, id) {
 
     }
+    
     /// <summary>
     /// Selecciona la carta que va a jugar el jugador virtual
     /// </summary>
@@ -25,19 +26,20 @@ public class PlayerIA : Player {
 
         // delegado que devuelve la diferencia de la vida de los jugadores y el -1 es para cuando de primero esta el humano para que siga siendo negativo
         int pos = this.Minimax(state, 0, 4, (x, y) => (x.playerStatuses[0].life - x.playerStatuses[1].life)*(y % 2 == 0 ? 1 : - 1));
-        try {
+        if (pos >= 0) {
             return state.playerStatuses[0].playerHand[pos];
-        } catch(Exception e) {
-            Console.WriteLine("Hubo un error en el Minimax. El pos fue {0}", pos);
-            foreach (Card cd in state.playerStatuses[0].playerHand) {
-                if (Game.IsValid(cd, state.playerStatuses[0])) {
-                    return cd;
-                }            
-            }
-            return null;
         }
+        return null;
     }
 
+    /// <summary>
+    /// Algoritmo minimax para determinar que carta jugar
+    /// </summary>
+    /// <param name="node">nodo actual</param>
+    /// <param name="prof">profundidad del arbol</param>
+    /// <param name="maxProf">maxima profundidad del arbol</param>
+    /// <param name="evaluate"></param>
+    /// <returns>la posicion que ocupa en la mano la carta elegida</returns>
     private int Minimax(Status node, int prof, int maxProf, Func<Status, int, int> evaluate) {
         // prof : profundidad del arbol, si llego al final evalua el nodo y devuelve el valor
         if (prof == maxProf) {

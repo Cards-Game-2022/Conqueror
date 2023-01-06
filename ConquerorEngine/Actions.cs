@@ -57,8 +57,6 @@ public static class Actions {
         if (state.playerDeck.Count > 0) {
             state.playerHand.Add(state.playerDeck[0]);
             RemoveCard(state.playerDeck, state.playerDeck[0]);
-        } else {
-            Console.WriteLine("El deck se encuentra vacio");
         }
     }
     
@@ -109,34 +107,38 @@ public static class Actions {
     /// <summary>
     /// Intercambia las manos de los jugadores
     /// </summary>
-    /// <param name="playerStatuses"></param>
-    public static void ChangeHands(List<PlayerStatus> playerStatuses) {
-        List<Card> HandCopy1 = playerStatuses[0].playerHand;
-        List<Card> HandCopy2 = playerStatuses[1].playerHand;
-        playerStatuses[0].playerHand = HandCopy2;
-        playerStatuses[1].playerHand = HandCopy1;
+    /// <param name="st">Lista de estados actuales de los jugadores</param>
+    public static void ChangeHands(List<PlayerStatus> st) {
+        List<Card> handCopy1 = st[0].playerHand;
+        List<Card> handCopy2 = st[1].playerHand;
+        st[0].playerHand = handCopy2;
+        st[1].playerHand = handCopy1;
     }
 
     /// <summary>
     /// Roba una carta de la mano del enemigo al azar
     /// </summary>
-    /// <param name="playerStatuses">Estado de los jugadores</param>
-    public static void DrawFromEnemy(List<PlayerStatus> playerStatuses) {
-        Card cd = RandomCard(playerStatuses[1].playerHand);
-        RemoveCard(playerStatuses[1].playerHand, cd);
-        playerStatuses[0].playerHand.Add(cd);
+    /// <param name="st">Lista de estados de los jugadores</param>
+    public static void DrawFromEnemy(List<PlayerStatus> st) {
+        Card cd = RandomCard(st[1].playerHand);
+        if (cd != null) {
+            RemoveCard(st[1].playerHand, cd);
+            st[0].playerHand.Add(cd);
+        }
     }
 
     /// <summary>
     /// Selecciona una carta al azar de un conjunto de cartas
     /// </summary>
     /// <param name="cardsList">lista de cartas de donde seleccionar una</param>
-    /// <returns></returns>
+    /// <returns>La carta seleccionada. Si el listado de cartas era vacio, devuelve null</returns>
     public static Card RandomCard(List<Card> cardsList)
     {
         Random randomGenerator = new Random();
-        int pos = randomGenerator.Next(0, cardsList.Count - 1);
-
-        return cardsList[pos];
+        if (cardsList.Count > 0) {
+            int pos = randomGenerator.Next(0, cardsList.Count);
+            return cardsList[pos];
+        }
+        return null;
     }
 }

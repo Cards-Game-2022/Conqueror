@@ -72,7 +72,7 @@
     "Effect": "if (EnemyLife \u003E MyLife) {\nEnemyLife = EnemyLife - 10;\n};\nif (EnemyLife \u003C MyLife | EnemyLife == MyLife) {\nEnemyLife = EnemyLife - 5;\n};\n"
   },
   {
-    "Name": "La Amazona",
+    "Name": "La amazona",
     "UrlPhoto": "images/cards/amazona.png",
     "Id": 9,
     "Rarity": 2,
@@ -81,7 +81,7 @@
     "Effect": "MyLife = 10;\nEnemyLife = 10;"
   },
   {
-    "Name": "El Espadazo",
+    "Name": "El espadazo",
     "UrlPhoto": "images/cards/espadazo.png",
     "Id": 10,
     "Rarity": 1,
@@ -108,12 +108,21 @@
     "Effect": "d=0;\nwhile (d\u003C3) {\nd = d\u002B1;\nDraw();\n};"
   },
   {
-    "Name": "El intercambio",
-    "UrlPhoto": "images/cards/default.png",
+    "Name": "El trueque",
+    "UrlPhoto": "images/cards/trueque.jpg",
     "Id": 13,
     "Rarity": 2,
     "Charms": 2,
     "Text": "Paga 5 puntos de vida para intercambiar la mano con tu enemigo",
     "Effect": "ChangeHands();\nMyLife = MyLife - 5;\n"
+  },
+  {
+    "Name": "El robo",
+    "UrlPhoto": "images/cards/robo.png",
+    "Id": 14,
+    "Rarity": 2,
+    "Charms": 1,
+    "Text": "Robas una carta al azar de la mano de tu enemigo",
+    "Effect": "DrawFromEnemy();"
   }
 ]

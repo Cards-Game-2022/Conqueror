@@ -3,8 +3,6 @@ using Conqueror.Logic.Language;
 namespace Conqueror.Logic;
 
 static class Utils {
-    
-    public static string[] Names = { "Draw", "ChangeHands" };
 
     /// <summary>
     /// Crea un Contexto basado en el estado actual del juego

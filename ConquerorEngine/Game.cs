@@ -5,6 +5,9 @@ namespace Conqueror.Logic;
 
 public class Game : IEnumerable<Status>, IGraphics {
     
+    /// <summary>
+    /// Estado del juego
+    /// </summary>
     public Status st = new(2);
 
     public Game() {
@@ -16,35 +19,7 @@ public class Game : IEnumerable<Status>, IGraphics {
     /// </summary>
     /// <param name="level">Determina los tipos de jugadores</param>
     public Game(int level) {
-        InitializePlayers(level);        
-    }
-    
-    /// <summary>
-    /// Inicializa los jugadores
-    /// </summary>
-    /// <param name="level">Define los tipos de jugadores: 
-    /// 0: Humano vs Humano. 
-    /// 1: Humano vs IA. 
-    /// 2: IA vs IA.
-    /// </param>
-    public void InitializePlayers(int level) {
-        Manager cq = new Manager();
-        
-        Character c0 = cq.db.GetCharacter(0);
-        Character c1 = cq.db.GetCharacter(1);
-
-        if (level != 2) {
-            st.playerStatuses[0].player = new PlayerHuman(c0.Name, c0.UrlPhoto, c0.Id);
-            if (level == 0) {
-                st.playerStatuses[1].player = new PlayerHuman(c1.Name, c1.UrlPhoto, c1.Id);           
-            } else {
-                st.playerStatuses[1].player = new PlayerIA(c1.Name, c1.UrlPhoto, c1.Id);    
-            }
-        }
-        else {
-            st.playerStatuses[0].player = new PlayerIA(c0.Name, c0.UrlPhoto, c0.Id);
-            st.playerStatuses[1].player = new PlayerIA(c1.Name, c1.UrlPhoto, c1.Id);            
-        }
+        st.InitializePlayers(level);        
     }    
     
     /// <summary>
@@ -79,6 +54,34 @@ public class Game : IEnumerable<Status>, IGraphics {
     }
 
     /// <summary>
+    /// Realiza los movimientos del jugador si es un jugador virtual
+    /// </summary>
+    /// <returns>Si realizo o no la jugada</returns>
+    public bool PlayIA() {
+        if (st.playerStatuses[0].player is PlayerIA)
+        {
+            Input((st.playerStatuses[0].player as PlayerIA).SelectIACard(st.StatusForIA()));
+            return true;
+        }
+        return false;
+    }
+    
+    /// <summary>
+    /// Verifica que una jugada sea valida
+    /// </summary>
+    /// <param name="cd">Carta que se quiere activar</param>
+    /// <param name="playerStatus">Estado del jugador que activa la carta</param>
+    /// <returns>Si es valida la jugada o no</returns>
+    public static bool IsValid(Card cd, PlayerStatus playerStatus) {
+        if (cd == null)
+            return false;
+        if (playerStatus.charms >= cd.Charms || cd.Charms == 0) {
+            return true;
+        }        
+        return false;
+    }
+    
+    /// <summary>
     /// Verifica el fin del juego
     /// </summary>
     /// <returns>Si el juego termino o no</returns>
@@ -88,22 +91,7 @@ public class Game : IEnumerable<Status>, IGraphics {
         } else {
             return false;
         }
-    }
-    
-    /// <summary>
-    /// Verifica que una jugada sea valida
-    /// </summary>
-    /// <param name="cd">Carta que se quiere activar</param>
-    /// <param name="playerStatus">Estado del jugador que activa la carta</param>
-    /// <returns>Si es valida la juagada o no</returns>
-    public static bool IsValid(Card cd, PlayerStatus playerStatus) {
-        if (cd == null)
-            return false;
-        if (playerStatus.charms >= cd.Charms || cd.Charms == 0) {
-            return true;
-        }        
-        return false;
-    }
+    }   
     
     /// <summary>
     /// Obtiene el ganador
@@ -132,20 +120,12 @@ public class Game : IEnumerable<Status>, IGraphics {
     /// <summary>
     /// Evita que la vida sea negativa
     /// </summary>    
-    public void StabilizeLife() {       
-        foreach (PlayerStatus state in st.playerStatuses) {
-            if (state.life < 0) {
-                state.life = 0;
+    public void StabilizeLife() {
+        foreach (PlayerStatus item in st.playerStatuses) {
+            if (item.life < 0) {
+                item.life = 0;
             }
         }
-    }
-    
-    /// <summary>
-    /// Aun no esta hecho para usarse.
-    /// </summary>
-    public List<Card> StorePlayedCard(List<Card> playedCards, Card card) {
-        playedCards.Add(card);
-        return playedCards;
     }
 
     /// <summary>
@@ -165,20 +145,12 @@ public class Game : IEnumerable<Status>, IGraphics {
             
     }
 
+    /// <summary>
+    /// Obtiene la siguiente jugada
+    /// </summary>
+    /// <returns>El nuevo estado de juego</returns>
     IEnumerator IEnumerable.GetEnumerator() {
         return GetEnumerator();        
-    }
-
-    /// <summary>
-    /// Realiza los movimientos del jugador si es un jugador virtual
-    /// </summary>
-    /// <returns>Si es o no un jugador virtual</returns>
-    public bool PlayIA() {
-        if (st.playerStatuses[0].player is PlayerIA) {
-            Input((st.playerStatuses[0].player as PlayerIA).SelectIACard(st.StatusForIA()));
-            return true;
-        }
-        return false;
     }
     
     /// <summary>

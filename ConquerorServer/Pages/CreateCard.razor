@@ -3,6 +3,9 @@
 
 <div class = "backgrounds create-card-background">
     <h1 class="text-center" id="CreateCardTop">Crear Carta</h1>
+    <div id = "error-message" class = "text-black text-center ErrorMessage" style="background-color: rgba(246, 13, 13, 0.79)">
+        <p> Hubo errores en la creacion <br> de la carta </p>
+    </div>
     <form autocomplete="off">
         <div class="row">
             <div class="col-12 col-lg-4 Create-Cards-Main-Form">
@@ -71,9 +74,14 @@
         Manager cq = new Manager();
         try {
             cq.CreateCard(name, photo, Int32.Parse(rarity), Int32.Parse(charms), text, effect);
+            Console.WriteLine("Carta creada con exito");
         }
         catch (System.Exception e) {
             Console.WriteLine("Se ingreso un valor incorrecto");
+            ErrorMessage();
         }
+    }
+    private async void ErrorMessage() {
+        await JS.InvokeVoidAsync("ErrorMessage");  
     }      
 }

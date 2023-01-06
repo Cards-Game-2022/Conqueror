@@ -70,9 +70,7 @@ class Lexer {
                 return new Token("ID", result);
         }
     }
-
-    
-    
+   
     public Token GetNextToken() {
 
         while (currentChar != '~') {
@@ -170,7 +168,7 @@ class Lexer {
     }
 
     private bool IsFunction(string name) {
-        foreach (var item in Utils.Names) {
+        foreach (var item in Config.Names) {
             if (item == name) {
                 return true;
             }

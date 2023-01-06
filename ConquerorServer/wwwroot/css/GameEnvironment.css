@@ -225,16 +225,18 @@ body {
 }
 
 .ErrorMessage {
-    display: none;
-    position: absolute;   
-    background-color: rgba(246, 13, 13, 0.48);
-    border-radius: 12px;
-    border-style: solid;
-    border-color:black;
-    padding: 3%;
-    font-size: 125%;
-    left: 40%;
-    font-family: 'Frabotta', sans-serif;
+	display: none;
+	position: relative;
+	background-color: rgba(246, 13, 13, 0.48);
+	border-radius: 12px;
+	border-style: solid;
+	border-color: black;
+	padding: 2%;
+	font-size: 125%;
+	font-family: 'Frabotta', sans-serif;
+	z-index: 3;
+	width: fit-content;
+	margin: 5px auto;
 }
 
 .GoToMainMenu {
