@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "jB2gh9QFOzOra/rl57XHqyIKrLl7e9a2UmlYpoanWcM=",
+  "Hash": "DIvv12Kjkgx/ZVT6rsl6sJ1k3ni5Z7jcMKpce63g73Y=",
   "Source": "ConquerorServer",
   "BasePath": "_content/ConquerorServer",
   "Mode": "Default",
@@ -1426,23 +1426,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/images/player.jpg"
-    },
-    {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/Js/ace.js",
-      "SourceId": "ConquerorServer",
-      "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
-      "BasePath": "_content/ConquerorServer",
-      "RelativePath": "Js/ace.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/Js/ace.js"
     },
     {
       "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/Js/background.js",

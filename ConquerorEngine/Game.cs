@@ -27,10 +27,11 @@ public class Game : IEnumerable<Status>, IGraphics {
     /// </summary>
     /// <param name="card">carta que se va a activar</param>
     public void Activate(Card card) {
-
         Context newContext = Launch(card, Utils.CreateScope(st), st);
         st.UpdateStatus(newContext, card);
-        StabilizeLife();        
+        Actions.RemoveCard(st.playerStatuses[0].playerHand, card);
+
+        StabilizeLife();      
     }
 
     /// <summary>
@@ -41,9 +42,7 @@ public class Game : IEnumerable<Status>, IGraphics {
     /// <param name="st">Estado actual del juego</param>
     /// <returns>El nuevo contexto</returns>
     public Context Launch(Card card, Context ctx, Status st)
-    {
-        Actions.RemoveCard(st.playerStatuses[0].playerHand, card);
-        
+    {    
         try {
             Utils.InterpretEffect(ctx, card.Effect);
         }
@@ -58,9 +57,9 @@ public class Game : IEnumerable<Status>, IGraphics {
     /// </summary>
     /// <returns>Si realizo o no la jugada</returns>
     public bool PlayIA() {
-        if (st.playerStatuses[0].player is PlayerIA)
-        {
-            Input((st.playerStatuses[0].player as PlayerIA).SelectIACard(st.StatusForIA()));
+        if (st.playerStatuses[0].player is PlayerIA) {
+            Card cd = (st.playerStatuses[0].player as PlayerIA).SelectIACard(st.StatusForIA());
+            Input(cd);
             return true;
         }
         return false;
@@ -133,16 +132,15 @@ public class Game : IEnumerable<Status>, IGraphics {
     /// </summary>
     /// <returns>El nuevo estado de juego</returns>
     public IEnumerator<Status> GetEnumerator() {    
-            if (!GameOver()) {            
+        if (!GameOver()) {            
+            ChangeTurns();
+            if (PlayIA()) {
                 ChangeTurns();
-                if (PlayIA()) {
-                    ChangeTurns();
-                }
-                yield return this.st;
             }
-            else
-            yield break;
-            
+            yield return this.st;
+        }
+        else
+        yield break;            
     }
 
     /// <summary>
@@ -161,6 +159,11 @@ public class Game : IEnumerable<Status>, IGraphics {
         if (!GameOver()) {                
             if (IsValid(card, st.playerStatuses[0])) {
                 Activate(card);
+
+                //Almacena la carta jugada por el enemigo del jugador virtual
+                if (st.playerStatuses[1].player is PlayerIA) {
+                    (st.playerStatuses[1].player as PlayerIA).StoreCard(card);
+                }
             }            
             else
                 return;

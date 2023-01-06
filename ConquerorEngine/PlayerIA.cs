@@ -5,7 +5,12 @@ using Conqueror.Logic.Language;
 namespace Conqueror.Logic;
 
 public class PlayerIA : Player {
-    
+
+    /// <summary>
+    /// Cartas jugadas por el enemigo del jugador virtual
+    /// </summary>
+    private List<Card> playedCards = new();
+
     /// <summary>
     /// Constructor de un jugador virtual
     /// </summary>
@@ -18,18 +23,27 @@ public class PlayerIA : Player {
     }
     
     /// <summary>
+    /// Agrega a la lista de cartas jugadas por el enemigo una nueva carta
+    /// </summary>
+    /// <param name="cd">carta que se añade a la lista</param>
+    public void StoreCard(Card cd) {
+        this.playedCards.Add(cd);
+    }
+    
+    /// <summary>
     /// Selecciona la carta que va a jugar el jugador virtual
     /// </summary>
     /// <param name="state">Estado actual del juego</param>
     /// <returns>La carta seleccionada</returns>
     public Card SelectIACard(Status state) {
 
+        state.playerStatuses[1].playerHand = (state.playerStatuses[0].player as PlayerIA).playedCards;
         // delegado que devuelve la diferencia de la vida de los jugadores y el -1 es para cuando de primero esta el humano para que siga siendo negativo
         int pos = this.Minimax(state, 0, 4, (x, y) => (x.playerStatuses[0].life - x.playerStatuses[1].life)*(y % 2 == 0 ? 1 : - 1));
-        if (pos >= 0) {
+        if (pos >= 0 && pos < state.playerStatuses[0].playerHand.Count) {
             return state.playerStatuses[0].playerHand[pos];
         }
-        return null;
+        return RandomMove(state.playerStatuses[0]);
     }
 
     /// <summary>
@@ -85,4 +99,29 @@ public class PlayerIA : Player {
         return pos;
     }
 
+    /// <summary>
+    /// Selecciona la primera carta valida de la mano del jugador virtual
+    /// </summary>
+    /// <param name="playerSt">Estado actual del jugador virtual</param>
+    /// <returns>La primera carta valida. Null si no se encontro ninguna valida</returns>
+    private Card RandomMove(PlayerStatus playerSt) {
+        foreach(Card cd in playerSt.playerHand) {
+            if(Game.IsValid(cd, playerSt)) {
+                return cd;
+            }
+        }
+        return null;
+    }
+    
+    /// <summary>
+    /// Clona el estado del juego del jugador virtual por copia
+    /// </summary>
+    /// <returns>Una copia del estado de juego del jugador virtual</returns>
+    public PlayerIA Clone() {
+        PlayerIA copy = new(this.Name, this.UrlPhoto, this.Id);
+        foreach(Card cd in this.playedCards) {
+            copy.playedCards.Add(cd);
+        }
+        return copy;        
+    }
 }

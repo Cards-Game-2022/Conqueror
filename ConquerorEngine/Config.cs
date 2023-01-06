@@ -33,7 +33,7 @@ static class Config {
     /// <summary>
     /// Cantidad de charms
     /// </summary>
-    static public int charms = 5;
+    static public int defaultCharms = 5;
     /// <summary>
     /// Nombres de las funciones definidas en el lenguaje
     /// </summary>

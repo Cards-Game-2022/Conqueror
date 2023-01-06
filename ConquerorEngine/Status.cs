@@ -31,7 +31,6 @@ public class Status {
         }
     }
 
-
     /// <summary>
     /// Inicializa los jugadores
     /// </summary>
@@ -65,6 +64,7 @@ public class Status {
             playerStatuses[1].player = new PlayerIA(c1.Name, c1.UrlPhoto, c1.Id);
         }
     }
+    
     /// <summary>
     /// Actualiza el estado de juego
     /// </summary>
@@ -108,11 +108,11 @@ public class Status {
     /// Se intercambian los jugadores
     /// </summary>
     public void ChangePlayers() {
-        List<PlayerStatus> copia = new();
-        copia.Add(this.playerStatuses[1]);
-        copia.Add(this.playerStatuses[0]);
+        List<PlayerStatus> copy = new();
+        copy.Add(this.playerStatuses[1]);
+        copy.Add(this.playerStatuses[0]);
 
-        this.playerStatuses = copia;
+        this.playerStatuses = copy;
     }
 
     /// <summary>
