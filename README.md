@@ -1,4 +1,4 @@
-# Conqueror
+# Conqueror Battle Cards
 
 + **Inicio del juego**:
   
@@ -10,9 +10,9 @@
 
   Si usas linux, puedes ejecutar:
 
-```bash
-make dev
-```
+  ```bash
+  make dev
+  ```
 
 + **Elementos del juego**:
 
@@ -22,15 +22,14 @@ make dev
   + Cada jugador obtiene las cartas en su mano a partir de las cartas de su deck.
   + Los charms representan el coste que tiene una carta para ser jugada. Mientras más util sea la carta, mayor será su coste en charms.
   + Los jugadores pueden tener, en un momento dado del juego, un valor negativo de charms pues esto indica que tienen que esperar a obtener más charms para activar una carta, o que pueden activar aquellas cuyo coste sea 0.
-  + Los jugadores pueden no tener cartas en su mano ni en su deck. Esto solo significa que no podrán activar efectos, pero no necesariamente han perdido la partida.
+  + Los jugadores pueden no tener cartas en su mano ni en su deck. Esto solo significa que no podrán activar efectoso robar del deck, pero no necesariamente han perdido la partida.
 
 + **Reglas**:
 
   + En cada turno el jugador solo puede jugar una carta.
-  + Cada turno el jugador recibe un charm.  
-  + Cada turno el jugador recibe una carta.
+  + Al inicio de cada turno el jugador recibe un charm y una carta.  
   + Las cartas existentes actúan sobre los elementos de un jugador como los charms y la vida.
-  + El juego termina únicamente cuando la vida de alguno de los jugadores llegue a cero.
+  + El juego termina únicamente cuando la vida de alguno de los jugadores llegue a cero o cuando uno de ellos decida rendirse y finalizar la partida.
 
 + **Forma de jugar**:
 
@@ -41,7 +40,7 @@ make dev
 
 + **Modos de juego**:
 
-  *Existen tres modos de juego fundamentales:*
+  *Existen tres modos de juego:*
   1. Torneo: Comienzas una partida contra un jugador virtual.
 
   2. Partida rápida: Comienzas una partida entre dos jugadores humanos.
