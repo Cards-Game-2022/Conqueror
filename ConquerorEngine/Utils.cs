@@ -25,11 +25,11 @@ static class Utils {
     /// </summary>
     public static Context CreateScope() {
         Context ctx = new Context();
-        ctx.Add(new Token("INT", "MyLife"), Config.BasicLife);
-        ctx.Add(new Token("INT", "EnemyLife"), Config.BasicLife);
-        ctx.Add(new Token("INT", "MyCharms"), Config.Charms);
-        ctx.Add(new Token("INT", "EnemyCharms"), Config.Charms);
-        ctx.Add(new Token("CONST", "CantMyCards"), Config.StartingCardsCount);
+        ctx.Add(new Token("INT", "MyLife"), Config.basicLife);
+        ctx.Add(new Token("INT", "EnemyLife"), Config.basicLife);
+        ctx.Add(new Token("INT", "MyCharms"), Config.charms);
+        ctx.Add(new Token("INT", "EnemyCharms"), Config.charms);
+        ctx.Add(new Token("CONST", "CantMyCards"), Config.startingCards);
         return ctx;
     }
     

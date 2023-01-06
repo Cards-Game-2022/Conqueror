@@ -35,8 +35,8 @@ public static class Actions {
     /// <param name="hand">Mano que se va a rellenar</param>
     /// <param name="deck">Deck del que se obtienen las cartas de la mano</param>
     public static void CreateHand(List<Card> hand, List<Card> deck) {
-        if (deck.Count >= Config.StartingCardsCount) {
-            for (int i = 0; i < Config.StartingCardsCount; i++) {  
+        if (deck.Count >= Config.startingCards) {
+            for (int i = 0; i < Config.startingCards; i++) {  
                 hand.Add(deck[0]);
                 deck.RemoveAt(0);   
             }

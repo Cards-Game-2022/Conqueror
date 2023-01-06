@@ -86,7 +86,7 @@ public class Status {
     /// </summary>
     /// <param name="ctx">estado de juego actual</param>
     public void ActivateFunctions(Context ctx) {
-        foreach (var item in Config.Names) {
+        foreach (var item in Config.functions) {
             if (ctx.ContainsId(item)) {
                 for (int i = ctx.GetValue(item); i>0; i--) {
 

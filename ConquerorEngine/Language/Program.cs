@@ -32,7 +32,7 @@ ctx.Add(new Token("INT", "MyCharms"), 5);
 ctx.Add(new Token("INT", "EnemyCharms"), 5);
 ctx.Add(new Token("CONST", "CantMyCards"), 0);
 
-foreach (var item in Config.Names) {
+foreach (var item in Config.functions) {
     ctx.Add(new Token("FUNC", item), 0);
 }
  
@@ -40,7 +40,7 @@ Interpreter i = new Interpreter(pr, ctx);
 i.Interpret();
 ctx.Show();
 
-foreach (var item in Config.Names) {
+foreach (var item in Config.functions) {
     int value = ctx.GetValue(item);
 }
 

@@ -168,7 +168,7 @@ class Lexer {
     }
 
     private bool IsFunction(string name) {
-        foreach (var item in Config.Names) {
+        foreach (var item in Config.functions) {
             if (item == name) {
                 return true;
             }

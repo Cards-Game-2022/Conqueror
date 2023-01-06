@@ -30,8 +30,8 @@ public class Database {
     public void InitCharacters() {
         if (Characters == null) {
             Characters = new List<Character>();
-            if (File.Exists(Config.PathCharacters)) {
-                string jsonString = File.ReadAllText(Config.PathCharacters);
+            if (File.Exists(Config.pathCharacters)) {
+                string jsonString = File.ReadAllText(Config.pathCharacters);
                 if (jsonString != "") {
                     Characters = JsonSerializer.Deserialize<List<Character>>(jsonString);
                     return;
@@ -46,8 +46,8 @@ public class Database {
     public void InitCards() {
         if (Cards == null) {
             Cards = new List<Card>();
-            if (File.Exists(Config.PathCard)) {
-                string jsonString = File.ReadAllText(Config.PathCard);
+            if (File.Exists(Config.pathCard)) {
+                string jsonString = File.ReadAllText(Config.pathCard);
                 if (jsonString != "") {
                     Cards = JsonSerializer.Deserialize<List<Card>>(jsonString);
                     return;
@@ -65,7 +65,7 @@ public class Database {
         Characters.Add(ch);
         var options = new JsonSerializerOptions { WriteIndented = true };
         string jsonString = JsonSerializer.Serialize(Characters, options);
-        File.WriteAllText(Config.PathCharacters, jsonString);
+        File.WriteAllText(Config.pathCharacters, jsonString);
     }
     
     /// <summary>
@@ -77,7 +77,7 @@ public class Database {
         Cards.Add(cd);
         var options = new JsonSerializerOptions { WriteIndented = true };
         string jsonString = JsonSerializer.Serialize(Cards, options);
-        File.WriteAllText(Config.PathCard, jsonString);
+        File.WriteAllText(Config.pathCard, jsonString);
     }
     
     /// <summary>
@@ -117,8 +117,8 @@ public class Database {
     public static Id GetLastId() {
         //Si existe el txt existe y contiene un numero, lo retorna
         //De lo contrario devuelve 0.
-        if (File.Exists(Config.PathCharacters)) {
-            string jsonString = File.ReadAllText(Config.PathLastID);
+        if (File.Exists(Config.pathCharacters)) {
+            string jsonString = File.ReadAllText(Config.pathLastID);
             if (jsonString != "") {
                 return JsonSerializer.Deserialize<Id>(jsonString);
             }
@@ -136,6 +136,6 @@ public class Database {
 
         var options = new JsonSerializerOptions { WriteIndented = true };
         string jsonString = JsonSerializer.Serialize(id, options);
-        File.WriteAllText(Config.PathLastID, jsonString); 
+        File.WriteAllText(Config.pathLastID, jsonString); 
     }
 }

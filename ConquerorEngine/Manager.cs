@@ -46,7 +46,7 @@ public class Manager {
         //Obtiene el id del ultimo personaje
         Id id = Database.GetLastId();
         //Crea y almacena el nuevo personaje con los parametros recibidos.      
-        db.StoreCharacter(new Character(name, Config.PathImageCharacters + "/" + url, id.Character + 1));
+        db.StoreCharacter(new Character(name, Config.pathCharactersImage + "/" + url, id.Character + 1));
         //Actualiza el ultimo id de personaje de la base de datos
         Database.UpdateId(id.Card, id.Character + 1);
     }

@@ -30,8 +30,8 @@ namespace Conqueror.Logic;
         /// Constructor del estado de jugador
         /// </summary>
         public PlayerStatus() {
-            life = Config.BasicLife;
-            charms = Config.Charms;
+            life = Config.basicLife;
+            charms = Config.charms;
             Actions.CreateDeck(playerDeck);
             Actions.CreateHand(playerHand, playerDeck);
             
