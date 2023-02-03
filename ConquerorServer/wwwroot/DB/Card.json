@@ -32,15 +32,15 @@
     "Id": 4,
     "Rarity": 5,
     "Charms": 1,
-    "Text": "Ganas 5 de vida",
-    "Effect": "MyLife= MyLife \u002B 5;"
+    "Text": "Ganas 15 de vida",
+    "Effect": "MyLife= MyLife \u002B 15;"
   },
   {
     "Name": "Merlin",
     "UrlPhoto": "images/cards/merlin.png",
     "Id": 5,
     "Rarity": 1,
-    "Charms": 3,
+    "Charms": 8,
     "Text": "Reduce la vida del enemigo a la mitad",
     "Effect": "EnemyLife= EnemyLife/2;"
   },
@@ -49,7 +49,7 @@
     "UrlPhoto": "images/cards/ultimoConjuro.png",
     "Id": 6,
     "Rarity": 2,
-    "Charms": 1,
+    "Charms": 0,
     "Text": "Aumenta tus charms en 3",
     "Effect": "MyCharms= MyCharms \u002B 3;"
   },
@@ -58,7 +58,7 @@
     "UrlPhoto": "images/cards/plumazo.png",
     "Id": 7,
     "Rarity": 4,
-    "Charms": 2,
+    "Charms": 1,
     "Text": "Disminuye los charms de tu enemigo en 2",
     "Effect": "EnemyCharms= EnemyCharms - 2;"
   },
@@ -76,7 +76,7 @@
     "UrlPhoto": "images/cards/amazona.png",
     "Id": 9,
     "Rarity": 2,
-    "Charms": 2,
+    "Charms": 4,
     "Text": "Iguala las vidas a 10",
     "Effect": "MyLife = 10;\nEnemyLife = 10;"
   },
