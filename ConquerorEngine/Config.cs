@@ -25,11 +25,11 @@ static class Config {
     /// <summary>
     /// Vida con que inicia el juego
     /// </summary>
-    static public int basicLife = 50;
+    static public int basicLife = 100;
     /// <summary>
     /// Cantidad de cartas con que inicia el juego cada jugador
     /// </summary>
-    static public int startingCards = 10;
+    static public int startingCards = 5;
     /// <summary>
     /// Cantidad de charms
     /// </summary>

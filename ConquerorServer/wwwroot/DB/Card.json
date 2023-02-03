@@ -85,9 +85,9 @@
     "UrlPhoto": "images/cards/espadazo.png",
     "Id": 10,
     "Rarity": 1,
-    "Charms": 6,
-    "Text": "Ambos jugadores reducen sus vidas al numero de charms que tengan",
-    "Effect": "MyLife = MyCharms;\nEnemyLife = EnemyCharms;"
+    "Charms": 10,
+    "Text": "Ambos jugadores reducen sus vidas al doble de charms que tengan",
+    "Effect": "MyLife = MyCharms + MyCharms;\nEnemyLife = EnemyCharms + EnemyCharms;"
   },
   {
     "Name": "El ladr\u00F3n",
