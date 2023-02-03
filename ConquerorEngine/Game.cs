@@ -3,7 +3,7 @@ using Conqueror.Logic.Language;
 
 namespace Conqueror.Logic;
 
-public class Game : IEnumerable<Status>, IGraphics {
+public class Game : IEnumerable<Status> {
     
     /// <summary>
     /// Estado del juego
@@ -173,12 +173,5 @@ public class Game : IEnumerable<Status>, IGraphics {
                 this.GetEnumerator().MoveNext();
             }
         }
-    }
-    
-    /// <summary>
-    /// Muestra las acciones
-    /// </summary>
-    public void Output() {
-        
     }
 }
