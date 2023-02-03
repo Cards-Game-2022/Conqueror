@@ -27,19 +27,19 @@
     ]
   },
   "packageFolders": {
-    "/home/marian_susana/.nuget/packages/": {}
+    "/home/marian/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/marian_susana/Documents/Conqueror/ConquerorServer/ConquerorServer.csproj",
+      "projectUniqueName": "/home/marian/Documents/Conqueror/ConquerorServer/ConquerorServer.csproj",
       "projectName": "ConquerorServer",
-      "projectPath": "/home/marian_susana/Documents/Conqueror/ConquerorServer/ConquerorServer.csproj",
-      "packagesPath": "/home/marian_susana/.nuget/packages/",
-      "outputPath": "/home/marian_susana/Documents/Conqueror/ConquerorServer/obj/",
+      "projectPath": "/home/marian/Documents/Conqueror/ConquerorServer/ConquerorServer.csproj",
+      "packagesPath": "/home/marian/.nuget/packages/",
+      "outputPath": "/home/marian/Documents/Conqueror/ConquerorServer/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/marian_susana/.nuget/NuGet/NuGet.Config"
+        "/home/marian/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -51,8 +51,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "/home/marian_susana/Documents/Conqueror/ConquerorEngine/ConquerorEngine.csproj": {
-              "projectPath": "/home/marian_susana/Documents/Conqueror/ConquerorEngine/ConquerorEngine.csproj"
+            "/home/marian/Documents/Conqueror/ConquerorEngine/ConquerorEngine.csproj": {
+              "projectPath": "/home/marian/Documents/Conqueror/ConquerorEngine/ConquerorEngine.csproj"
             }
           }
         }
@@ -84,7 +84,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.111/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.113/RuntimeIdentifierGraph.json"
       }
     }
   }

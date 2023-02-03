@@ -139,7 +139,8 @@
     private async void Play(Card cd) {
         if (!game.GameOver()) { 
             if (Game.IsValid(cd, game.st.playerStatuses[0])) {
-                game.Input(cd);
+                (game.st.playerStatuses[0].player as PlayerHuman).Play(game.st, cd);
+                game.Input();
                 Effect();
             }
             else ErrorMessage();

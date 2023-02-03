@@ -29,22 +29,6 @@ public class PlayerIA : Player {
     public void StoreCard(Card cd) {
         this.playedCards.Add(cd);
     }
-    
-    /// <summary>
-    /// Selecciona la carta que va a jugar el jugador virtual
-    /// </summary>
-    /// <param name="state">Estado actual del juego</param>
-    /// <returns>La carta seleccionada</returns>
-    public Card SelectIACard(Status state) {
-
-        state.playerStatuses[1].playerHand = (state.playerStatuses[0].player as PlayerIA).playedCards;
-        // delegado que devuelve la diferencia de la vida de los jugadores y el -1 es para cuando de primero esta el humano para que siga siendo negativo
-        int pos = this.Minimax(state, 0, 4, (x, y) => (x.playerStatuses[0].life - x.playerStatuses[1].life)*(y % 2 == 0 ? 1 : - 1));
-        if (pos >= 0 && pos < state.playerStatuses[0].playerHand.Count) {
-            return state.playerStatuses[0].playerHand[pos];
-        }
-        return RandomMove(state.playerStatuses[0]);
-    }
 
     /// <summary>
     /// Algoritmo minimax para determinar que carta jugar
@@ -105,8 +89,8 @@ public class PlayerIA : Player {
     /// <param name="playerSt">Estado actual del jugador virtual</param>
     /// <returns>La primera carta valida. Null si no se encontro ninguna valida</returns>
     private Card RandomMove(PlayerStatus playerSt) {
-        foreach(Card cd in playerSt.playerHand) {
-            if(Game.IsValid(cd, playerSt)) {
+        foreach (Card cd in playerSt.playerHand) {
+            if (Game.IsValid(cd, playerSt)) {
                 return cd;
             }
         }
@@ -124,4 +108,20 @@ public class PlayerIA : Player {
         }
         return copy;        
     }
+
+    public override void Play(Status st, Card cd)
+    {        
+        st.currentCard = SelectIACard(st.StatusForIA());
+    }
+
+    public Card SelectIACard(Status IAState) {
+        IAState.playerStatuses[1].playerHand = (IAState.playerStatuses[0].player as PlayerIA).playedCards;
+        // delegado que devuelve la diferencia de la vida de los jugadores y el -1 es para cuando de primero esta el humano para que siga siendo negativo
+        int pos = this.Minimax(IAState, 0, 4, (x, y) => (x.playerStatuses[0].life - x.playerStatuses[1].life)*(y % 2 == 0 ? 1 : - 1));
+        if (pos >= 0 && pos < IAState.playerStatuses[0].playerHand.Count) {
+            return IAState.playerStatuses[0].playerHand[pos];
+        }
+        return RandomMove(IAState.playerStatuses[0]);
+    }
+
 }

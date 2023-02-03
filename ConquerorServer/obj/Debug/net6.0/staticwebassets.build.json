@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "DIvv12Kjkgx/ZVT6rsl6sJ1k3ni5Z7jcMKpce63g73Y=",
+  "Hash": "ed0Dbjtkm8AMpbK8+3hl1sG1SfS8U4nU9i7mk9U9DYg=",
   "Source": "ConquerorServer",
   "BasePath": "_content/ConquerorServer",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "ConquerorServer/wwwroot",
       "Source": "ConquerorServer",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/obj/Debug/net6.0/scopedcss/bundle/ConquerorServer.styles.css",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/obj/Debug/net6.0/scopedcss/bundle/ConquerorServer.styles.css",
       "SourceId": "ConquerorServer",
       "SourceType": "Computed",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/obj/Debug/net6.0/scopedcss/bundle/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/obj/Debug/net6.0/scopedcss/bundle/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "ConquerorServer.styles.css",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/marian_susana/Documents/Conqueror/ConquerorServer/obj/Debug/net6.0/scopedcss/bundle/ConquerorServer.styles.css"
+      "OriginalItemSpec": "/home/marian/Documents/Conqueror/ConquerorServer/obj/Debug/net6.0/scopedcss/bundle/ConquerorServer.styles.css"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/obj/Debug/net6.0/scopedcss/projectbundle/ConquerorServer.bundle.scp.css",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/obj/Debug/net6.0/scopedcss/projectbundle/ConquerorServer.bundle.scp.css",
       "SourceId": "ConquerorServer",
       "SourceType": "Computed",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/obj/Debug/net6.0/scopedcss/projectbundle/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/obj/Debug/net6.0/scopedcss/projectbundle/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "ConquerorServer.bundle.scp.css",
       "AssetKind": "All",
@@ -48,13 +48,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/home/marian_susana/Documents/Conqueror/ConquerorServer/obj/Debug/net6.0/scopedcss/projectbundle/ConquerorServer.bundle.scp.css"
+      "OriginalItemSpec": "/home/marian/Documents/Conqueror/ConquerorServer/obj/Debug/net6.0/scopedcss/projectbundle/ConquerorServer.bundle.scp.css"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/complements/bootstrap/css/bootstrap.min.css",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/complements/bootstrap/css/bootstrap.min.css",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "complements/bootstrap/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot/complements/bootstrap/css/bootstrap.min.css"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/complements/bootstrap/js/bootstrap.bundle.js",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/complements/bootstrap/js/bootstrap.bundle.js",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "complements/bootstrap/js/bootstrap.bundle.js",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot/complements/bootstrap/js/bootstrap.bundle.js"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/complements/jquery.js",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/complements/jquery.js",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "complements/jquery.js",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot/complements/jquery.js"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/complements/popper.js",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/complements/popper.js",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "complements/popper.js",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot/complements/popper.js"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/css/card.css",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/css/card.css",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "css/card.css",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot/css/card.css"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/css/CreateCard.css",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/css/CreateCard.css",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "css/CreateCard.css",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot/css/CreateCard.css"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/css/GameEnvironment.css",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/css/GameEnvironment.css",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "css/GameEnvironment.css",
       "AssetKind": "All",
@@ -170,10 +170,10 @@
       "OriginalItemSpec": "wwwroot/css/GameEnvironment.css"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/css/History.css",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/css/History.css",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "css/History.css",
       "AssetKind": "All",
@@ -187,10 +187,10 @@
       "OriginalItemSpec": "wwwroot/css/History.css"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/css/index.css",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/css/index.css",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "css/index.css",
       "AssetKind": "All",
@@ -204,10 +204,10 @@
       "OriginalItemSpec": "wwwroot/css/index.css"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/css/open-iconic/FONT-LICENSE",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/css/open-iconic/FONT-LICENSE",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "css/open-iconic/FONT-LICENSE",
       "AssetKind": "All",
@@ -221,10 +221,10 @@
       "OriginalItemSpec": "wwwroot/css/open-iconic/FONT-LICENSE"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/css/open-iconic/font/css/open-iconic-bootstrap.min.css",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/css/open-iconic/font/css/open-iconic-bootstrap.min.css",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "css/open-iconic/font/css/open-iconic-bootstrap.min.css",
       "AssetKind": "All",
@@ -238,10 +238,10 @@
       "OriginalItemSpec": "wwwroot/css/open-iconic/font/css/open-iconic-bootstrap.min.css"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/css/open-iconic/font/fonts/open-iconic.eot",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/css/open-iconic/font/fonts/open-iconic.eot",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.eot",
       "AssetKind": "All",
@@ -255,10 +255,10 @@
       "OriginalItemSpec": "wwwroot/css/open-iconic/font/fonts/open-iconic.eot"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/css/open-iconic/font/fonts/open-iconic.otf",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/css/open-iconic/font/fonts/open-iconic.otf",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.otf",
       "AssetKind": "All",
@@ -272,10 +272,10 @@
       "OriginalItemSpec": "wwwroot/css/open-iconic/font/fonts/open-iconic.otf"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/css/open-iconic/font/fonts/open-iconic.svg",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/css/open-iconic/font/fonts/open-iconic.svg",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.svg",
       "AssetKind": "All",
@@ -289,10 +289,10 @@
       "OriginalItemSpec": "wwwroot/css/open-iconic/font/fonts/open-iconic.svg"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/css/open-iconic/font/fonts/open-iconic.ttf",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/css/open-iconic/font/fonts/open-iconic.ttf",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.ttf",
       "AssetKind": "All",
@@ -306,10 +306,10 @@
       "OriginalItemSpec": "wwwroot/css/open-iconic/font/fonts/open-iconic.ttf"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/css/open-iconic/font/fonts/open-iconic.woff",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/css/open-iconic/font/fonts/open-iconic.woff",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.woff",
       "AssetKind": "All",
@@ -323,10 +323,10 @@
       "OriginalItemSpec": "wwwroot/css/open-iconic/font/fonts/open-iconic.woff"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/css/open-iconic/ICON-LICENSE",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/css/open-iconic/ICON-LICENSE",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "css/open-iconic/ICON-LICENSE",
       "AssetKind": "All",
@@ -340,10 +340,10 @@
       "OriginalItemSpec": "wwwroot/css/open-iconic/ICON-LICENSE"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/css/open-iconic/README.md",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/css/open-iconic/README.md",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "css/open-iconic/README.md",
       "AssetKind": "All",
@@ -357,10 +357,10 @@
       "OriginalItemSpec": "wwwroot/css/open-iconic/README.md"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/css/pages.css",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/css/pages.css",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "css/pages.css",
       "AssetKind": "All",
@@ -374,10 +374,10 @@
       "OriginalItemSpec": "wwwroot/css/pages.css"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/css/SelectPlayer.css",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/css/SelectPlayer.css",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "css/SelectPlayer.css",
       "AssetKind": "All",
@@ -391,10 +391,10 @@
       "OriginalItemSpec": "wwwroot/css/SelectPlayer.css"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/css/StartMenu.css",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/css/StartMenu.css",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "css/StartMenu.css",
       "AssetKind": "All",
@@ -408,10 +408,10 @@
       "OriginalItemSpec": "wwwroot/css/StartMenu.css"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/DB/Card.json",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/DB/Card.json",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "DB/Card.json",
       "AssetKind": "All",
@@ -425,10 +425,10 @@
       "OriginalItemSpec": "wwwroot/DB/Card.json"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/DB/Characters.json",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/DB/Characters.json",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "DB/Characters.json",
       "AssetKind": "All",
@@ -442,10 +442,10 @@
       "OriginalItemSpec": "wwwroot/DB/Characters.json"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/DB/Id.json",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/DB/Id.json",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "DB/Id.json",
       "AssetKind": "All",
@@ -459,10 +459,10 @@
       "OriginalItemSpec": "wwwroot/DB/Id.json"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/favicon.ico",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/favicon.ico",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -476,10 +476,10 @@
       "OriginalItemSpec": "wwwroot/favicon.ico"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/font/bootstrap-icons.css",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/font/bootstrap-icons.css",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "font/bootstrap-icons.css",
       "AssetKind": "All",
@@ -493,10 +493,10 @@
       "OriginalItemSpec": "wwwroot/font/bootstrap-icons.css"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/font/bootstrap-icons.json",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/font/bootstrap-icons.json",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "font/bootstrap-icons.json",
       "AssetKind": "All",
@@ -510,10 +510,10 @@
       "OriginalItemSpec": "wwwroot/font/bootstrap-icons.json"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/font/bootstrap-icons.scss",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/font/bootstrap-icons.scss",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "font/bootstrap-icons.scss",
       "AssetKind": "All",
@@ -527,10 +527,10 @@
       "OriginalItemSpec": "wwwroot/font/bootstrap-icons.scss"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/font/fonts/Barbarian.ttf",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/font/fonts/Barbarian.ttf",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "font/fonts/Barbarian.ttf",
       "AssetKind": "All",
@@ -544,10 +544,10 @@
       "OriginalItemSpec": "wwwroot/font/fonts/Barbarian.ttf"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/font/fonts/Beyond Wonderland.ttf",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/font/fonts/Beyond Wonderland.ttf",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "font/fonts/Beyond Wonderland.ttf",
       "AssetKind": "All",
@@ -561,10 +561,10 @@
       "OriginalItemSpec": "wwwroot/font/fonts/Beyond Wonderland.ttf"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/font/fonts/BLKCHCRY.TTF",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/font/fonts/BLKCHCRY.TTF",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "font/fonts/BLKCHCRY.TTF",
       "AssetKind": "All",
@@ -578,10 +578,10 @@
       "OriginalItemSpec": "wwwroot/font/fonts/BLKCHCRY.TTF"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/font/fonts/bootstrap-icons.woff",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/font/fonts/bootstrap-icons.woff",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "font/fonts/bootstrap-icons.woff",
       "AssetKind": "All",
@@ -595,10 +595,10 @@
       "OriginalItemSpec": "wwwroot/font/fonts/bootstrap-icons.woff"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/font/fonts/bootstrap-icons.woff2",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/font/fonts/bootstrap-icons.woff2",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "font/fonts/bootstrap-icons.woff2",
       "AssetKind": "All",
@@ -612,10 +612,10 @@
       "OriginalItemSpec": "wwwroot/font/fonts/bootstrap-icons.woff2"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/font/fonts/DavysRibbons.ttf",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/font/fonts/DavysRibbons.ttf",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "font/fonts/DavysRibbons.ttf",
       "AssetKind": "All",
@@ -629,10 +629,10 @@
       "OriginalItemSpec": "wwwroot/font/fonts/DavysRibbons.ttf"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/font/fonts/DragonForcE.ttf",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/font/fonts/DragonForcE.ttf",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "font/fonts/DragonForcE.ttf",
       "AssetKind": "All",
@@ -646,10 +646,10 @@
       "OriginalItemSpec": "wwwroot/font/fonts/DragonForcE.ttf"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/font/fonts/Frabotta-gx855.otf",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/font/fonts/Frabotta-gx855.otf",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "font/fonts/Frabotta-gx855.otf",
       "AssetKind": "All",
@@ -663,10 +663,10 @@
       "OriginalItemSpec": "wwwroot/font/fonts/Frabotta-gx855.otf"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/font/fonts/Strange world.ttf",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/font/fonts/Strange world.ttf",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "font/fonts/Strange world.ttf",
       "AssetKind": "All",
@@ -680,10 +680,10 @@
       "OriginalItemSpec": "wwwroot/font/fonts/Strange world.ttf"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/font/fonts/Unutterable-z8E8X.ttf",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/font/fonts/Unutterable-z8E8X.ttf",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "font/fonts/Unutterable-z8E8X.ttf",
       "AssetKind": "All",
@@ -697,10 +697,10 @@
       "OriginalItemSpec": "wwwroot/font/fonts/Unutterable-z8E8X.ttf"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/font/fonts/verdana.ttf",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/font/fonts/verdana.ttf",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "font/fonts/verdana.ttf",
       "AssetKind": "All",
@@ -714,10 +714,10 @@
       "OriginalItemSpec": "wwwroot/font/fonts/verdana.ttf"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/font/index.html",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/font/index.html",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "font/index.html",
       "AssetKind": "All",
@@ -731,10 +731,10 @@
       "OriginalItemSpec": "wwwroot/font/index.html"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/animated-gifs-of-fighting-game-backgrounds-13.gif",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/images/animated-gifs-of-fighting-game-backgrounds-13.gif",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "images/animated-gifs-of-fighting-game-backgrounds-13.gif",
       "AssetKind": "All",
@@ -748,10 +748,10 @@
       "OriginalItemSpec": "wwwroot/images/animated-gifs-of-fighting-game-backgrounds-13.gif"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/attack.gif",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/images/attack.gif",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "images/attack.gif",
       "AssetKind": "All",
@@ -765,10 +765,10 @@
       "OriginalItemSpec": "wwwroot/images/attack.gif"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/black.gif",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/images/black.gif",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "images/black.gif",
       "AssetKind": "All",
@@ -782,10 +782,10 @@
       "OriginalItemSpec": "wwwroot/images/black.gif"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/card-elements/hand-card-back-red.png",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/images/card-elements/hand-card-back-red.png",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "images/card-elements/hand-card-back-red.png",
       "AssetKind": "All",
@@ -799,10 +799,10 @@
       "OriginalItemSpec": "wwwroot/images/card-elements/hand-card-back-red.png"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/card-elements/hand-frame-square-blue.png",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/images/card-elements/hand-frame-square-blue.png",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "images/card-elements/hand-frame-square-blue.png",
       "AssetKind": "All",
@@ -816,10 +816,10 @@
       "OriginalItemSpec": "wwwroot/images/card-elements/hand-frame-square-blue.png"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/card-elements/hand-orb-red.png",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/images/card-elements/hand-orb-red.png",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "images/card-elements/hand-orb-red.png",
       "AssetKind": "All",
@@ -833,10 +833,10 @@
       "OriginalItemSpec": "wwwroot/images/card-elements/hand-orb-red.png"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/cards.jpg",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/images/cards.jpg",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "images/cards.jpg",
       "AssetKind": "All",
@@ -850,10 +850,10 @@
       "OriginalItemSpec": "wwwroot/images/cards.jpg"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/cards/amazona.png",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/images/cards/amazona.png",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "images/cards/amazona.png",
       "AssetKind": "All",
@@ -867,10 +867,10 @@
       "OriginalItemSpec": "wwwroot/images/cards/amazona.png"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/cards/bolaFuego.png",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/images/cards/bolaFuego.png",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "images/cards/bolaFuego.png",
       "AssetKind": "All",
@@ -884,10 +884,10 @@
       "OriginalItemSpec": "wwwroot/images/cards/bolaFuego.png"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/cards/culebra.png",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/images/cards/culebra.png",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "images/cards/culebra.png",
       "AssetKind": "All",
@@ -901,10 +901,10 @@
       "OriginalItemSpec": "wwwroot/images/cards/culebra.png"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/cards/default.png",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/images/cards/default.png",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "images/cards/default.png",
       "AssetKind": "All",
@@ -918,10 +918,10 @@
       "OriginalItemSpec": "wwwroot/images/cards/default.png"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/cards/elsusto.png",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/images/cards/elsusto.png",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "images/cards/elsusto.png",
       "AssetKind": "All",
@@ -935,10 +935,10 @@
       "OriginalItemSpec": "wwwroot/images/cards/elsusto.png"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/cards/elsusto2.png",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/images/cards/elsusto2.png",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "images/cards/elsusto2.png",
       "AssetKind": "All",
@@ -952,10 +952,10 @@
       "OriginalItemSpec": "wwwroot/images/cards/elsusto2.png"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/cards/espadazo.png",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/images/cards/espadazo.png",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "images/cards/espadazo.png",
       "AssetKind": "All",
@@ -969,10 +969,10 @@
       "OriginalItemSpec": "wwwroot/images/cards/espadazo.png"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/cards/helbrand.png",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/images/cards/helbrand.png",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "images/cards/helbrand.png",
       "AssetKind": "All",
@@ -986,10 +986,10 @@
       "OriginalItemSpec": "wwwroot/images/cards/helbrand.png"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/cards/ladron.png",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/images/cards/ladron.png",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "images/cards/ladron.png",
       "AssetKind": "All",
@@ -1003,10 +1003,10 @@
       "OriginalItemSpec": "wwwroot/images/cards/ladron.png"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/cards/ladronzuelo.png",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/images/cards/ladronzuelo.png",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "images/cards/ladronzuelo.png",
       "AssetKind": "All",
@@ -1020,10 +1020,10 @@
       "OriginalItemSpec": "wwwroot/images/cards/ladronzuelo.png"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/cards/merlin.png",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/images/cards/merlin.png",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "images/cards/merlin.png",
       "AssetKind": "All",
@@ -1037,10 +1037,10 @@
       "OriginalItemSpec": "wwwroot/images/cards/merlin.png"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/cards/plumazo.png",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/images/cards/plumazo.png",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "images/cards/plumazo.png",
       "AssetKind": "All",
@@ -1054,10 +1054,10 @@
       "OriginalItemSpec": "wwwroot/images/cards/plumazo.png"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/cards/robo.png",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/images/cards/robo.png",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "images/cards/robo.png",
       "AssetKind": "All",
@@ -1071,10 +1071,10 @@
       "OriginalItemSpec": "wwwroot/images/cards/robo.png"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/cards/trueque.jpg",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/images/cards/trueque.jpg",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "images/cards/trueque.jpg",
       "AssetKind": "All",
@@ -1088,10 +1088,10 @@
       "OriginalItemSpec": "wwwroot/images/cards/trueque.jpg"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/cards/ultimoConjuro.png",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/images/cards/ultimoConjuro.png",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "images/cards/ultimoConjuro.png",
       "AssetKind": "All",
@@ -1105,10 +1105,10 @@
       "OriginalItemSpec": "wwwroot/images/cards/ultimoConjuro.png"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/Characters/centauro.gif",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/images/Characters/centauro.gif",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "images/Characters/centauro.gif",
       "AssetKind": "All",
@@ -1122,10 +1122,10 @@
       "OriginalItemSpec": "wwwroot/images/Characters/centauro.gif"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/Characters/dragon.gif",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/images/Characters/dragon.gif",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "images/Characters/dragon.gif",
       "AssetKind": "All",
@@ -1139,10 +1139,10 @@
       "OriginalItemSpec": "wwwroot/images/Characters/dragon.gif"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/Characters/dragon2.gif",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/images/Characters/dragon2.gif",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "images/Characters/dragon2.gif",
       "AssetKind": "All",
@@ -1156,10 +1156,10 @@
       "OriginalItemSpec": "wwwroot/images/Characters/dragon2.gif"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/Characters/dragon3.gif",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/images/Characters/dragon3.gif",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "images/Characters/dragon3.gif",
       "AssetKind": "All",
@@ -1173,10 +1173,10 @@
       "OriginalItemSpec": "wwwroot/images/Characters/dragon3.gif"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/Characters/dragon4.gif",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/images/Characters/dragon4.gif",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "images/Characters/dragon4.gif",
       "AssetKind": "All",
@@ -1190,10 +1190,10 @@
       "OriginalItemSpec": "wwwroot/images/Characters/dragon4.gif"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/Characters/photo101.png",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/images/Characters/photo101.png",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "images/Characters/photo101.png",
       "AssetKind": "All",
@@ -1207,10 +1207,10 @@
       "OriginalItemSpec": "wwwroot/images/Characters/photo101.png"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/Characters/photo104.png",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/images/Characters/photo104.png",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "images/Characters/photo104.png",
       "AssetKind": "All",
@@ -1224,10 +1224,10 @@
       "OriginalItemSpec": "wwwroot/images/Characters/photo104.png"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/fondo1.jpeg",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/images/fondo1.jpeg",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "images/fondo1.jpeg",
       "AssetKind": "All",
@@ -1241,10 +1241,10 @@
       "OriginalItemSpec": "wwwroot/images/fondo1.jpeg"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/fondo2.jpg",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/images/fondo2.jpg",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "images/fondo2.jpg",
       "AssetKind": "All",
@@ -1258,10 +1258,10 @@
       "OriginalItemSpec": "wwwroot/images/fondo2.jpg"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/fondo3.jpg",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/images/fondo3.jpg",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "images/fondo3.jpg",
       "AssetKind": "All",
@@ -1275,10 +1275,10 @@
       "OriginalItemSpec": "wwwroot/images/fondo3.jpg"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/fondo4.jpg",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/images/fondo4.jpg",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "images/fondo4.jpg",
       "AssetKind": "All",
@@ -1292,10 +1292,10 @@
       "OriginalItemSpec": "wwwroot/images/fondo4.jpg"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/fondo5.jpg",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/images/fondo5.jpg",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "images/fondo5.jpg",
       "AssetKind": "All",
@@ -1309,10 +1309,10 @@
       "OriginalItemSpec": "wwwroot/images/fondo5.jpg"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/fondo6.jpg",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/images/fondo6.jpg",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "images/fondo6.jpg",
       "AssetKind": "All",
@@ -1326,10 +1326,10 @@
       "OriginalItemSpec": "wwwroot/images/fondo6.jpg"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/fondo7.jpeg",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/images/fondo7.jpeg",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "images/fondo7.jpeg",
       "AssetKind": "All",
@@ -1343,10 +1343,10 @@
       "OriginalItemSpec": "wwwroot/images/fondo7.jpeg"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/fondo8.jpg",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/images/fondo8.jpg",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "images/fondo8.jpg",
       "AssetKind": "All",
@@ -1360,10 +1360,10 @@
       "OriginalItemSpec": "wwwroot/images/fondo8.jpg"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/game.jpg",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/images/game.jpg",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "images/game.jpg",
       "AssetKind": "All",
@@ -1377,10 +1377,10 @@
       "OriginalItemSpec": "wwwroot/images/game.jpg"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/history.gif",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/images/history.gif",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "images/history.gif",
       "AssetKind": "All",
@@ -1394,10 +1394,10 @@
       "OriginalItemSpec": "wwwroot/images/history.gif"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/main-menu.jpg",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/images/main-menu.jpg",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "images/main-menu.jpg",
       "AssetKind": "All",
@@ -1411,10 +1411,10 @@
       "OriginalItemSpec": "wwwroot/images/main-menu.jpg"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/images/player.jpg",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/images/player.jpg",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "images/player.jpg",
       "AssetKind": "All",
@@ -1428,10 +1428,10 @@
       "OriginalItemSpec": "wwwroot/images/player.jpg"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/Js/background.js",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/Js/background.js",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "Js/background.js",
       "AssetKind": "All",
@@ -1445,10 +1445,10 @@
       "OriginalItemSpec": "wwwroot/Js/background.js"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/Js/game.js",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/Js/game.js",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "Js/game.js",
       "AssetKind": "All",
@@ -1462,10 +1462,10 @@
       "OriginalItemSpec": "wwwroot/Js/game.js"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/Js/history.js",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/Js/history.js",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "Js/history.js",
       "AssetKind": "All",
@@ -1479,10 +1479,10 @@
       "OriginalItemSpec": "wwwroot/Js/history.js"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/Js/video.js",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/Js/video.js",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "Js/video.js",
       "AssetKind": "All",
@@ -1496,10 +1496,10 @@
       "OriginalItemSpec": "wwwroot/Js/video.js"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/video/Rolling star.mp3",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/video/Rolling star.mp3",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "video/Rolling star.mp3",
       "AssetKind": "All",
@@ -1513,10 +1513,10 @@
       "OriginalItemSpec": "wwwroot/video/Rolling star.mp3"
     },
     {
-      "Identity": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/video/video.mp4",
+      "Identity": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/video/video.mp4",
       "SourceId": "ConquerorServer",
       "SourceType": "Discovered",
-      "ContentRoot": "/home/marian_susana/Documents/Conqueror/ConquerorServer/wwwroot/",
+      "ContentRoot": "/home/marian/Documents/Conqueror/ConquerorServer/wwwroot/",
       "BasePath": "_content/ConquerorServer",
       "RelativePath": "video/video.mp4",
       "AssetKind": "All",

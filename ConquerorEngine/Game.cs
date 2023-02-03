@@ -11,7 +11,7 @@ public class Game : IEnumerable<Status> {
     public Status st = new(2);
 
     public Game() {
-
+        
     }
     
     /// <summary>
@@ -57,9 +57,10 @@ public class Game : IEnumerable<Status> {
     /// </summary>
     /// <returns>Si realizo o no la jugada</returns>
     public bool PlayIA() {
-        if (st.playerStatuses[0].player is PlayerIA) {
-            Card cd = (st.playerStatuses[0].player as PlayerIA).SelectIACard(st.StatusForIA());
-            Input(cd);
+        Player player = st.playerStatuses[0].player;
+        if (player is PlayerIA) {
+            (player as PlayerIA).Play(st, new Card());
+            Input();
             return true;
         }
         return false;
@@ -155,14 +156,14 @@ public class Game : IEnumerable<Status> {
     /// Recibe la carta jugada
     /// </summary>
     /// <param name="card">carta jugada</param>
-    public void Input(Card card) {
+    public void Input() {
         if (!GameOver()) {                
-            if (IsValid(card, st.playerStatuses[0])) {
-                Activate(card);
+            if (IsValid(st.currentCard, st.playerStatuses[0])) {
+                Activate(st.currentCard);
 
                 //Almacena la carta jugada por el enemigo del jugador virtual
                 if (st.playerStatuses[1].player is PlayerIA) {
-                    (st.playerStatuses[1].player as PlayerIA).StoreCard(card);
+                    (st.playerStatuses[1].player as PlayerIA).StoreCard(st.currentCard);
                 }
             }            
             else
@@ -173,5 +174,12 @@ public class Game : IEnumerable<Status> {
                 this.GetEnumerator().MoveNext();
             }
         }
+    }
+
+    public void Next(Card cd)
+    {
+        if(cd == null)
+            PlayIA();
+        
     }
 }

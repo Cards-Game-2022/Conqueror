@@ -13,191 +13,6 @@
   "ProjectWorkspaceState": {
     "TagHelpers": [
       {
-        "HashCode": 1451049710,
-        "Kind": "Components.Component",
-        "Name": "ConquerorServer.Pages.CreateCard",
-        "AssemblyName": "ConquerorServer",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "CreateCard"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ConquerorServer.Pages.CreateCard",
-          "Common.TypeNamespace": "ConquerorServer.Pages",
-          "Common.TypeNameIdentifier": "CreateCard"
-        }
-      },
-      {
-        "HashCode": 1977872068,
-        "Kind": "Components.Component",
-        "Name": "ConquerorServer.Pages.CreateCard",
-        "AssemblyName": "ConquerorServer",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "ConquerorServer.Pages.CreateCard"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ConquerorServer.Pages.CreateCard",
-          "Common.TypeNamespace": "ConquerorServer.Pages",
-          "Common.TypeNameIdentifier": "CreateCard",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 1204706379,
-        "Kind": "Components.Component",
-        "Name": "ConquerorServer.Pages.FetchData",
-        "AssemblyName": "ConquerorServer",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "FetchData"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ConquerorServer.Pages.FetchData",
-          "Common.TypeNamespace": "ConquerorServer.Pages",
-          "Common.TypeNameIdentifier": "FetchData"
-        }
-      },
-      {
-        "HashCode": 1319858924,
-        "Kind": "Components.Component",
-        "Name": "ConquerorServer.Pages.FetchData",
-        "AssemblyName": "ConquerorServer",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "ConquerorServer.Pages.FetchData"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ConquerorServer.Pages.FetchData",
-          "Common.TypeNamespace": "ConquerorServer.Pages",
-          "Common.TypeNameIdentifier": "FetchData",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": -554612212,
-        "Kind": "Components.Component",
-        "Name": "ConquerorServer.Pages.GameEnvironment",
-        "AssemblyName": "ConquerorServer",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "GameEnvironment"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ConquerorServer.Pages.GameEnvironment",
-          "Common.TypeNamespace": "ConquerorServer.Pages",
-          "Common.TypeNameIdentifier": "GameEnvironment"
-        }
-      },
-      {
-        "HashCode": -975381612,
-        "Kind": "Components.Component",
-        "Name": "ConquerorServer.Pages.GameEnvironment",
-        "AssemblyName": "ConquerorServer",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "ConquerorServer.Pages.GameEnvironment"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ConquerorServer.Pages.GameEnvironment",
-          "Common.TypeNamespace": "ConquerorServer.Pages",
-          "Common.TypeNameIdentifier": "GameEnvironment",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": -211045171,
-        "Kind": "Components.Component",
-        "Name": "ConquerorServer.Pages.History",
-        "AssemblyName": "ConquerorServer",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "History"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ConquerorServer.Pages.History",
-          "Common.TypeNamespace": "ConquerorServer.Pages",
-          "Common.TypeNameIdentifier": "History"
-        }
-      },
-      {
-        "HashCode": -501403588,
-        "Kind": "Components.Component",
-        "Name": "ConquerorServer.Pages.History",
-        "AssemblyName": "ConquerorServer",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "ConquerorServer.Pages.History"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ConquerorServer.Pages.History",
-          "Common.TypeNamespace": "ConquerorServer.Pages",
-          "Common.TypeNameIdentifier": "History",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": -1128793918,
-        "Kind": "Components.Component",
-        "Name": "ConquerorServer.Pages.Index",
-        "AssemblyName": "ConquerorServer",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Index"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ConquerorServer.Pages.Index",
-          "Common.TypeNamespace": "ConquerorServer.Pages",
-          "Common.TypeNameIdentifier": "Index"
-        }
-      },
-      {
-        "HashCode": -365044216,
-        "Kind": "Components.Component",
-        "Name": "ConquerorServer.Pages.Index",
-        "AssemblyName": "ConquerorServer",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "ConquerorServer.Pages.Index"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ConquerorServer.Pages.Index",
-          "Common.TypeNamespace": "ConquerorServer.Pages",
-          "Common.TypeNameIdentifier": "Index",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": -1131073986,
         "Kind": "Components.Component",
         "Name": "ConquerorServer.Pages.JV",
@@ -231,43 +46,6 @@
           "Common.TypeName": "ConquerorServer.Pages.JV",
           "Common.TypeNamespace": "ConquerorServer.Pages",
           "Common.TypeNameIdentifier": "JV",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 1492101467,
-        "Kind": "Components.Component",
-        "Name": "ConquerorServer.Pages.PVP",
-        "AssemblyName": "ConquerorServer",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "PVP"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ConquerorServer.Pages.PVP",
-          "Common.TypeNamespace": "ConquerorServer.Pages",
-          "Common.TypeNameIdentifier": "PVP"
-        }
-      },
-      {
-        "HashCode": -127844790,
-        "Kind": "Components.Component",
-        "Name": "ConquerorServer.Pages.PVP",
-        "AssemblyName": "ConquerorServer",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "ConquerorServer.Pages.PVP"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ConquerorServer.Pages.PVP",
-          "Common.TypeNamespace": "ConquerorServer.Pages",
-          "Common.TypeNameIdentifier": "PVP",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -342,6 +120,228 @@
           "Common.TypeName": "ConquerorServer.Pages.StartMenu",
           "Common.TypeNamespace": "ConquerorServer.Pages",
           "Common.TypeNameIdentifier": "StartMenu",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1451049710,
+        "Kind": "Components.Component",
+        "Name": "ConquerorServer.Pages.CreateCard",
+        "AssemblyName": "ConquerorServer",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "CreateCard"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ConquerorServer.Pages.CreateCard",
+          "Common.TypeNamespace": "ConquerorServer.Pages",
+          "Common.TypeNameIdentifier": "CreateCard"
+        }
+      },
+      {
+        "HashCode": 1977872068,
+        "Kind": "Components.Component",
+        "Name": "ConquerorServer.Pages.CreateCard",
+        "AssemblyName": "ConquerorServer",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ConquerorServer.Pages.CreateCard"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ConquerorServer.Pages.CreateCard",
+          "Common.TypeNamespace": "ConquerorServer.Pages",
+          "Common.TypeNameIdentifier": "CreateCard",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -1128793918,
+        "Kind": "Components.Component",
+        "Name": "ConquerorServer.Pages.Index",
+        "AssemblyName": "ConquerorServer",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Index"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ConquerorServer.Pages.Index",
+          "Common.TypeNamespace": "ConquerorServer.Pages",
+          "Common.TypeNameIdentifier": "Index"
+        }
+      },
+      {
+        "HashCode": -365044216,
+        "Kind": "Components.Component",
+        "Name": "ConquerorServer.Pages.Index",
+        "AssemblyName": "ConquerorServer",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ConquerorServer.Pages.Index"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ConquerorServer.Pages.Index",
+          "Common.TypeNamespace": "ConquerorServer.Pages",
+          "Common.TypeNameIdentifier": "Index",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -211045171,
+        "Kind": "Components.Component",
+        "Name": "ConquerorServer.Pages.History",
+        "AssemblyName": "ConquerorServer",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "History"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ConquerorServer.Pages.History",
+          "Common.TypeNamespace": "ConquerorServer.Pages",
+          "Common.TypeNameIdentifier": "History"
+        }
+      },
+      {
+        "HashCode": -501403588,
+        "Kind": "Components.Component",
+        "Name": "ConquerorServer.Pages.History",
+        "AssemblyName": "ConquerorServer",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ConquerorServer.Pages.History"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ConquerorServer.Pages.History",
+          "Common.TypeNamespace": "ConquerorServer.Pages",
+          "Common.TypeNameIdentifier": "History",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1204706379,
+        "Kind": "Components.Component",
+        "Name": "ConquerorServer.Pages.FetchData",
+        "AssemblyName": "ConquerorServer",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "FetchData"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ConquerorServer.Pages.FetchData",
+          "Common.TypeNamespace": "ConquerorServer.Pages",
+          "Common.TypeNameIdentifier": "FetchData"
+        }
+      },
+      {
+        "HashCode": 1319858924,
+        "Kind": "Components.Component",
+        "Name": "ConquerorServer.Pages.FetchData",
+        "AssemblyName": "ConquerorServer",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ConquerorServer.Pages.FetchData"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ConquerorServer.Pages.FetchData",
+          "Common.TypeNamespace": "ConquerorServer.Pages",
+          "Common.TypeNameIdentifier": "FetchData",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1492101467,
+        "Kind": "Components.Component",
+        "Name": "ConquerorServer.Pages.PVP",
+        "AssemblyName": "ConquerorServer",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "PVP"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ConquerorServer.Pages.PVP",
+          "Common.TypeNamespace": "ConquerorServer.Pages",
+          "Common.TypeNameIdentifier": "PVP"
+        }
+      },
+      {
+        "HashCode": -127844790,
+        "Kind": "Components.Component",
+        "Name": "ConquerorServer.Pages.PVP",
+        "AssemblyName": "ConquerorServer",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ConquerorServer.Pages.PVP"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ConquerorServer.Pages.PVP",
+          "Common.TypeNamespace": "ConquerorServer.Pages",
+          "Common.TypeNameIdentifier": "PVP",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -554612212,
+        "Kind": "Components.Component",
+        "Name": "ConquerorServer.Pages.GameEnvironment",
+        "AssemblyName": "ConquerorServer",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "GameEnvironment"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ConquerorServer.Pages.GameEnvironment",
+          "Common.TypeNamespace": "ConquerorServer.Pages",
+          "Common.TypeNameIdentifier": "GameEnvironment"
+        }
+      },
+      {
+        "HashCode": -975381612,
+        "Kind": "Components.Component",
+        "Name": "ConquerorServer.Pages.GameEnvironment",
+        "AssemblyName": "ConquerorServer",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ConquerorServer.Pages.GameEnvironment"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ConquerorServer.Pages.GameEnvironment",
+          "Common.TypeNamespace": "ConquerorServer.Pages",
+          "Common.TypeNameIdentifier": "GameEnvironment",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },

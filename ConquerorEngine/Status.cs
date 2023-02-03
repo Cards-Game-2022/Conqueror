@@ -12,12 +12,15 @@ public class Status {
     /// Lista de todos los estados de jugadores
     /// </summary>
     public List<PlayerStatus> playerStatuses { get; private set; }
+
+    public Card currentCard;
     
     /// <summary>
     /// Constructor de estados vacio
     /// </summary>
     public Status() {
         playerStatuses = new();
+        currentCard = null;
     }
     
     /// <summary>
@@ -25,6 +28,7 @@ public class Status {
     /// </summary>
     /// <param name="nPlayers">Representa la cantidad de jugadores que tendra el juego</param>
     public Status(int nPlayers) {
+        currentCard = null;
         playerStatuses = new(nPlayers);
         for (int i = 0; i<nPlayers; i++) {
             playerStatuses.Add(new PlayerStatus());

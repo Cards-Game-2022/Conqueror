@@ -15,4 +15,6 @@ public abstract class Player : Character {
         
     }
 
+    public abstract void Play(Status st, Card cd);
+
 }
