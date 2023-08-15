@@ -88,3 +88,18 @@
 /home/marian/Documents/Conqueror/ConquerorEngine/obj/Debug/net6.0/ref/ConquerorEngine.dll
 /home/marian/Documents/Conqueror/ConquerorEngine/obj/Debug/net6.0/ConquerorEngine.pdb
 /home/marian/Documents/Conqueror/ConquerorEngine/obj/Debug/net6.0/ConquerorEngine.genruntimeconfig.cache
+/home/marian/Documents/MATCOM/Various/1er año/Segundo semestre/Programación/Conqueror/ConquerorEngine/bin/Debug/net6.0/ConquerorEngine
+/home/marian/Documents/MATCOM/Various/1er año/Segundo semestre/Programación/Conqueror/ConquerorEngine/bin/Debug/net6.0/ConquerorEngine.deps.json
+/home/marian/Documents/MATCOM/Various/1er año/Segundo semestre/Programación/Conqueror/ConquerorEngine/bin/Debug/net6.0/ConquerorEngine.runtimeconfig.json
+/home/marian/Documents/MATCOM/Various/1er año/Segundo semestre/Programación/Conqueror/ConquerorEngine/bin/Debug/net6.0/ConquerorEngine.dll
+/home/marian/Documents/MATCOM/Various/1er año/Segundo semestre/Programación/Conqueror/ConquerorEngine/bin/Debug/net6.0/ref/ConquerorEngine.dll
+/home/marian/Documents/MATCOM/Various/1er año/Segundo semestre/Programación/Conqueror/ConquerorEngine/bin/Debug/net6.0/ConquerorEngine.pdb
+/home/marian/Documents/MATCOM/Various/1er año/Segundo semestre/Programación/Conqueror/ConquerorEngine/obj/Debug/net6.0/ConquerorEngine.csproj.AssemblyReference.cache
+/home/marian/Documents/MATCOM/Various/1er año/Segundo semestre/Programación/Conqueror/ConquerorEngine/obj/Debug/net6.0/ConquerorEngine.GeneratedMSBuildEditorConfig.editorconfig
+/home/marian/Documents/MATCOM/Various/1er año/Segundo semestre/Programación/Conqueror/ConquerorEngine/obj/Debug/net6.0/ConquerorEngine.AssemblyInfoInputs.cache
+/home/marian/Documents/MATCOM/Various/1er año/Segundo semestre/Programación/Conqueror/ConquerorEngine/obj/Debug/net6.0/ConquerorEngine.AssemblyInfo.cs
+/home/marian/Documents/MATCOM/Various/1er año/Segundo semestre/Programación/Conqueror/ConquerorEngine/obj/Debug/net6.0/ConquerorEngine.csproj.CoreCompileInputs.cache
+/home/marian/Documents/MATCOM/Various/1er año/Segundo semestre/Programación/Conqueror/ConquerorEngine/obj/Debug/net6.0/ConquerorEngine.dll
+/home/marian/Documents/MATCOM/Various/1er año/Segundo semestre/Programación/Conqueror/ConquerorEngine/obj/Debug/net6.0/ref/ConquerorEngine.dll
+/home/marian/Documents/MATCOM/Various/1er año/Segundo semestre/Programación/Conqueror/ConquerorEngine/obj/Debug/net6.0/ConquerorEngine.pdb
+/home/marian/Documents/MATCOM/Various/1er año/Segundo semestre/Programación/Conqueror/ConquerorEngine/obj/Debug/net6.0/ConquerorEngine.genruntimeconfig.cache

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/marian/Documents/Conqueror/ConquerorEngine/ConquerorEngine.csproj",
+      "projectUniqueName": "/home/marian/Documents/MATCOM/Various/1er año/Segundo semestre/Programación/Conqueror/ConquerorEngine/ConquerorEngine.csproj",
       "projectName": "ConquerorEngine",
-      "projectPath": "/home/marian/Documents/Conqueror/ConquerorEngine/ConquerorEngine.csproj",
+      "projectPath": "/home/marian/Documents/MATCOM/Various/1er año/Segundo semestre/Programación/Conqueror/ConquerorEngine/ConquerorEngine.csproj",
       "packagesPath": "/home/marian/.nuget/packages/",
-      "outputPath": "/home/marian/Documents/Conqueror/ConquerorEngine/obj/",
+      "outputPath": "/home/marian/Documents/MATCOM/Various/1er año/Segundo semestre/Programación/Conqueror/ConquerorEngine/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/marian/.nuget/NuGet/NuGet.Config"
@@ -58,7 +58,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.113/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.121/RuntimeIdentifierGraph.json"
       }
     }
   }

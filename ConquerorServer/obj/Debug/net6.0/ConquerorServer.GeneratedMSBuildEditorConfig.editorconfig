@@ -8,73 +8,73 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ConquerorServer
 build_property.RootNamespace = ConquerorServer
-build_property.ProjectDir = /home/marian/Documents/Conqueror/ConquerorServer/
+build_property.ProjectDir = /home/marian/Documents/MATCOM/Various/1er año/Segundo semestre/Programación/Conqueror/ConquerorServer/
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /home/marian/Documents/Conqueror/ConquerorServer
+build_property.MSBuildProjectDirectory = /home/marian/Documents/MATCOM/Various/1er año/Segundo semestre/Programación/Conqueror/ConquerorServer
 build_property._RazorSourceGeneratorDebug = 
 
-[/home/marian/Documents/Conqueror/ConquerorServer/App.razor]
+[/home/marian/Documents/MATCOM/Various/1er año/Segundo semestre/Programación/Conqueror/ConquerorServer/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/marian/Documents/Conqueror/ConquerorServer/Pages/CreateCard.razor]
+[/home/marian/Documents/MATCOM/Various/1er año/Segundo semestre/Programación/Conqueror/ConquerorServer/Pages/CreateCard.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ3JlYXRlQ2FyZC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/marian/Documents/Conqueror/ConquerorServer/Pages/FetchData.razor]
+[/home/marian/Documents/MATCOM/Various/1er año/Segundo semestre/Programación/Conqueror/ConquerorServer/Pages/FetchData.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRmV0Y2hEYXRhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/marian/Documents/Conqueror/ConquerorServer/Pages/GameEnvironment.razor]
+[/home/marian/Documents/MATCOM/Various/1er año/Segundo semestre/Programación/Conqueror/ConquerorServer/Pages/GameEnvironment.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvR2FtZUVudmlyb25tZW50LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/marian/Documents/Conqueror/ConquerorServer/Pages/History.razor]
+[/home/marian/Documents/MATCOM/Various/1er año/Segundo semestre/Programación/Conqueror/ConquerorServer/Pages/History.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSGlzdG9yeS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/marian/Documents/Conqueror/ConquerorServer/Pages/Index.razor]
+[/home/marian/Documents/MATCOM/Various/1er año/Segundo semestre/Programación/Conqueror/ConquerorServer/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/marian/Documents/Conqueror/ConquerorServer/Pages/JV.razor]
+[/home/marian/Documents/MATCOM/Various/1er año/Segundo semestre/Programación/Conqueror/ConquerorServer/Pages/JV.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSlYucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/marian/Documents/Conqueror/ConquerorServer/Pages/PVP.razor]
+[/home/marian/Documents/MATCOM/Various/1er año/Segundo semestre/Programación/Conqueror/ConquerorServer/Pages/PVP.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUFZQLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/marian/Documents/Conqueror/ConquerorServer/Pages/SelectPlayer.razor]
+[/home/marian/Documents/MATCOM/Various/1er año/Segundo semestre/Programación/Conqueror/ConquerorServer/Pages/SelectPlayer.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2VsZWN0UGxheWVyLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/marian/Documents/Conqueror/ConquerorServer/Pages/StartMenu.razor]
+[/home/marian/Documents/MATCOM/Various/1er año/Segundo semestre/Programación/Conqueror/ConquerorServer/Pages/StartMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU3RhcnRNZW51LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/marian/Documents/Conqueror/ConquerorServer/Shared/SurveyPrompt.razor]
+[/home/marian/Documents/MATCOM/Various/1er año/Segundo semestre/Programación/Conqueror/ConquerorServer/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL1N1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/marian/Documents/Conqueror/ConquerorServer/_Imports.razor]
+[/home/marian/Documents/MATCOM/Various/1er año/Segundo semestre/Programación/Conqueror/ConquerorServer/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/marian/Documents/Conqueror/ConquerorServer/Shared/MainLayout.razor]
+[/home/marian/Documents/MATCOM/Various/1er año/Segundo semestre/Programación/Conqueror/ConquerorServer/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL01haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-i3zs6xhxze
 
-[/home/marian/Documents/Conqueror/ConquerorServer/Pages/Error.cshtml]
+[/home/marian/Documents/MATCOM/Various/1er año/Segundo semestre/Programación/Conqueror/ConquerorServer/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/marian/Documents/Conqueror/ConquerorServer/Pages/_Host.cshtml]
+[/home/marian/Documents/MATCOM/Various/1er año/Segundo semestre/Programación/Conqueror/ConquerorServer/Pages/_Host.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX0hvc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/marian/Documents/Conqueror/ConquerorServer/Pages/_Layout.cshtml]
+[/home/marian/Documents/MATCOM/Various/1er año/Segundo semestre/Programación/Conqueror/ConquerorServer/Pages/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX0xheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

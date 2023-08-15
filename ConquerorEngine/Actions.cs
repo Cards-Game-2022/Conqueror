@@ -20,7 +20,7 @@ public static class Actions {
     /// </summary>
     /// <param name="deck">El deck que se va a rellenar</param>
     public static void CreateDeck(List<Card> deck) {
-        Manager mg = new Manager();
+        Manager mg = new();
         foreach (Card card in mg.db.Cards) {
             for (int i = 0; i<2*card.Rarity; i++) {  
                 deck.Add(card);    
@@ -81,7 +81,7 @@ public static class Actions {
     public static void Shuffle(List<Card> cardsList) {
 
         int[] shuffledPositions = new int[cardsList.Count];
-        Random randomGenerator = new Random();
+        Random randomGenerator = new();
 
         for (int i = 0; i < shuffledPositions.Length; i++) { 
             bool added = false;
@@ -132,9 +132,9 @@ public static class Actions {
     /// </summary>
     /// <param name="cardsList">lista de cartas de donde seleccionar una</param>
     /// <returns>La carta seleccionada. Si el listado de cartas era vacio, devuelve null</returns>
-    public static Card RandomCard(List<Card> cardsList)
+    public static Card? RandomCard(List<Card> cardsList)
     {
-        Random randomGenerator = new Random();
+        Random randomGenerator = new();
         if (cardsList.Count > 0) {
             int pos = randomGenerator.Next(0, cardsList.Count);
             return cardsList[pos];
